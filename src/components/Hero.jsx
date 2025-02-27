@@ -13,8 +13,10 @@ const Hero = () => {
             </h1>
             <p className="fs-5 mb-3">Full-stack developer and innovation enthusiast</p>
             <p className="text-secondary mb-4">
-              Over 4 years of experience in the tech industry. I specialize in building innovative 
-              web and mobile applications using technologies such as React, React Native, and Node.js.
+            I’m passionate about the tech industry and eager to apply my skills in building innovative web and 
+            mobile applications. While I’m still early in my journey, I’ve been improving my abilities with technologies 
+            like React, Next.js, and Node.js. I’m excited to grow and contribute to a team where I can continue 
+            learning and developing my craft.
             </p>
             <div className="d-flex gap-3">
               <Button variant="outline-secondary" className="custom-btn">
