@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap } from 'react-icons/si';
+import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpress, SiMongodb, SiNextdotjs, SiHtml5, SiSass, SiCypress, SiJest } from 'react-icons/si';
 
 const About = () => {
   return (
@@ -28,6 +28,13 @@ const About = () => {
                 <SiJavascript className="tech-icon js-icon" />
                 <SiTypescript className="tech-icon ts-icon" />
                 <SiBootstrap className="tech-icon bootstrap-icon" />
+                <SiExpress className="tech-icon express-icon" />
+                <SiMongodb className="tech-icon mongodb-icon"/>
+                <SiNextdotjs className="tech-icon next-icon" />
+                <SiHtml5 className="tech-icon html-icon" />
+                <SiSass className="tech-icon sass-icon" />
+                <SiCypress className="tech-icon cypress-icon" />
+                <SiJest className="tech-icon jest-icon" />
               </div>
               <h3 className="text-primary mb-2">About me</h3>
               <h2 className="fs-2 fw-bold mb-3">
