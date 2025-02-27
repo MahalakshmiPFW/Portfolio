@@ -36,15 +36,15 @@ const About = () => {
                 <SiCypress className="tech-icon cypress-icon" />
                 <SiJest className="tech-icon jest-icon" />
               </div>
-              <h3 className="text-primary mb-2">About me</h3>
-              <h2 className="fs-2 fw-bold mb-3">
-                I'm a passionate software developer looking for my first international opportunity
-              </h2>
+              <h2 className="text-primary mb-2 fw-bold">About me</h2>
+              <h3 className="fs-2 fw-bold mb-3">
+                I'm a passionate software developer looking for my first international opportunity!
+              </h3>
               <p className="text-light mb-4">
-                Beyond coding, I'm a coffee enthusiast, a cat lover, and a self-taught artist who 
-                enjoys spending my free time dancing. I am currently seeking opportunities to 
-                bring my skills and enthusiasm to a tech company in the United States or Europe 
-                and am excited about the prospect of relocating to pursue new challenges.
+                Beyond coding, you’ll find me savoring a cup of coffee or diving into the world of fiction, where I can lose myself for hours. 
+                I love singing, painting, and binge-watching TV shows and movies that spark my imagination. As a self-taught artist with a passion 
+                for creativity, I’m now on the lookout for opportunities to bring my skills and enthusiasm to a tech company in the United States or 
+                Europe. I’m excited by the idea of relocating to embrace new challenges and explore fresh horizons.
               </p>
               <Button variant="primary" className="custom-btn">
                 My resume
