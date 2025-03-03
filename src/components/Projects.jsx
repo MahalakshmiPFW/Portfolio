@@ -7,26 +7,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'DevLinks',
-      description: 'A link aggregator for social media.',
-      date: 'Jul - Dec 2023',
-      image: 'assets/images/devlinks-project.png',
-      technologies: ['react']
+      title: 'CampusMart - Buy Smart, Sell Fast',
+      description: 'An e-commerce platform for students to buy and sell products on campus.',
+      date: 'Sept - Dec 2024',
+      image: 'assets/images/CampusMart-logo.png',
+      technologies: ['react', 'nodejs', 'mongodb', 'express', 'bootstrap', 'css', 'javascript', 'html', 'cloudinary', 'vercel']
     },
     {
       id: 2,
-      title: 'Feedback Widget',
-      description: 'A feedback widget to improve your applications based on users feedback.',
-      date: 'Jul - Dec 2023',
-      image: 'assets/images/feedback-widget-project.png',
-      technologies: ['react', 'node']
+      title: 'Sweetwater Student Opportunities App',
+      description: 'An event management app for students to find and join opportunities at Sweetwater.',
+      date: 'Sept - Dec 2024',
+      image: 'assets/images/',
+      technologies: ['react', 'nodejs', 'mongodb', 'nextjs']
     },
     {
       id: 3,
       title: 'Nutritional table',
       description: 'An app to improve your eating habits based on the nutritional values.',
       date: 'Jul - Dec 2023',
-      image: 'assets/images/nutritional-table-project.png',
+      image: 'assets/images/',
       technologies: ['react', 'bootstrap']
     }
   ];
