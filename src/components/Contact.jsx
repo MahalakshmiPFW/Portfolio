@@ -31,8 +31,7 @@ const Contact = () => {
                     }}
                   />
                 </div>
-                <h3 className="mb-2">Contact</h3>
-                <h2 className="fs-2 fw-bold mb-3">Enjoyed my work? Let's work together</h2>
+                <h2 className="fs-2 fw-bold mb-2 text-center">Enjoyed my work? Let's connect!</h2>
                 <p className="text-light mb-4">
                   I'm always up for a chat. Ping me an email at <a href="mailto:mahalakshmimahadevan.1225@gmail.com" className="text-primary">mahalakshmimahadevan.1225@gmail.com</a> or give me a shout on social media.
                 </p>

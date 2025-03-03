@@ -41,8 +41,7 @@ const Projects = () => {
             <line x1="20" y1="10" x2="20" y2="30" stroke="#53c28b" strokeWidth="2" />
           </svg>
         </div>
-        <h3 className="text-center mb-2">Projects</h3>
-        <h2 className="text-center fs-2 fw-bold mb-2">Take a look at my highlighted projects</h2>
+        <h2 className="text-center fs-2 fw-bold mb-5">Take a look at my Highlighted Projects</h2>
         
         <Row className="g-4">
           {projects.map(project => (

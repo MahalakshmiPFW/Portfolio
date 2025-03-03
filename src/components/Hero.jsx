@@ -35,8 +35,8 @@ const Hero = () => {
                 alt="Developer coding" 
                 className="img-fluid"
                 style={{ 
-                  maxWidth: '125%', 
-                  transform: 'translateX(12%)',
+                  maxWidth: '180%', 
+                  transform: 'translateX(5%) scale(1.2)',
                   position: 'relative',
                   zIndex: 1
                 }}
