@@ -14,8 +14,8 @@ const Footer = () => {
           </Col>
           <Col md={6}>
             <div className="footer-links d-flex justify-content-md-end justify-content-center gap-4">
-              <a href="#" className="footer-link">GitHub</a>
-              <a href="#" className="footer-link">LinkedIn</a>
+              <a href="https://github.com/MahalakshmiPFW" className="footer-link">GitHub</a>
+              <a href="https://www.linkedin.com/in/mahalakshmimahadevan/" className="footer-link">LinkedIn</a>
               <a href="#" className="footer-link">Instagram</a>
               <a href="#home" className="footer-link">
                 <FaArrowUp />
