@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'An event management app for students to find and join opportunities at Sweetwater.',
       date: 'Sept - Dec 2024',
       image: 'assets/images/',
-      technologies: ['react', 'nodejs', 'mongodb', 'nextjs']
+      technologies: ['react', 'node.js', 'mongodb', 'nextjs']
     },
     {
       id: 3,

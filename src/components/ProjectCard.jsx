@@ -4,10 +4,10 @@ import { SiReact, SiNodedotjs, SiBootstrap } from 'react-icons/si';
 
 const ProjectCard = ({ project }) => {
   const getTechIcon = (tech) => {
-    switch(tech) {
+    switch (tech) {
       case 'react':
         return <SiReact className="tech-icon react-icon" />;
-      case 'node':
+      case 'nodejs':
         return <SiNodedotjs className="tech-icon node-icon" />;
       case 'bootstrap':
         return <SiBootstrap className="tech-icon bootstrap-icon" />;
@@ -17,18 +17,20 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Card className="project-card h-100">
-      <div className="project-image-container p-2">
+    <Card className="project-card h-100 text-center p-3">
+      {/* Circular Image Container */}
+      <div className="image-container mx-auto">
         <img 
           src={project.image} 
           alt={project.title}
-          className="project-image rounded-3"
+          className="project-image"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = 'https://via.placeholder.com/400x200';
+            e.target.src = 'https://via.placeholder.com/100';
           }}
         />
       </div>
+
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-2">
           <span className="project-date">{project.date}</span>
