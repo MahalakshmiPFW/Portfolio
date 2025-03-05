@@ -45,7 +45,7 @@ const Contact = () => {
               <div className="text-center text-lg-start">
                 <div className="profile-picture-container mb-4">
                   <img 
-                    src="assets/images/profile-picture.jpg" 
+                    src="assets/images/Profile.png" 
                     alt="Profile" 
                     className="profile-picture"
                     onError={(e) => {
