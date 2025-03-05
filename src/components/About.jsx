@@ -11,8 +11,8 @@ const About = () => {
             <Col lg={4} className="mb-4 mb-lg-0">
               <div className="about-image-container">
                 <img 
-                  src="assets/images/developer-with-cat.png" 
-                  alt="Developer with a cat" 
+                  src="assets/images/Profile.png" 
+                  alt="Profile-Pic" 
                   className="img-fluid"
                   onError={(e) => {
                     e.target.onerror = null;
