@@ -48,7 +48,7 @@ const About = () => {
               </p>
               <Button variant="primary" className="custom-btn"
               onClick={() => window.open('/MAHALAKSHMI_RESUME.pdf', '_blank')}>
-                My resume
+                My Resume
               </Button>
             </Col>
           </Row>

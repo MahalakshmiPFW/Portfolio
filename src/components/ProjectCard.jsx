@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         
-        <Card.Title className="text-center fw-bold mb-2 text-secondary">{project.title}</Card.Title>
+        <Card.Title className="text-center fw-bold mb-2 text-primary">{project.title}</Card.Title>
         
         <div className="text-center mb-2">
           <span className="project-date text-secondary">{project.date}</span>
