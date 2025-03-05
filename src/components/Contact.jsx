@@ -25,13 +25,13 @@ const Contact = () => {
 
     //To send email using EmailJS
     emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
-      console.log('Email sent successfully!', response);
+      alert('Email sent successfully!  🎉', response);
       setName('');
       setEmail('');
       setMessage('');
     })
     .catch((error) => {
-      console.error('Error sending email:', error);
+      alert('Error sending email:', error);
     });
   }
 
@@ -59,7 +59,7 @@ const Contact = () => {
                   I'm always up for a chat. <br />
                   Ping me an email at <a href="mailto:sanjumahalakshmi12@gmail.com" className="text-primary">sanjumahalakshmi12@gmail.com</a> <br />or give me a shout on social media.
                 </p>
-                <div className="social-links d-flex justify-content-center justify-content-lg-start gap-3">
+                <div className="social-links d-flex justify-content-center gap-3">
                   <a href="https://github.com/MahalakshmiPFW" className="social-link">
                     <FaGithub className="fs-4" />
                   </a>
