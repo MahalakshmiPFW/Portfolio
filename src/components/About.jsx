@@ -37,7 +37,7 @@ const About = () => {
                 <SiJest className="tech-icon jest-icon" />
               </div>
               <h2 className="mb-2 fw-bold">About me</h2>
-              <h3 className="fs-2 mb-3">
+              <h3 className="fs-3 mb-3">
                 I'm a passionate software developer looking for my first international opportunity!
               </h3>
               <p className="mb-4 text-secondary">
