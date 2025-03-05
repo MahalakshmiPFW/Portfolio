@@ -4,65 +4,57 @@ import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpres
 
 const ProjectCard = ({ project }) => {
   const getTechIcon = (tech) => {
-    switch (tech) {
-      case 'react':
-        return <SiReact className="tech-icon react-icon" />;
-      case 'nodejs':
-        return <SiNodedotjs className="tech-icon node-icon" />;
-      case 'javascript':
-        return <SiJavascript className="tech-icon js-icon" />;
-      case 'typescript':
-        return <SiTypescript className="tech-icon ts-icon" />;
-      case 'bootstrap':
-        return <SiBootstrap className="tech-icon bootstrap-icon" />;
-      case 'express':
-        return <SiExpress className="tech-icon express-icon" />;
-      case 'mongodb':
-        return <SiMongodb className="tech-icon mongodb-icon" />;
-      case 'nextjs':
-        return <SiNextdotjs className="tech-icon next-icon" />;
-      case 'html':
-        return <SiHtml5 className="tech-icon html-icon" />;
-      case 'sass':
-        return <SiSass className="tech-icon sass-icon" />;
-      case 'cypress':
-        return <SiCypress className="tech-icon cypress-icon" />;
-      case 'jest':
-        return <SiJest className="tech-icon jest-icon" />;
-      default:
-        return null;
-    }
+    const iconMap = {
+      'react': SiReact,
+      'nodejs': SiNodedotjs,
+      'javascript': SiJavascript,
+      'typescript': SiTypescript,
+      'bootstrap': SiBootstrap,
+      'express': SiExpress,
+      'mongodb': SiMongodb,
+      'nextjs': SiNextdotjs,
+      'html': SiHtml5,
+      'sass': SiSass,
+      'cypress': SiCypress,
+      'jest': SiJest
+    };
+
+    const Icon = iconMap[tech];
+    return Icon ? <Icon className="tech-icon" /> : null;
   };
-  
 
   return (
-    <Card className="project-card h-100 text-center p-3">
-      {/* Circular Image Container */}
-      <div className="image-container mx-auto">
+    <Card className="project-card h-100 d-flex flex-column">
+      <div className="project-image-container mx-auto mb-3">
         <img 
           src={project.image} 
           alt={project.title}
           className="project-image"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = 'https://via.placeholder.com/100';
+            e.target.src = 'https://via.placeholder.com/120';
           }}
         />
       </div>
 
-      <Card.Body>
-        <div className="d-flex justify-content-between align-items-center mb-2">
-          <div className="d-flex gap-2">
-            {project.technologies.map((tech, index) => (
-              <span key={index}>{getTechIcon(tech)}</span>
-            ))}
-          </div>
+      <Card.Body className="d-flex flex-column">
+        <div className="d-flex justify-content-center mb-2">
+          {project.technologies.map((tech, index) => (
+            <span key={index} className="mx-1">
+              {getTechIcon(tech)}
+            </span>
+          ))}
         </div>
-        <Card.Title className="fw-bold">{project.title}</Card.Title>
-        <div className="d-flex justify-content-between align-items-center mb-2">
-          <span className="project-date">{project.date}</span>
+        
+        <Card.Title className="text-center fw-bold mb-2">{project.title}</Card.Title>
+        
+        <div className="text-center mb-2">
+          <span className="project-date text-secondary">{project.date}</span>
         </div>
-        <Card.Text>{project.description}</Card.Text>
+        
+        <Card.Text className="text-center flex-grow-1">
+          {project.description}
+        </Card.Text>
       </Card.Body>
     </Card>
   );

@@ -36,7 +36,7 @@ const About = () => {
                 <SiCypress className="tech-icon cypress-icon" />
                 <SiJest className="tech-icon jest-icon" />
               </div>
-              <h2 className="mb-2 fw-bold">About me</h2>
+              <h2 className="mb-2 fw-bold">About Me</h2>
               <h3 className="fs-3 mb-3">
                 I'm a passionate software developer looking for my first international opportunity!
               </h3>
