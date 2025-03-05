@@ -15,7 +15,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Sweetwater Student Opportunities App',
+      title: 'Sweetwater Student Opportunities',
       description: 'An event management app for students to find and join opportunities at Sweetwater.',
       date: 'Sept - Dec 2024',
       image: 'assets/images/sweetwater-1.png',
