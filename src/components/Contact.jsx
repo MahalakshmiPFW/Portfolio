@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowRight } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -10,15 +11,37 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ name, email, message });
-    // Add actual form submission logic here
-  };
+
+    const serviceId = 'service_cw9a0ww';
+    const templateId = 'template_xw75uhu';
+    const publicKey = 'XEnmDteQGfgktRQm3';
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'Mahalakshmi',
+      message: message,
+    }
+
+    //To send email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
+      console.log('Email sent successfully!', response);
+      setName('');
+      setEmail('');
+      setMessage('');
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+    });
+  }
+
 
   return (
     <section id="contact" className="contact-section py-5">
       <Container>
         <div className="contact-container rounded-4 p-4 p-md-5">
           <Row>
-            <Col lg={4} className="mb-5 mb-lg-0">
+            <Col lg={5} className="mb-5 mb-lg-0">
               <div className="text-center text-lg-start">
                 <div className="profile-picture-container mb-4">
                   <img 
@@ -31,26 +54,26 @@ const Contact = () => {
                     }}
                   />
                 </div>
-                <h2 className="fs-2 fw-bold mb-2 text-center">Enjoyed my work? Let's connect!</h2>
-                <p className="text-light mb-4">
-                  I'm always up for a chat. Ping me an email at <a href="mailto:mahalakshmimahadevan.1225@gmail.com" className="text-primary">mahalakshmimahadevan.1225@gmail.com</a> or give me a shout on social media.
+                <h2 className="fs-2 sanjumahalakshmi12@gmail.com mb-2 text-center">Enjoyed my work? Let's connect!</h2>
+                <p className="mb-4">
+                  I'm always up for a chat. Ping me an email at <a href="mailto:sanjumahalakshmi12@gmail.com" className="text-primary">sanjumahalakshmi12@gmail.com</a> or give me a shout on social media.
                 </p>
                 <div className="social-links d-flex justify-content-center justify-content-lg-start gap-3">
-                  <a href="#" className="social-link">
+                  <a href="https://github.com/MahalakshmiPFW" className="social-link">
                     <FaGithub className="fs-4" />
                   </a>
-                  <a href="#" className="social-link">
+                  <a href="https://www.linkedin.com/in/mahalakshmimahadevan/" className="social-link">
                     <FaLinkedin className="fs-4" />
                   </a>
-                  <a href="#" className="social-link">
+                  <a href="https://www.instagram.com/tvdforever__delena/" className="social-link">
                     <FaInstagram className="fs-4" />
                   </a>
                 </div>
               </div>
             </Col>
-            <Col lg={8}>
+            <Col lg={7}>
               <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="contactName">
+                <Form.Group className="mb-4" controlId="contactName">
                   <Form.Control 
                     type="text" 
                     placeholder="Name" 

@@ -3,14 +3,14 @@
 
 :root {
   /* Light theme variables */
-  --primary-color: #a984f8;
+  --primary-color: #8a68d5;
   --secondary-color: #53c28b;
   --light-bg: #f8f9fa;
   --light-secondary-bg: #e9ecef;
   --light-component-bg: #ffffff;
   --light-border-color: #dee2e6;
-  --light-text-color: #343a40;
-  --light-text-secondary: #6c757d;
+  --light-text-color: black;
+  --light-text-secondary: #565c61;
 
   /* Dark theme variables - your existing variables */
   --dark-bg: #13111c;
@@ -18,7 +18,7 @@
   --dark-component-bg: #222131;
   --dark-border-color: #2e2b3f;
   --dark-text-color: #ffffff;
-  --dark-text-secondary: #a0a0a0;
+  --dark-text-secondary: #aeadad;
 }
 
 /* Apply theme variables based on data-theme attribute */
@@ -70,6 +70,7 @@ body[data-theme="dark"] {
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+  font-weight: bold;
 }
 
 .btn-primary:hover, .btn-primary:focus {
