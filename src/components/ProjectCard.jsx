@@ -46,13 +46,13 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         
-        <Card.Title className="text-center fw-bold mb-2">{project.title}</Card.Title>
+        <Card.Title className="text-center fw-bold mb-2 text-secondary">{project.title}</Card.Title>
         
         <div className="text-center mb-2">
           <span className="project-date text-secondary">{project.date}</span>
         </div>
         
-        <Card.Text className="text-center flex-grow-1">
+        <Card.Text className="text-center flex-grow-1 text-secondary">
           {project.description}
         </Card.Text>
       </Card.Body>
