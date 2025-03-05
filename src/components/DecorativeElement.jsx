@@ -15,6 +15,12 @@ const DecorativeElement = ({ type, position }) => {
             <path d="M10 0 L40 30 L30 40 L0 10 Z" fill="#53c28b" fillOpacity="0.3" />
           </svg>
         );
+      case 'music-note':
+        return (
+          <span style={{ fontSize: '40px', color: '#53c28b',  }}>
+            &#x266A; {/* U+266A (♪) */}
+          </span>
+        );
       default:
         return null;
     }

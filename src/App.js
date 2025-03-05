@@ -17,8 +17,10 @@ function App() {
       <div className="app-container">
         <Navbar />
         <Hero />
-        <DecorativeElement type="diamond" position="right" />
+        <DecorativeElement type="music-note" position="right" />
         <About />
+        <DecorativeElement type="music-note" position="left" />
+        <DecorativeElement type="diamond" position="right" />
         <Projects />
         <DecorativeElement type="corner" position="right" />
         <Contact />
