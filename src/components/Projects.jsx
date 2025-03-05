@@ -25,7 +25,7 @@ const Projects = () => {
       id: 3,
       title: 'Portfolio',
       description: 'A personal portfolio showcasing my web development skills, including projects built with React, Node.js, and other modern technologies.',
-      date: 'Jul - Dec 2023',
+      date: ' Feb - Mar 2025',
       image: 'assets/images/Portfolio.png',
       technologies: ['react', 'bootstrap']
     }
@@ -48,6 +48,7 @@ const Projects = () => {
           <Button 
             variant="outline-secondary" 
             className="custom-btn d-inline-flex align-items-center"
+            onClick={() => window.open('https://github.com/MahalakshmiPFW?tab=repositories', '_blank')}
           >
             <span className="me-2">See all</span>
             <FaArrowRight />

@@ -56,7 +56,8 @@ const Contact = () => {
                 </div>
                 <h2 className="fs-2 sanjumahalakshmi12@gmail.com mb-2 text-center">Enjoyed my work? Let's connect!</h2>
                 <p className="mb-4 text-center">
-                  I'm always up for a chat. Ping me an email at <a href="mailto:sanjumahalakshmi12@gmail.com" className="text-primary">sanjumahalakshmi12@gmail.com</a> or give me a shout on social media.
+                  I'm always up for a chat. <br />
+                  Ping me an email at <a href="mailto:sanjumahalakshmi12@gmail.com" className="text-primary">sanjumahalakshmi12@gmail.com</a> <br />or give me a shout on social media.
                 </p>
                 <div className="social-links d-flex justify-content-center justify-content-lg-start gap-3">
                   <a href="https://github.com/MahalakshmiPFW" className="social-link">

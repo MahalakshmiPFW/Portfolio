@@ -46,7 +46,8 @@ const About = () => {
                 for creativity, I’m now on the lookout for opportunities to bring my skills and enthusiasm to a tech company in the United States or 
                 Europe. I’m excited by the idea of relocating to embrace new challenges and explore fresh horizons.
               </p>
-              <Button variant="primary" className="custom-btn">
+              <Button variant="primary" className="custom-btn"
+              onClick={() => window.open('/MAHALAKSHMI_RESUME.pdf', '_blank')}>
                 My resume
               </Button>
             </Col>
