@@ -1,4 +1,4 @@
-# README :)
+# README :
 This portfolio project is developed using React.js, Bootstrap and deployed using Vercel!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
