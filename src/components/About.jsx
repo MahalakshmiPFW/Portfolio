@@ -47,7 +47,7 @@ const About = () => {
                 Europe. I’m excited by the idea of relocating to embrace new challenges and explore fresh horizons.
               </p>
               <Button variant="primary" className="custom-btn"
-              onClick={() => window.open('/MAHALAKSHMI_RESUME.pdf', '_blank')}>
+              onClick={() => window.open('/MAHALAKSHMI___RESUME-5.PDF', '_blank')}>
                 My Resume
               </Button>
             </Col>

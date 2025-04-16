@@ -34,7 +34,7 @@ const Hero = () => {
                 className="img-fluid"
                 style={{ 
                   maxWidth: '190%', 
-                  transform: 'translateX(5%) scale(1.2)',
+                  transform: 'translateX(5%) scale(1.5)',
                   position: 'relative',
                   zIndex: 1
                 }}

@@ -21,6 +21,16 @@ const DecorativeElement = ({ type, position }) => {
             &#x266A; {/* U+266A (♪) */}
           </span>
         );
+
+      case 'piano':
+        return (
+          <div style={{ textAlign: 'center', color: '#53c28b' }}>
+            <span role="img" aria-label="piano" style={{ fontSize: '30px' }}>🎹</span>
+            <div style={{ fontSize: '24px', marginTop: '-5px' }}>
+              &#x266A; &#x266B; &#x266C;
+            </div>
+          </div>
+        );
       default:
         return null;
     }
