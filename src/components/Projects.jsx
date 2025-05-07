@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
 import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -34,17 +35,38 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section py-5">
       <Container>
-        <h2 className="text-center fs-2 fw-bold mb-5">Take a look at my Highlighted Projects</h2>
-        
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-center fs-2 fw-bold mb-2">Take a look at my Highlighted Projects</h2>
+          <p className="text-center text-secondary mb-5">
+            Here are some of the projects I'm most proud of. Each one taught me something new and challenged me to grow as a developer.
+          </p>
+        </motion.div>
         <Row className="g-4">
-          {projects.map(project => (
+          {projects.map((project, idx) => (
             <Col key={project.id} md={4}>
-              <ProjectCard project={project} />
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
             </Col>
           ))}
         </Row>
-
-        <div className="text-center mt-5">
+        <motion.div
+          className="text-center mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <Button 
             variant="outline-secondary" 
             className="custom-btn d-inline-flex align-items-center"
@@ -53,7 +75,7 @@ const Projects = () => {
             <span className="me-2">See all</span>
             <FaArrowRight />
           </Button>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );
