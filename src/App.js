@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DecorativeElement from './components/DecorativeElement';
+import Timeline from './components/Timeline';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <DecorativeElement type="music-note" position="right" />
         <About />
         <DecorativeElement type="music-note" position="left" />
+        <Timeline />
         <DecorativeElement type="diamond" position="right" />
         <Projects />
         <DecorativeElement type="corner" position="right" />
