@@ -87,7 +87,7 @@ const About = () => {
                 </ul>
               </div>
               <Button variant="primary" className="custom-btn me-2"
-                onClick={() => window.open('/MAHALAKSHMI___RESUME-5.pdf', '_blank')}>
+                onClick={() => window.open('/Resume.pdf', '_blank')}>
                 My Resume
               </Button>
               <Button variant="outline-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>

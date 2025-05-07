@@ -41,7 +41,7 @@ const Hero = () => {
                 <span className="me-2">Let's Connect!</span>
                 <FaArrowRight />
               </Button>
-              <Button variant="outline-primary" href="/MAHALAKSHMI___RESUME-5.pdf" target="_blank">
+              <Button variant="outline-primary" href="/Resume.pdf" target="_blank">
                 Download Resume
               </Button>
             </div>
