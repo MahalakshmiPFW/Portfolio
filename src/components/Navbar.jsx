@@ -43,7 +43,7 @@ const Navbar = () => {
           <Nav className="ms-auto align-items-center">
             <Nav.Link href="#home" className="nav-link">Home</Nav.Link>
             <Nav.Link href="#about" className="nav-link">About</Nav.Link>
-            <Nav.Link href="#education" className="nav-link">Education</Nav.Link>
+            <Nav.Link href="#timeline" className="nav-link">Journey</Nav.Link>
             <Nav.Link href="#projects" className="nav-link">Projects</Nav.Link>
             <Nav.Link href="#contact" className="nav-link">Contact</Nav.Link>
             <a href="https://github.com/MahalakshmiPFW" target="_blank" rel="noopener noreferrer" className="nav-link px-2">
