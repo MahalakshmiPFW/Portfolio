@@ -6,12 +6,27 @@ import { motion } from 'framer-motion';
 const Timeline = () => {
   const timelineData = [
     {
+      id: 0,
+      type: "work",
+      title: "Full Stack Software Engineering Intern",
+      organization: "ForOurLastNames",
+      location: "Remote",
+      duration: "June 2025 - Present",
+      logo: "assets/images/FOLN Logo.png", // Placeholder, update if you have the company logo
+      responsibilities: [
+        "Lead intern for the App Store deployment project (iOS & Android): requirements gathering, scoping, and execution.",
+        "Collaborating on the Regression Testing project to ensure product quality and reliability.",
+        "Building an AI ChatBot to enhance user engagement and support.",
+        "Working closely with cross-functional teams to deliver full stack solutions."
+      ]
+    },
+    {
       id: 1,
       type: "education",
       title: "Master of Science in Computer Science",
       organization: "Purdue University",
       location: "Fort Wayne, Indiana",
-      duration: "2024 - 2026",
+      duration: "August 2024 - May 2026",
       gpa: "4.0/4.0",
       logo: "assets/images/PurdueLogo.svg",
       activities: [
@@ -33,7 +48,7 @@ const Timeline = () => {
       title: "Process Automation and Procurement Intern",
       organization: "Schneider Electric",
       location: "Dubai, U.A.E",
-      duration: "2024",
+      duration: "June 2024 - July 2024",
       logo: "assets/images/SE Logo1.png",
       responsibilities: [
         "Designed and implemented a streamlined, user-friendly supplier scorecard application for the Procurement and Supply Chain department",
@@ -47,7 +62,7 @@ const Timeline = () => {
       title: "Research Intern",
       organization: "BetaIT",
       location: "Dubai, U.A.E",
-      duration: "2023",
+      duration: "July 2023 - September 2023",
       logo: "assets/images/BetaIT.jpeg",
       responsibilities: [
         "Assisted the Director of Corporate Development with research regarding Odoo and its applications",
@@ -60,7 +75,7 @@ const Timeline = () => {
       title: "IT Intern and Team Leader",
       organization: "BetaIT",
       location: "Dubai, U.A.E",
-      duration: "2022",
+      duration: "July 2022 - August 2022",
       logo: "assets/images/BetaIT.jpeg",
       responsibilities: [
         "Utilized Hypervisors and Autopsy in Kali Linux",
@@ -74,7 +89,7 @@ const Timeline = () => {
       title: "Bachelor of Science in Computer Engineering",
       organization: "American University of Sharjah",
       location: "Sharjah, UAE",
-      duration: "2020 - 2023",
+      duration: "August 2020 - December 2023",
       logo: "assets/images/AUS Logo.png",
       activities: [
         {

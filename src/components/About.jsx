@@ -71,7 +71,7 @@ const About = () => {
                   Building with code. Dreaming in color.
               </h3>
               <p className="mb-4 text-secondary">
-                I’m a developer who loves turning ideas into interactive, beautiful apps.<br />
+                I'm a developer who loves turning ideas into interactive, beautiful apps.<br />
                 React, Node.js, and a splash of creativity are my favorite tools.<br />
                 I'm now on the lookout for opportunities to bring my skills and enthusiasm to a tech company in the United States or
                 Europe. <br /><br />
@@ -87,7 +87,7 @@ const About = () => {
                 </ul>
               </div>
               <Button variant="primary" className="custom-btn me-2"
-                onClick={() => window.open('/Resume.pdf', '_blank')}>
+                onClick={() => window.open('/Resume.pdf', '_blank', 'noopener,noreferrer')}>
                 My Resume
               </Button>
               <Button variant="outline-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
