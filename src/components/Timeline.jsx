@@ -14,7 +14,7 @@ const Timeline = () => {
       duration: "June 2025 - Present",
       logo: "assets/images/FOLN Logo.png", // Placeholder, update if you have the company logo
       responsibilities: [
-        "Lead intern for the App Store deployment project (iOS & Android): requirements gathering, scoping, and execution.",
+        "Leading intern for the App Store deployment project (iOS & Android): requirements gathering, scoping, and execution.",
         "Collaborating on the Regression Testing project to ensure product quality and reliability.",
         "Building an AI ChatBot to enhance user engagement and support.",
         "Working closely with cross-functional teams to deliver full stack solutions."
