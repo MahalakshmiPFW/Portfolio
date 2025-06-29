@@ -37,7 +37,7 @@ const Timeline = () => {
         },
         {
           title: "Box Office - Student Staff",
-          description: "Provide front-line customer service by selling and distributing tickets using specialized ticketing software, responding to inquiries via phone and email, and supporting event operations through ushering duties, including ticket scanning and guest assistance.",
+          description: "Handled ticket sales using ticketing software, responded to customer inquiries via phone/email, and assisted with event entry and guest support.",
           duration: "2025 - Present"
         }
       ]
