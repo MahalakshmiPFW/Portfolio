@@ -73,8 +73,7 @@ const About = () => {
               <p className="mb-4 text-secondary">
                 I'm a developer who loves turning ideas into interactive, beautiful apps.<br />
                 React, Node.js, and a splash of creativity are my favorite tools.<br />
-                I'm now on the lookout for opportunities to bring my skills and enthusiasm to a tech company in the United States or
-                Europe. <br /><br />
+                I'm now on the lookout for opportunities to bring my skills and enthusiasm to a great company anywhere in the world. <br /><br />
                 Always learning, always creating.
               </p>
               <div className="mb-3">
