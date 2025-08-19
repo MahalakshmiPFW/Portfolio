@@ -11,12 +11,13 @@ const Timeline = () => {
       title: "Full Stack Software Engineering Intern",
       organization: "ForOurLastNames",
       location: "Remote",
-      duration: "June 2025 - Present",
+      duration: "June 2025 - August 2025",
       logo: "assets/images/FOLN Logo.png", // Placeholder, update if you have the company logo
       responsibilities: [
-        "Leading intern for the App Store deployment project (iOS & Android): requirements gathering, scoping, and execution.",
-        "Collaborating on the Regression Testing project using Playwright to ensure product quality and reliability.",
-        "Working closely with cross-functional teams to deliver full stack solutions."
+        "Developed React components and Typescript functionality for user onboarding, and other features across financial technology platform.",
+        "Led App Store deployment project for iOS and Android, researching submission requirements and creating comprehensive deployment workflows and documentation.",
+        "Implemented automated testing using Playwright, developing test scripts for frontend quality assurance and regression testing.",
+        "Delivered 9 feature enhancements and resolved 4 critical UI/UX bugs, achieving 95% project completion rate while collaborating with cross-functional development teams."
       ]
     },
     {
