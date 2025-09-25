@@ -12,7 +12,7 @@ const Projects = () => {
       description: 'An e-commerce platform for students to buy and sell products on campus.',
       date: 'Sept - Dec 2024',
       image: 'assets/images/CampusMart-logo.png',
-      technologies: ['react', 'nodejs', 'mongodb', 'express', 'bootstrap']
+      technologies: ['react', 'nodejs', 'mongodb', 'express', 'bootstrap', 'vercel']
     },
     {
       id: 2,
@@ -26,9 +26,17 @@ const Projects = () => {
       id: 3,
       title: 'Portfolio',
       description: 'A personal portfolio showcasing my web development skills, including projects built with React, Node.js, and other modern technologies.',
-      date: ' Feb - Mar 2025',
+      date: 'Feb - Mar 2025',
       image: 'assets/images/Portfolio.png',
-      technologies: ['react', 'bootstrap']
+      technologies: ['react', 'bootstrap', 'framer-motion', 'vercel']
+    },
+    {
+      id: 4,
+      title: 'Syllabus to Calendar App',
+      description: 'Converts course syllabi into organized calendar tasks using AI. Pasting text triggers GPT-4-powered task extraction and classification. PDF upload is a Work in Progress. Includes dual calendar/list views and optional Google Calendar sync.',
+      date: 'Sept 2025 - Present',
+      image: 'assets/images/Syl-to-Cal-app.png',
+      technologies: ['react', 'nextjs', 'typescript', 'nodejs', 'tailwindcss', 'openai', 'vercel']
     }
   ];
 
@@ -52,7 +60,7 @@ const Projects = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.15 }} // increased delay increment for smooth stagger
                 viewport={{ once: true }}
               >
                 <ProjectCard project={project} />
