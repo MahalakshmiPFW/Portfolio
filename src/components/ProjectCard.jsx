@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpress, SiMongodb, SiNextdotjs, SiHtml5, SiSass, SiCypress, SiJest, SiVercel, SiFramer, SiTailwindcss, SiOpenai } from 'react-icons/si';
+import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpress, SiMongodb, SiNextdotjs, SiHtml5, SiSass, SiCypress, SiJest, SiVercel, SiFramer, SiTailwindcss, SiGooglegemini } from 'react-icons/si';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
       'jest': SiJest,
       'framer-motion': SiFramer,
       'vercel': SiVercel,
-      'openai': SiOpenai,
+      'gemini': SiGooglegemini,
     };
 
     const Icon = iconMap[tech];

@@ -32,11 +32,11 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Syllabus to Calendar App',
-      description: 'Converts course syllabi into organized calendar tasks using AI. Pasting text triggers GPT-4-powered task extraction and classification. PDF upload is a Work in Progress. Includes dual calendar/list views and optional Google Calendar sync.',
+      title: 'SyllabusSync',
+      description: 'Converts course syllabi into organized calendar tasks using AI. Pasting text triggers Google Gemini AI-powered task extraction and classification. PDF upload is a Work in Progress. Includes dual calendar/list views and optional Google Calendar sync.',
       date: 'Sept 2025 - Present',
-      image: 'assets/images/Syl-to-Cal-app.png',
-      technologies: ['react', 'nextjs', 'typescript', 'nodejs', 'tailwindcss', 'openai', 'vercel']
+      image: 'assets/images/SyllabusSync.png',
+      technologies: ['react', 'nextjs', 'typescript', 'nodejs', 'tailwindcss', 'gemini', 'vercel']
     }
   ];
 
