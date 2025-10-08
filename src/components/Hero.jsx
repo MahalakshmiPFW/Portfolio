@@ -49,12 +49,18 @@ const Hero = () => {
               </Button>
             </div>
           </Col>
-          <Col md={7} className="position-relative">
+          <Col md={7} className="position-relative d-flex justify-content-center justify-content-md-end">
             <motion.div
-              className="hero-image-container d-flex justify-content-center"
+              className="hero-image-container d-flex justify-content-center justify-content-md-end align-items-center"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              style={{
+                minHeight: '500px',
+                paddingRight: '0',
+                width: '100%',
+                height: '100%'
+              }}
             >
               <img
                 src="assets/images/dev-type.svg"
@@ -62,11 +68,14 @@ const Hero = () => {
                 className="img-fluid"
                 loading="eager"
                 decoding="async"
-                width="800"
-                height="600"
+                width="900"
+                height="900"
                 style={{
-                  maxWidth: '190%',
-                  transform: 'translateX(5%) scale(1.5)',
+                  maxWidth: '100%',
+                  width: '100%',
+                  height: '100%',
+                  maxHeight: '500px',
+                  objectFit: 'contain',
                   position: 'relative',
                   zIndex: 1
                 }}
