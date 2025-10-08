@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import { FaArrowRight, FaSmileBeam } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
@@ -57,6 +60,10 @@ const Hero = () => {
                 src="assets/images/dev-type.svg"
                 alt="Developer coding"
                 className="img-fluid"
+                loading="eager"
+                decoding="async"
+                width="800"
+                height="600"
                 style={{
                   maxWidth: '190%',
                   transform: 'translateX(5%) scale(1.5)',

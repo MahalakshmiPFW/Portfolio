@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpress, SiMongodb, SiNextdotjs, SiHtml5, SiSass, SiCypress, SiJest } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
@@ -30,6 +33,10 @@ const About = () => {
                   src="assets/images/Profile.png"
                   alt="Profile-Pic"
                   className="img-fluid rounded-circle border border-3"
+                  loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="300"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = 'https://via.placeholder.com/300x300';

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowRight } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -10,7 +13,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
     console.log({ name, email, message });
@@ -26,7 +29,8 @@ const Contact = () => {
       message: message,
     }
 
-    //To send email using EmailJS
+    //To send email using EmailJS (dynamically imported to reduce initial bundle size)
+    const { default: emailjs } = await import('@emailjs/browser');
     emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
       setStatus('success');
       setName('');
@@ -62,6 +66,10 @@ const Contact = () => {
                     src="assets/images/Profile.png" 
                     alt="Profile" 
                     className="profile-picture"
+                    loading="lazy"
+                    decoding="async"
+                    width="160"
+                    height="160"
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = 'https://via.placeholder.com/160x160';

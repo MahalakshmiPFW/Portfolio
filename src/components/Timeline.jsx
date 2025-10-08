@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import { motion } from 'framer-motion';
 //import { FaGraduationCap, FaBriefcase, FaCode } from 'react-icons/fa';
 
@@ -187,6 +187,10 @@ const Timeline = () => {
                           src={item.logo} 
                           alt={`${item.organization} logo`}
                           className="img-fluid rounded"
+                          loading="lazy"
+                          decoding="async"
+                          width={60}
+                          height={60}
                           style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                           onError={(e) => {
                             e.target.onerror = null;

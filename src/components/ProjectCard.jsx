@@ -39,6 +39,10 @@ const ProjectCard = ({ project }) => {
           src={project.image} 
           alt={project.title}
           className="project-image"
+          loading="lazy"
+          decoding="async"
+          width={120}
+          height={120}
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = 'https://via.placeholder.com/120';
@@ -97,4 +101,4 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-export default ProjectCard;
+export default React.memo(ProjectCard);

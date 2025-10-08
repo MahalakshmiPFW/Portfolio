@@ -3,7 +3,7 @@ import { FaArrowUp, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 
-const Footer = () => {
+const Footer = React.memo(() => {
   const { darkMode } = useTheme();
 
   // Dynamic styles based on theme
@@ -68,6 +68,6 @@ const Footer = () => {
       </div>
     </motion.footer>
   );
-};
+});
 
 export default Footer;
