@@ -43,4 +43,4 @@ const DecorativeElement = ({ type, position }) => {
   );
 };
 
-export default DecorativeElement;
+export default React.memo(DecorativeElement);

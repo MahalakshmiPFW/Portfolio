@@ -1,5 +1,8 @@
 import React from 'react';
-import { Navbar as BootstrapNavbar, Nav, Container, Button } from 'react-bootstrap';
+import BootstrapNavbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import { useTheme } from '../contexts/ThemeContext';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
