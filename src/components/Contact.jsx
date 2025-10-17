@@ -47,6 +47,16 @@ const Contact = () => {
     <section id="contact" className="contact-section py-5">
       <Container>
         <motion.div
+          className="text-center mb-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="display-5 fw-bold mb-3">Get In Touch</h2>
+          <p className="lead text-secondary">Ready to collaborate? Let's start a conversation!</p>
+        </motion.div>
+        <motion.div
           className="contact-container rounded-4 p-4 p-md-5"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

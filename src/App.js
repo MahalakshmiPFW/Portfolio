@@ -62,8 +62,8 @@ function App() {
           </Suspense>
         </LazySection>
         <DecorativeElement type="corner" position="right" />
-        <LazySection>
-          <Suspense fallback={null}>
+        <LazySection rootMargin="100px">
+          <Suspense fallback={<div className="text-center py-5">Loading contact section...</div>}>
             <Contact />
           </Suspense>
         </LazySection>

@@ -133,6 +133,19 @@ body[data-theme="dark"] {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Contact section specific styles */
+.contact-section {
+  min-height: 80vh;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--secondary-bg) 100%);
+}
+
+.contact-container {
+  background: linear-gradient(135deg, var(--component-bg) 0%, var(--secondary-bg) 100%);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
 .hero-section {
   margin-top: 120px;
 }
