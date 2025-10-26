@@ -5,6 +5,7 @@ import './App.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Skills from './components/Skills';
 import DecorativeElement from './components/DecorativeElement';
 const About = React.lazy(() => import('./components/About'));
 const Projects = React.lazy(() => import('./components/Projects'));
@@ -43,6 +44,7 @@ function App() {
       <div className="app-container">
         <Navbar />
         <Hero />
+        <Skills />
         <DecorativeElement type="music-note" position="right" />
         <LazySection>
           <Suspense fallback={null}>

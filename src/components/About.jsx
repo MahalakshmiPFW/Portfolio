@@ -3,23 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { SiReact, SiNodedotjs, SiJavascript, SiTypescript, SiBootstrap, SiExpress, SiMongodb, SiNextdotjs, SiHtml5, SiSass, SiCypress, SiJest } from 'react-icons/si';
-import { motion } from 'framer-motion';
-
-const techIcons = [
-  { icon: <SiReact />, name: "React" },
-  { icon: <SiNodedotjs />, name: "Node.js" },
-  { icon: <SiJavascript />, name: "JavaScript" },
-  { icon: <SiTypescript />, name: "TypeScript" },
-  { icon: <SiBootstrap />, name: "Bootstrap" },
-  { icon: <SiExpress />, name: "Express" },
-  { icon: <SiMongodb />, name: "MongoDB" },
-  { icon: <SiNextdotjs />, name: "Next.js" },
-  { icon: <SiHtml5 />, name: "HTML5" },
-  { icon: <SiSass />, name: "Sass" },
-  { icon: <SiCypress />, name: "Cypress" },
-  { icon: <SiJest />, name: "Jest" },
-];
 
 const About = () => {
   return (
@@ -45,34 +28,6 @@ const About = () => {
               </div>
             </Col>
             <Col lg={8}>
-              <motion.div
-                className="tech-stack d-flex gap-3 mb-4 flex-wrap"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.08
-                    }
-                  }
-                }}
-              >
-                {techIcons.map((tech, idx) => (
-                  <motion.div
-                    key={tech.name}
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 }
-                    }}
-                    whileHover={{ scale: 1.2, rotate: 8 }}
-                    className="tech-icon fs-2"
-                    title={tech.name}
-                  >
-                    {tech.icon}
-                  </motion.div>
-                ))}
-              </motion.div>
               <h2 className="mb-2 fw-bold">About Me</h2>
               <h3 className="fs-3 mb-3">
                   Building with code. Dreaming in color.

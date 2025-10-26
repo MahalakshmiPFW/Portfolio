@@ -74,7 +74,7 @@ const Hero = () => {
                   maxWidth: '100%',
                   width: '100%',
                   height: '100%',
-                  maxHeight: '500px',
+                  maxHeight: '350px',
                   objectFit: 'contain',
                   position: 'relative',
                   zIndex: 1
