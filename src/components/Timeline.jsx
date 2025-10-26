@@ -14,10 +14,10 @@ const Timeline = () => {
       duration: "June 2025 - August 2025",
       logo: "assets/images/FOLN Logo.png", // Placeholder, update if you have the company logo
       responsibilities: [
-        "Developed React components and Typescript functionality for user onboarding, and other features across financial technology platform.",
-        "Led App Store deployment project for iOS and Android, researching submission requirements and creating comprehensive deployment workflows and documentation.",
-        "Implemented automated testing using Playwright, developing test scripts for frontend quality assurance and regression testing.",
-        "Delivered 9 feature enhancements and resolved 4 critical UI/UX bugs, achieving 95% project completion rate while collaborating with cross-functional development teams."
+        "Built user-facing features for a financial technology platform",
+        "Led mobile app deployment to iOS and Android App Stores",
+        "Implemented automated testing to improve product quality",
+        "Delivered 9 feature enhancements and fixed 4 critical bugs"
       ]
     },
     {
@@ -31,13 +31,13 @@ const Timeline = () => {
       logo: "assets/images/PurdueLogo.svg",
       activities: [
         {
-          title: "Math & Science Testing Center - Student Staff",
-          description: "Assisting students with testing and proctoring for Math and Science courses.",
+          title: "Testing Center Student Staff",
+          description: "Proctored exams and assisted students in Math & Science courses",
           duration: "2025 - Present"
         },
         {
-          title: "Box Office - Student Staff",
-          description: "Handled ticket sales using ticketing software, responded to customer inquiries via phone/email, and assisted with event entry and guest support.",
+          title: "Box Office Student Staff",
+          description: "Handled ticket sales, customer service, and event operations",
           duration: "2025 - Present"
         }
       ]
@@ -51,9 +51,9 @@ const Timeline = () => {
       duration: "June 2024 - July 2024",
       logo: "assets/images/SE Logo1.png",
       responsibilities: [
-        "Designed and implemented a streamlined, user-friendly supplier scorecard application for the Procurement and Supply Chain department",
-        "Utilized Python for backend processing, Tkinter for the user interface, and MySQL with phpMyAdmin for database management",
-        "Completed cybersecurity trainings from Schneider ACES Cybersecurity team"
+        "Built supplier evaluation application for procurement department",
+        "Developed full-stack solution using Python and MySQL",
+        "Completed cybersecurity training certification"
       ]
     },
     {
@@ -65,8 +65,8 @@ const Timeline = () => {
       duration: "July 2023 - September 2023",
       logo: "assets/images/BetaIT.jpeg",
       responsibilities: [
-        "Assisted the Director of Corporate Development with research regarding Odoo and its applications",
-        "Explored how Odoo could be integrated into the company's 2nd digital transformation"
+        "Conducted research on digital transformation platforms",
+        "Analyzed integration strategies for company-wide implementation"
       ]
     },
     {
@@ -78,9 +78,9 @@ const Timeline = () => {
       duration: "July 2022 - August 2022",
       logo: "assets/images/BetaIT.jpeg",
       responsibilities: [
-        "Utilized Hypervisors and Autopsy in Kali Linux",
-        "Created and configured virtual load balancers on Google Public Cloud",
-        "Focused on research, presentation, and teamwork"
+        "Set up cloud infrastructure on Google Cloud Platform",
+        "Configured virtual load balancers and security systems",
+        "Led team projects and delivered technical presentations"
       ]
     },
     {
@@ -93,24 +93,14 @@ const Timeline = () => {
       logo: "assets/images/AUS Logo.png",
       activities: [
         {
-          title: "Python Bootcamp Assistant",
-          description: "Assisted with 2-day Python Bootcamp under the Associate Dean of Business",
+          title: "Python Bootcamp Instructor Assistant",
+          description: "Taught programming concepts to business students",
           duration: "March 2023"
         }
       ]
     }
   ];
 
-  // const getIcon = (type) => {
-  //   switch (type) {
-  //     case 'education':
-  //       return <FaGraduationCap className="text-primary" />;
-  //     case 'work':
-  //       return <FaBriefcase className="text-primary" />;
-  //     default:
-  //       return <FaCode className="text-primary" />;
-  //   }
-  // };
 
   return (
     <section id="timeline" className="timeline-section py-5">
@@ -128,8 +118,8 @@ const Timeline = () => {
           </p>
         </motion.div>
 
-        <div className="timeline-container position-relative">
-          {/* Vertical line */}
+        <div className="timeline-container position-relative" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          {/* Vertical dashed line */}
           <div 
             className="timeline-line position-absolute"
             style={{
@@ -137,147 +127,133 @@ const Timeline = () => {
               transform: 'translateX(-50%)',
               width: '2px',
               height: '100%',
-              background: 'var(--primary-color)',
-              opacity: 0.3
+              borderLeft: '2px dashed var(--secondary-color)',
+              opacity: 0.6,
+              top: '0'
             }}
           />
 
-          {timelineData.map((item, idx) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              viewport={{ once: true }}
-              className="timeline-item position-relative mb-5"
-            >
-              {/* Timeline dot */}
-              <div 
-                className="timeline-dot position-absolute rounded-circle"
-                style={{
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '20px',
-                  height: '20px',
-                  background: 'var(--primary-color)',
-                  border: '4px solid var(--component-bg)',
-                  zIndex: 1
-                }}
-              />
+          {timelineData.map((item, idx) => {
+            const isEven = idx % 2 === 0;
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+                className="timeline-item position-relative mb-5"
+              >
+                <div className="row align-items-center">
+                  {/* Image - left or right based on index */}
+                  <div className={`col-md-5 ${isEven ? 'order-2' : ''}`}>
+                    <motion.div
+                      className="timeline-image-container mx-auto"
+                      style={{
+                        width: '150px',
+                        height: '150px',
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                        border: '4px solid var(--component-bg)',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                        backgroundColor: 'white',
+                        padding: '10px'
+                      }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <img 
+                        src={item.logo} 
+                        alt={`${item.organization}`}
+                        className="w-100 h-100"
+                        style={{ objectFit: 'contain', borderRadius: '50%' }}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'https://via.placeholder.com/150';
+                        }}
+                      />
+                    </motion.div>
+                  </div>
 
-              <div className="row">
-                <div className={`col-md-6 ${idx % 2 === 0 ? 'text-md-end' : 'text-md-start order-md-2'}`}>
-                  <div 
-                    className="timeline-content p-4 rounded-4"
-                    style={{
-                      background: 'var(--component-bg)',
-                      border: '1px solid var(--border-color)',
-                      marginRight: idx % 2 === 0 ? '2rem' : '0',
-                      marginLeft: idx % 2 === 0 ? '0' : '2rem',
-                      textAlign: 'left'
-                    }}
-                  >
-                    <div className="d-flex align-items-center mb-3 justify-content-between">
-                      <div>
-                        <h3 className="fs-4 fw-bold mb-1">{item.title}</h3>
-                        <p className="text-secondary mb-0">{item.organization}</p>
-                      </div>
-                      <div className="organization-logo ms-3" style={{ width: '60px', height: '60px' }}>
-                        <img 
-                          src={item.logo} 
-                          alt={`${item.organization} logo`}
-                          className="img-fluid rounded"
-                          loading="lazy"
-                          decoding="async"
-                          width={60}
-                          height={60}
-                          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = 'https://via.placeholder.com/60x60';
+                  {/* Content - opposite side */}
+                  <div className={`col-md-7 ${isEven ? 'order-1 text-md-end' : 'text-md-start'}`}>
+                    <motion.div
+                      className="timeline-content p-4 rounded-4 h-100"
+                      style={{
+                        background: 'linear-gradient(135deg, var(--component-bg) 0%, var(--secondary-bg) 100%)',
+                        border: '1px solid var(--border-color)',
+                        minHeight: '200px'
+                      }}
+                    >
+                      <div className="timeline-dot-wrapper position-relative mb-3">
+                        <span 
+                          className="timeline-dot-inline rounded-circle d-inline-block"
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                            background: 'var(--secondary-color)',
+                            border: '3px solid var(--component-bg)',
+                            boxShadow: '0 0 0 3px var(--secondary-color)'
                           }}
                         />
                       </div>
-                    </div>
-                    
-                    <div className="mb-3">
-                      <p className="mb-1">
-                        <span className="text-secondary">Location:</span> {item.location}
-                      </p>
-                      <p className="mb-1">
-                        <span className="text-secondary">Duration:</span> {item.duration}
-                      </p>
-                      {item.gpa && (
-                        <p className="mb-1">
-                          <span className="text-secondary">GPA:</span> {item.gpa}
-                        </p>
-                      )}
-                    </div>
+                      
+                      <div className="year-badge mb-2">
+                        <span 
+                          className="text-primary fw-bold"
+                          style={{ fontSize: '1.1rem' }}
+                        >
+                          {item.duration.split('-')[0].trim()}
+                        </span>
+                      </div>
 
-                    {item.activities && (
-                      <div>
-                        <h4 className="fs-5 fw-bold mb-2">
-                          {/* <span>Campus Activities</span>
-                          <FaBriefcase className="text-primary" /> */}
-                          Campus Activities
-                        </h4>
-                        <div className="activities-list">
-                          {item.activities.map((activity, index) => (
-                            <motion.div
-                              key={index}
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.3, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                              className="activity-item mb-3"
+                      <h3 className="fs-4 fw-bold mb-2" style={{ color: 'var(--text-color)' }}>
+                        {item.title}
+                      </h3>
+                      
+                      <p className="text-secondary mb-2 fw-semibold" style={{ fontSize: '0.95rem' }}>
+                        {item.organization}
+                      </p>
+
+                      <p className="text-secondary mb-3" style={{ fontSize: '0.875rem' }}>
+                        {item.location}
+                      </p>
+
+                      {item.responsibilities && (
+                        <div className="responsibilities-list">
+                          {item.responsibilities.map((resp, index) => (
+                            <p 
+                              key={index} 
+                              className="text-secondary mb-2 small"
+                              style={{ fontSize: '0.85rem', lineHeight: '1.4' }}
                             >
-                              <h5 className="fs-6 fw-bold mb-1">{activity.title}</h5>
-                              <p className="text-secondary mb-1 small">{activity.description}</p>
-                              <p className="text-secondary mb-0 small">
-                                <span className="text-primary">Duration:</span> {activity.duration}
-                              </p>
-                            </motion.div>
+                              {resp}
+                            </p>
                           ))}
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    {item.responsibilities && (
-                      <div>
-                        <h4 className="fs-5 fw-bold mb-2">
-                          {/* <span>Key Responsibilities</span>
-                          <FaCode className="text-primary" /> */}
-                          Key Responsibilities
-                        </h4>
-                        <ul className="list-unstyled mb-0">
-                          {item.responsibilities.map((responsibility, index) => (
-                            <motion.li
-                              key={index}
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.3, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                              className="mb-2 d-flex align-items-center"
+                      {item.activities && (
+                        <div className="activities-list">
+                          {item.activities.map((activity, index) => (
+                            <p 
+                              key={index} 
+                              className="text-secondary small mb-2"
+                              style={{ fontSize: '0.85rem' }}
                             >
-                              <span className="text-primary me-2">•</span>
-                              {responsibility}
-                            </motion.li>
+                              {activity.title}
+                            </p>
                           ))}
-                        </ul>
-                      </div>
-                    )}
+                        </div>
+                      )}
+                    </motion.div>
                   </div>
                 </div>
-                <div className={`col-md-6 ${idx % 2 === 0 ? 'text-md-start' : 'text-md-end order-md-1'}`}>
-                  <div className="timeline-date d-none d-md-block">
-                    <span className="badge bg-primary rounded-pill px-3 py-2">
-                      {item.duration}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </Container>
     </section>

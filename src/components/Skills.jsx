@@ -27,7 +27,9 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills-section py-3" style={{ backgroundColor: 'var(--secondary-bg)' }}>
+    <section className="skills-section py-3" style={{ 
+      background: 'linear-gradient(to bottom, rgba(74, 178, 128, 0.04), var(--secondary-bg))'
+    }}>
       <div className="skills-container" style={{ overflowX: 'hidden', position: 'relative', overflow: 'hidden' }}>
         <div className="skills-scroll d-flex align-items-center py-2">
           {/* First set - original */}
