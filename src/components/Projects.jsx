@@ -34,7 +34,7 @@ const Projects = () => {
       date: 'Jan. 2025 – Apr. 2025',
       image: 'assets/images/MastodonHub.png',
       technologies: ['React', 'Django', 'SQLite', 'Cypress', 'Jest', 'EmailJS', 'Jira', 'Bitbucket'],
-      demo: 'https://mastodonhub.vercel.app'
+      demo: 'https://mastodonhub-1-mdvy.onrender.com'
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const Projects = () => {
       date: 'Aug. 2024 – Dec. 2024',
       image: 'assets/images/CampusMart-logo.png',
       technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Vercel'],
-      demo: 'https://campusmart.vercel.app'
+      demo: 'https://campusmart-purdue.vercel.app'
     },
     {
       id: 2,

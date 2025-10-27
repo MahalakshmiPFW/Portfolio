@@ -17,7 +17,17 @@ const Hero = () => {
               Hi <span className="text-primary"><FaSmileBeam /></span>,<br />
               I'm <span className="text-primary">Mahalakshmi</span>
             </h1>
-            <span className="fs-5 mb-3 d-block text-primary">
+            <span 
+              className="fs-5 mb-3 d-block fw-semibold"
+              style={{
+                background: 'linear-gradient(to right, var(--primary-color), var(--secondary-color))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 0 4px rgba(138, 104, 213, 0.2)) drop-shadow(0 0 8px rgba(74, 178, 128, 0.15))',
+                textShadow: '0 0 3px rgba(138, 104, 213, 0.25)'
+              }}
+            >
               <Typewriter
                 words={[
                   'Full-Stack Developer',
