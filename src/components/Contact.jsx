@@ -53,7 +53,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="display-5 fw-bold mb-3">Let's Build Something Timeless</h2>
+          <h2 className="display-5 fw-bold mb-3">🪄 Let's Build Something Timeless ✨</h2>
           <p className="lead text-secondary">Design meets code.</p>
         </motion.div>
         <motion.div
