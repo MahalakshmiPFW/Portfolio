@@ -6,7 +6,6 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
-import Causes from './components/Causes';
 import DecorativeElement from './components/DecorativeElement';
 const About = React.lazy(() => import('./components/About'));
 const Projects = React.lazy(() => import('./components/Projects'));
@@ -52,7 +51,6 @@ function App() {
             <About />
           </Suspense>
         </LazySection>
-        <Causes />
         <DecorativeElement type="music-note" position="left" />
         <LazySection>
           <Suspense fallback={null}>
