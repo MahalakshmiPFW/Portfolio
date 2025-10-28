@@ -42,7 +42,7 @@ const Projects = () => {
       description: 'Peer-to-peer responsive ecommerce platform using the MERN stack for secure buying and selling of used items. Deployed on Vercel with Agile development practices.',
       date: 'Aug. 2024 – Dec. 2024',
       image: 'assets/images/CampusMart-logo.png',
-      technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Vercel'],
+      technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Vercel', 'Cloudinary'],
       demo: 'https://campusmart-purdue.vercel.app'
     },
     {
