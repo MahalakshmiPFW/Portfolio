@@ -54,7 +54,6 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <h2 className="display-5 fw-bold mb-3">🪄 Let's Build Something Timeless ✨</h2>
-          <p className="lead text-secondary">Design meets code.</p>
         </motion.div>
         <motion.div
           className="contact-container rounded-4 p-4 p-md-5"
