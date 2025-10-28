@@ -30,7 +30,6 @@ const Hero = () => {
             >
               <Typewriter
                 words={[
-                  'Full-Stack Developer',
                   'UI/UX Enthusiast',
                   'Code + Creativity = Magic',
                   'Lifelong Learner'

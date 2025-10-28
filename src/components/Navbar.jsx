@@ -31,7 +31,7 @@ const Navbar = () => {
         >
           <span className="text-primary">
             <Typewriter
-              words={['Mahalakshmi', 'Maha.codes()', 'Creative Dev']}
+              words={['Mahalakshmi', 'maha.codes()', 'Full-Stack Developer']}
               loop={0}
               cursor
               cursorStyle="|"
