@@ -45,7 +45,6 @@ function App() {
         <Navbar />
         <Hero />
         <Skills />
-        <DecorativeElement type="music-note" position="right" />
         <LazySection>
           <Suspense fallback={null}>
             <About />

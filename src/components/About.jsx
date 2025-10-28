@@ -8,6 +8,10 @@ const About = () => {
   return (
     <section id="about" className="about-section py-5">
       <Container>
+        <div className="text-center mb-4">
+          <h2 className="fs-1 fw-bold mb-3">About Me</h2>
+        </div>
+        
         <div className="about-container rounded-4 p-4 p-md-5">
           <Row className="align-items-center">
             <Col lg={4} className="mb-4 mb-lg-0">
@@ -28,7 +32,6 @@ const About = () => {
               </div>
             </Col>
             <Col lg={8}>
-              <h2 className="mb-2 fw-bold">About Me</h2>
               <h3 className="fs-3 mb-3">
                   Building with code. Dreaming in color.
               </h3>
