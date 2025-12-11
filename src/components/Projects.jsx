@@ -22,7 +22,7 @@ const Projects = () => {
       id: 6,
       title: 'Pose-Based Maze Navigation',
       description: 'A low-code, rapid-prototyping project that blends applied machine learning with real-time gesture recognition to control a browser-based maze game. Uses Teachable Machine for pose detection and TensorFlow.js for real-time webcam-based gesture recognition.',
-      date: '2024',
+      date: 'Dec. 2025',
       image: 'assets/images/pose-based-maze-game.png',
       technologies: ['JavaScript', 'TensorFlow.js', 'Teachable Machine', 'HTML', 'CSS', 'Python'],
       demo: 'https://github.com/MahalakshmiPFW/pose-based-maze-navigation.git'
@@ -31,7 +31,7 @@ const Projects = () => {
       id: 7,
       title: 'Pokemon Explorer',
       description: 'A React Native learning project that explores Pokémon data through clean UI design, API integration, and modern mobile development practices. Features pagination, search functionality, and detailed Pokémon information using PokeAPI.',
-      date: '2024',
+      date: 'Dec.2025',
       image: null,
       technologies: ['React Native', 'TypeScript', 'Expo', 'Expo Router', 'PokeAPI'],
       demo: 'https://github.com/MahalakshmiPFW/Pokemon-Explorer-React-Native.git'
