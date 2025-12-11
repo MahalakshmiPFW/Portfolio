@@ -13,7 +13,7 @@ const Projects = () => {
       id: 5,
       title: 'Gesture2Globe',
       description: 'Real-time ASL sign language recognition using MediaPipe to capture hand and pose landmarks via webcam. Recognizes 30-40 common signs and fingerspelling, converting them to English text with Text-to-Speech output. Team project for Applications of Deep Learning course.',
-      date: 'Oct. 2024 – Present',
+      date: 'Oct. 2025 – Present',
       image: null,
       technologies: ['Python', 'MediaPipe', 'PiperTTS', 'OpenCV', 'Flask/Streamlit', 'ONNX', 'espeak-ng', 'Google Translate API'],
       isWIP: true
