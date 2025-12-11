@@ -19,6 +19,24 @@ const Projects = () => {
       isWIP: true
     },
     {
+      id: 6,
+      title: 'Pose-Based Maze Navigation',
+      description: 'A low-code, rapid-prototyping project that blends applied machine learning with real-time gesture recognition to control a browser-based maze game. Uses Teachable Machine for pose detection and TensorFlow.js for real-time webcam-based gesture recognition.',
+      date: '2024',
+      image: null,
+      technologies: ['JavaScript', 'TensorFlow.js', 'Teachable Machine', 'HTML', 'CSS', 'Python'],
+      demo: 'https://github.com/MahalakshmiPFW/pose-based-maze-navigation.git'
+    },
+    {
+      id: 7,
+      title: 'Pokemon Explorer',
+      description: 'A React Native learning project that explores Pokémon data through clean UI design, API integration, and modern mobile development practices. Features pagination, search functionality, and detailed Pokémon information using PokeAPI.',
+      date: '2024',
+      image: null,
+      technologies: ['React Native', 'TypeScript', 'Expo', 'Expo Router', 'PokeAPI'],
+      demo: 'https://github.com/MahalakshmiPFW/Pokemon-Explorer-React-Native.git'
+    },
+    {
       id: 1,
       title: 'SyllabusSync',
       description: 'AI-powered web application that converts course syllabi into organized calendar tasks using Google Gemini 2.0 Flash API. Implemented native PDF processing, automatic semester-aware date detection, and Google Calendar sync.',
@@ -45,14 +63,14 @@ const Projects = () => {
       technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Vercel', 'Cloudinary'],
       demo: 'https://campusmart-purdue.vercel.app'
     },
-    {
-      id: 2,
-      title: 'Sweetwater Student Opportunities App',
-      description: 'Web application for student opportunities with CRUD operations for event management, RSVP functionality, and event feedback. Responsive design for desktop and mobile.',
-      date: 'Sep. 2024 – Dec. 2024',
-      image: 'assets/images/sweetwater-1.png',
-      technologies: ['Next.js', 'MongoDB', 'Express', 'React', 'Node.js']
-    }
+    // {
+    //   id: 2,
+    //   title: 'Sweetwater Student Opportunities App',
+    //   description: 'Web application for student opportunities with CRUD operations for event management, RSVP functionality, and event feedback. Responsive design for desktop and mobile.',
+    //   date: 'Sep. 2024 – Dec. 2024',
+    //   image: 'assets/images/sweetwater-1.png',
+    //   technologies: ['Next.js', 'MongoDB', 'Express', 'React', 'Node.js']
+    // }
   ];
 
   return (
