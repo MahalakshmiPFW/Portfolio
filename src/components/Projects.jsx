@@ -23,7 +23,7 @@ const Projects = () => {
       title: 'Pose-Based Maze Navigation',
       description: 'A low-code, rapid-prototyping project that blends applied machine learning with real-time gesture recognition to control a browser-based maze game. Uses Teachable Machine for pose detection and TensorFlow.js for real-time webcam-based gesture recognition.',
       date: '2024',
-      image: null,
+      image: 'assets/images/pose-based-maze-game.png',
       technologies: ['JavaScript', 'TensorFlow.js', 'Teachable Machine', 'HTML', 'CSS', 'Python'],
       demo: 'https://github.com/MahalakshmiPFW/pose-based-maze-navigation.git'
     },
