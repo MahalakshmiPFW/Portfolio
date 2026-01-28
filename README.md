@@ -1,18 +1,19 @@
 # Mahalakshmi's Portfolio Website
 
-A modern, responsive portfolio website built with React.js and Bootstrap, featuring smooth animations, dark/light mode, and interactive components.
+A modern, responsive portfolio website built with React, TypeScript, and Vite, featuring smooth animations, dark/light mode, and interactive components.
 
 ## 🚀 Features
 
 ### Core Features
 - Responsive design that works on all devices
 - Dark/Light mode toggle with persistent theme preference
-- Smooth scrolling and animations using Framer Motion
-- Typewriter effect in the navbar and hero section
+- Smooth scrolling and animations
+- Custom typewriter effect component
 - Interactive project showcase
 - Contact form with EmailJS integration
 - Social media integration
-- Decorative elements and custom styling
+- Professional experience timeline
+- Skills showcase with categorized groups
 
 ### Sections
 1. **Navbar**
@@ -32,41 +33,45 @@ A modern, responsive portfolio website built with React.js and Bootstrap, featur
    - Animated tech stack icons
    - Skills showcase
 
-4. **Projects Section**
+4. **Skills Section**
+   - Technical skills showcase
+   - Categorized skill groups
+
+5. **Experience Section**
+   - Professional work experience timeline
+   - Company details and roles
+   - Technology stacks used
+
+6. **Projects Section**
    - Project cards with images
    - Technology stack indicators
    - Live demo and GitHub links
    - Project descriptions and dates
 
-5. **Contact Section**
+7. **Contact Section**
    - EmailJS integration for form submission
    - Social media links
    - Professional profile picture
    - Contact information
 
-6. **Footer**
-   - Copyright information
-   - Social media links
-   - Back to top button
-   - Dynamic tagline based on theme
 
 ## 🎨 Technologies Used
 
 ### Frontend
-- React.js
-- React Bootstrap
-- Framer Motion (animations)
-- React Icons
-- React Simple Typewriter
+- React 19
+- TypeScript
+- Vite (build tool)
+- Lucide React (icons)
 - EmailJS (contact form)
 
 ### Styling
-- Bootstrap 5
+- Tailwind CSS
 - Custom CSS
 - Google Fonts (Inter, Dancing Script)
 
 ### Development Tools
-- Create React App
+- Vite
+- TypeScript
 - npm
 - Git
 - Vercel (deployment)
@@ -74,8 +79,8 @@ A modern, responsive portfolio website built with React.js and Bootstrap, featur
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher) or yarn
 
 ### Installation
 
@@ -92,31 +97,34 @@ npm install
 
 3. Create a `.env` file in the root directory and add your EmailJS credentials:
 
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
+4. Start the development server:
+```bash
+npm run dev
+```
 
 ## Available Scripts
 
-- `npm i` - Installs the necessary dependencies
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
+- `npm install` - Installs the necessary dependencies
+- `npm run dev` - Runs the app in development mode (Vite dev server)
 - `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
+- `npm run preview` - Preview the production build locally
 
 ## 🎨 Customization
 
 ### Theme Colors
-The website uses CSS variables for theming. You can customize the colors in `src/App.css`:
-- Light theme variables
-- Dark theme variables
-- Primary and secondary colors
+The website uses Tailwind CSS with custom theme configuration. You can customize the colors using Tailwind's dark mode classes and CSS variables.
 
 ### Content
-- Update project information in `src/components/Projects.jsx`
-- Modify personal information in respective component files
+- Update project information in `src/components/Projects.tsx`
+- Modify personal information in `src/constants.tsx` and respective component files
 - Replace images in the `public/assets/images` directory
+- Update experience data in `src/constants.tsx`
 
 ## 📦 Deployment
 The website is deployed on Vercel. To deploy your own version:
