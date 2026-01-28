@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahalakshmi | Portfolio</title>
+    <meta name="description" content="Portfolio of Mahalakshmi, a Frontend Engineer" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Caveat:wght@400;500;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              hand: ['Caveat', 'cursive'],
+              marker: ['Reenie Beanie', 'cursive'],
+            },
+            colors: {
+              light: {
+                bg: '#FDFCF8', // Warm off-white (Paper)
+                text: '#1A1A1A',
+                accent: '#5B21B6', // Deep Purple
+                secondary: '#F3F4F6', 
+                surface: '#FFFFFF',
+              },
+              dark: {
+                bg: '#0F0F11', // Deep charcoal
+                text: '#F3F4F6',
+                accent: '#A78BFA', // Soft Purple
+                secondary: '#1E1B4B', 
+                surface: '#18181B',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 3s linear infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'handwriting': 'handwriting 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'subtle-float': 'subtleFloat 4s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              handwriting: {
+                '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              subtleFloat: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-6px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      /* Editorial Utilities */
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+</head>
+  <body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text selection:bg-light-accent selection:text-white dark:selection:bg-dark-accent">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
