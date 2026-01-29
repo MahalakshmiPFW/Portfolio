@@ -98,7 +98,7 @@ const About: React.FC = () => {
               <div className="relative transform rotate-2 lg:-rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-8 shadow-xl rounded-sm">
                 <div className="aspect-square bg-gray-100 overflow-hidden mb-3 grayscale hover:grayscale-0 transition-all">
                   <img
-                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+                    src="assets/images/IMG_7852.jpeg"
                     alt="Me Coding"
                     className="w-full h-full object-cover"
                   />
@@ -216,13 +216,13 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Adventures Polaroid (hidden for now) */}
+            {/* Adventures Polaroid */}
             {SHOW_ADVENTURES && (
               <div className="relative transform -rotate-2 lg:-rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-10 shadow-xl rounded-sm">
                 <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-2 grayscale hover:grayscale-0 transition-all">
                   <img
-                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
-                    alt="Friends"
+                    src="assets/images/IMG_9567.jpeg"
+                    alt="Friends and Adventures"
                     className="w-full h-full object-cover"
                   />
                 </div>
