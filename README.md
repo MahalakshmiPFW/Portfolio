@@ -14,6 +14,7 @@ I’m currently preparing for new grad and entry-level software engineering role
 
 - Component-driven architecture, responsive design
 - Dark mode, animations, production-ready structure
+- AWWWARDS-inspired navigation — rounded pill UI, micro-shadows, fluid transitions, and a tactile toggle glow designed for clarity and polish
 - Built for clarity and maintainability
 
 ## Quick Start

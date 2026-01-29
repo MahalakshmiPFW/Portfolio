@@ -2,15 +2,11 @@ import React from 'react';
 import Section from './ui/Section';
 import Reveal from './ui/Reveal';
 import Typewriter from './ui/Typewriter';
-import {
-  Coffee,
-  MapPin,
-  Calendar,
-  Sparkles,
-  Music,
-  Camera,
-  Ticket,
-} from 'lucide-react';
+import { Coffee, MapPin, Calendar, Sparkles, Music, Camera, Ticket } from 'lucide-react';
+
+// Flip these to true to make them visible again
+const SHOW_HACKATHON = true;
+const SHOW_ADVENTURES = true;
 
 // Flip this to true when the date is near
 const SHOW_CONFERENCE_TICKET = false;
@@ -95,33 +91,29 @@ const About: React.FC = () => {
         </div>
 
         {/* RIGHT COLUMN */}
-        {/* 
-          ✅ No absolute positioning
-          ✅ No overlap
-          ✅ Responsive grid
-          ✅ Keeps each card’s existing size classes
-        */}
         <div className="lg:col-span-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-12 items-start justify-items-center">
-            {/* Hackathon Polaroid */}
-            <div className="transform rotate-2 lg:-rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-8 shadow-xl rounded-sm">
-              <div className="aspect-square bg-gray-100 overflow-hidden mb-3 grayscale hover:grayscale-0 transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
-                  alt="Me Coding"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <Reveal delay={100}>
-                <div className="text-center font-hand text-2xl text-gray-800 animate-subtle-float">
-                  Hackathon Mode 💻
+            {/* Hackathon Polaroid (hidden for now) */}
+            {SHOW_HACKATHON && (
+              <div className="relative transform rotate-2 lg:-rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-8 shadow-xl rounded-sm">
+                <div className="aspect-square bg-gray-100 overflow-hidden mb-3 grayscale hover:grayscale-0 transition-all">
+                  <img
+                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+                    alt="Me Coding"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </Reveal>
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-red-200/50 rotate-1" />
-            </div>
+                <Reveal delay={100}>
+                  <div className="text-center font-hand text-2xl text-gray-800 animate-subtle-float">
+                    Hackathon Mode 💻
+                  </div>
+                </Reveal>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-red-200/50 rotate-1" />
+              </div>
+            )}
 
             {/* Coffee Receipt */}
-            <div className="transform -rotate-1 lg:rotate-6 hover:rotate-0 transition-all duration-500 w-full max-w-xs lg:w-52 bg-[#fcfcfc] p-4 shadow-md font-mono text-xs text-gray-600 border-t-4 border-gray-200">
+            <div className="relative transform -rotate-1 lg:rotate-6 hover:rotate-0 transition-all duration-500 w-full max-w-xs lg:w-52 bg-[#fcfcfc] p-4 shadow-md font-mono text-xs text-gray-600 border-t-4 border-gray-200">
               <div className="text-center mb-4 border-b border-dashed border-gray-300 pb-2">
                 <Coffee size={20} className="mx-auto mb-1 text-gray-400" />
                 <Reveal delay={200}>
@@ -160,7 +152,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Music Player */}
-            <div className="transform -rotate-2 lg:rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-[280px] bg-gray-900 text-white p-4 rounded-2xl shadow-2xl border border-gray-700">
+            <div className="relative transform -rotate-2 lg:rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-[280px] bg-gray-900 text-white p-4 rounded-2xl shadow-2xl border border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-md flex items-center justify-center">
                   <Music size={20} className="text-white" />
@@ -224,22 +216,24 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Adventures Polaroid */}
-            <div className="transform -rotate-2 lg:-rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-10 shadow-xl rounded-sm">
-              <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-2 grayscale hover:grayscale-0 transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
-                  alt="Friends"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <Reveal delay={400}>
-                <div className="text-center font-hand text-2xl text-gray-800 animate-subtle-float">
-                  Adventures ✌️
+            {/* Adventures Polaroid (hidden for now) */}
+            {SHOW_ADVENTURES && (
+              <div className="relative transform -rotate-2 lg:-rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-10 shadow-xl rounded-sm">
+                <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-2 grayscale hover:grayscale-0 transition-all">
+                  <img
+                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
+                    alt="Friends"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </Reveal>
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-yellow-200/80 rotate-2 shadow-sm backdrop-blur-sm" />
-            </div>
+                <Reveal delay={400}>
+                  <div className="text-center font-hand text-2xl text-gray-800 animate-subtle-float">
+                    Adventures ✌️
+                  </div>
+                </Reveal>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-yellow-200/80 rotate-2 shadow-sm backdrop-blur-sm" />
+              </div>
+            )}
 
             {/* Conference Ticket (hidden for now, no layout impact when false) */}
             {SHOW_CONFERENCE_TICKET && (
