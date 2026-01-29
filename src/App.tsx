@@ -26,8 +26,8 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="py-8 text-center text-sm text-gray-500 dark:text-gray-500 border-t border-gray-100 dark:border-gray-900">
-        <p>© {new Date().getFullYear()} Mahalakshmi. Built with React & Tailwind.</p>
+      <footer className="py-8 text-center text-md text-gray-500 dark:text-gray-500 border-t border-gray-100 dark:border-gray-900">
+        <p>© {new Date().getFullYear()} Mahalakshmi. Built with React & Tailwind...and lots of coffee ☕️</p>
       </footer>
     </div>
   );

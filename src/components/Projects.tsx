@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <Section id="projects" className="py-24 md:py-32 relative overflow-hidden">
+    <Section id="projects" className="pt-24 md:pt-32 pb-6 md:pb-10 relative overflow-hidden">
       <div className="absolute top-0 right-0 text-[20vw] font-serif font-bold text-gray-100 dark:text-white/5 leading-none -z-10 select-none pointer-events-none">
         Work
       </div>

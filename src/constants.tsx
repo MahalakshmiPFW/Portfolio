@@ -38,46 +38,64 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
+    id: 'edu-2',
+    role: 'Master of Science in Computer Science',
+    company: 'Purdue University Fort Wayne',
+    location: 'IN, U.S.A',
+    period: 'August 2024 – May 2026',
+    description: [
+      'Focused on full-stack development, frontend engineering, and software design.',
+      'Coursework includes Algorithm Design, Software Project Management, HCI, and Heuristic Problem Solving.',
+      'Actively building production-ready web applications and preparing for entry-level software engineering roles.'
+    ],
+    skills: ['Software Project Management', 'Full-Stack Development','Algorithms', 'HCI'],
+    logo: '/assets/images/PurdueLogo.svg',
+  },
+
+  {
     id: '1',
-    role: 'Full-Stack SWE Intern',
+    role: 'Full-Stack Software Engineering Intern',
     company: 'ForOurLastNames',
     location: 'Tulsa, OK, U.S.A',
     period: 'June 2025 – August 2025',
     description: [
-      'Enhanced React and TypeScript components for user onboarding and legal pages, delivering 9 features with strong completion rates.',
-      'Fixed 4 critical UI/UX bugs and enhanced responsive design across web/mobile interfaces.',
-      'Led mobile app deployment project for iOS/Android App Stores, creating deployment workflows.',
-      'Implemented automated testing with Playwright, improving code quality and reducing manual testing effort.'
+      'Enhanced React and TypeScript components for user onboarding and legal pages, delivering 9 production features.',
+      'Resolved 4 critical UI/UX and responsive layout issues across web and mobile interfaces.',
+      'Led mobile app deployment for iOS and Android, defining deployment workflows and release processes.',
+      'Implemented automated testing using Playwright, improving code quality and reducing manual QA effort.'
     ],
     skills: ['React', 'TypeScript', 'Playwright', 'Mobile Deployment'],
     logo: '/assets/images/FOLN Logo.png',
   },
+
   {
     id: '2',
-    role: 'Process Automation and Procurement Intern',
+    role: 'Process Automation & Procurement Intern',
     company: 'Schneider Electric',
     location: 'Dubai, U.A.E',
     period: 'June 2024 – July 2024',
     description: [
-      'Developed a prototype supplier scorecard application to address inefficiencies from globally shared spreadsheets.',
-      'Applied Python for backend processing, Tkinter for interface, and MySQL for data management.'
+      'Built a prototype supplier scorecard application to replace inefficient spreadsheet-based workflows.',
+      'Implemented backend logic using Python with a Tkinter-based interface and MySQL data storage.'
     ],
     skills: ['Python', 'Tkinter', 'MySQL', 'Automation'],
     logo: '/assets/images/SE Logo1.png',
   },
+
   {
     id: '3',
-    role: 'IT Intern, Team Leader & Research Intern',
+    role: 'IT Intern, Team Lead & Research Intern',
     company: 'BetaIT',
     location: 'Dubai, U.A.E',
     period: 'July 2022 – Aug. 2022 & July 2023 – Sept. 2023',
     description: [
-      'Led infrastructure projects using Google Cloud virtual load balancers and Hypervisors.',
-      'Conducted research on Odoo ERP implementation for digital transformation initiatives.'
+      'Led infrastructure-related initiatives using Google Cloud load balancers and virtualization platforms.',
+      'Conducted research on Odoo ERP adoption for digital transformation projects.'
     ],
     skills: ['Google Cloud', 'Linux', 'ERP Research'],
     logo: '/assets/images/BetaIT.jpeg',
   },
+
   {
     id: '4',
     role: 'Python Bootcamp Assistant',
@@ -85,10 +103,24 @@ export const EXPERIENCE: Experience[] = [
     location: 'Sharjah, U.A.E',
     period: 'March 2023',
     description: [
-      'Assisted with a 2-day Python Bootcamp under the Associate Dean of Business.',
-      'Taught Python basics, Numpy, and Pandas for Data Analyses to over 30 attendees.'
+      'Assisted in delivering a 2-day Python Bootcamp organized under the Associate Dean of Business.',
+      'Introduced Python fundamentals, NumPy, and Pandas to over 30 participants.'
     ],
-    skills: ['Python', 'Teaching', 'Numpy', 'Pandas'],
+    skills: ['Python', 'Teaching', 'NumPy', 'Pandas'],
+    logo: '/assets/images/AUS Logo.png',
+  },
+
+  {
+    id: 'edu-1',
+    role: 'Bachelor of Science in Computer Engineering',
+    company: 'American University of Sharjah',
+    location: 'Sharjah, U.A.E',
+    period: 'August 2020 – December 2023',
+    description: [
+      'Built a strong foundation in computer engineering, programming, and systems.',
+      'Completed coursework spanning software development, hardware systems, and applied engineering concepts.'
+    ],
+    skills: ['Programming', 'Engineering Fundamentals', 'Problem Solving'],
     logo: '/assets/images/AUS Logo.png',
   },
 ];
@@ -100,7 +132,7 @@ export const PROJECTS: Project[] = [
     description: 'AI-powered web application that converts course syllabi (text and PDF) into organized calendar tasks using Google Gemini 2.0 Flash API. Features native PDF processing and automatic semester-aware date detection.',
     tags: ['Next.js 15', 'React 19', 'Gemini 2.0 API', 'TailwindCSS v4', 'Vercel'],
     image: '/assets/images/SyllabusSync.png',
-    demoLink: 'https://syllabus-sync.vercel.app',
+    demoLink: 'https://syllabus-to-calendar-app.vercel.app',
     repoLink: 'https://github.com/MahalakshmiPFW/Syllabus-to-Calendar-App',
     featured: true,
     status: 'Completed',
@@ -111,7 +143,7 @@ export const PROJECTS: Project[] = [
     title: 'Gesture2Globe',
     description: 'Real-time ASL sign language recognition using MediaPipe to capture landmarks via webcam. Recognizes 30-40 common signs and converts them to English text with TTS output.',
     tags: ['Python', 'MediaPipe', 'OpenCV', 'Deep Learning'],
-    image: '/assets/images/pose-based-maze-game.png',
+    image: '',
     featured: true,
     status: 'Completed',
     year: '2024-Present'
