@@ -7,9 +7,7 @@ import { Coffee, MapPin, Calendar, Sparkles, Music, Camera, Ticket } from 'lucid
 // Flip these to true to make them visible again
 const SHOW_HACKATHON = true;
 const SHOW_ADVENTURES = true;
-
-// Flip this to true when the date is near
-const SHOW_CONFERENCE_TICKET = false;
+const SHOW_CONFERENCE_TICKET = true;
 
 const About: React.FC = () => {
   return (
@@ -93,7 +91,7 @@ const About: React.FC = () => {
         {/* RIGHT COLUMN */}
         <div className="lg:col-span-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-12 items-start justify-items-center">
-            {/* Hackathon Polaroid (hidden for now) */}
+            {/* Hackathon Polaroid */}
             {SHOW_HACKATHON && (
               <div className="relative transform rotate-2 lg:-rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 w-full max-w-xs lg:w-56 bg-white p-3 pb-8 shadow-xl rounded-sm">
                 <div className="aspect-square bg-gray-100 overflow-hidden mb-3 grayscale hover:grayscale-0 transition-all">
@@ -235,7 +233,7 @@ const About: React.FC = () => {
               </div>
             )}
 
-            {/* Conference Ticket (hidden for now, no layout impact when false) */}
+            {/* Conference Ticket */}
             {SHOW_CONFERENCE_TICKET && (
               <div className="w-full max-w-[300px] lg:w-80 group sm:col-span-2 justify-self-center">
                 <div className="flex bg-white dark:bg-[#1a1a1a] rounded-xl shadow-2xl overflow-hidden relative border-0">
@@ -248,10 +246,10 @@ const About: React.FC = () => {
                     </div>
 
                     <h3 className="font-serif text-2xl font-black mb-1 leading-tight text-white drop-shadow-sm">
-                      SWE Local
+                      SWE Local 2026
                     </h3>
                     <p className="text-xs text-indigo-100 font-medium mb-5 uppercase tracking-wide">
-                      Conference 2026 Series
+                      Conference Series
                     </p>
 
                     <div className="flex gap-4 text-[10px] opacity-90 font-mono text-white">
@@ -260,8 +258,7 @@ const About: React.FC = () => {
                           Date
                         </span>
                         <span className="font-bold text-sm flex items-center gap-1">
-                          <Calendar size={12} className="text-indigo-200" /> Mar
-                          ’26
+                          <Calendar size={12} className="text-indigo-200" /> March’26
                         </span>
                       </div>
                       <div className="flex flex-col">
