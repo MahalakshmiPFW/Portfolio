@@ -150,14 +150,6 @@ const Projects: React.FC = () => {
                     </div>
                   )}
 
-                  {project.featured && index === 0 && (
-                    <div className="absolute -right-4 -bottom-4 z-40 bg-yellow-200 text-black font-hand text-2xl md:text-3xl px-4 py-2 shadow-lg transform rotate-3 hidden md:block">
-                      <Reveal>
-                        <span className="animate-subtle-float block">My Pride & Joy! ✨</span>
-                      </Reveal>
-                    </div>
-                  )}
-
                   <div
                     className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none z-20"
                     style={{

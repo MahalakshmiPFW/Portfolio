@@ -128,6 +128,18 @@ export const EXPERIENCE: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
+    title: 'SPLYT - GSAP UI',
+    description: 'AWWARDS-style animated frontend learning project built with React, GSAP, and TailwindCSS featuring scroll-triggered animations and responsive transitions.',
+    tags: ['React', 'GSAP', 'TailwindCSS', 'Vite', 'Vercel'],
+    image: '/assets/images/Splyt.png',
+    demoLink: 'https://gsap-awwwards-frontend-mahalakshmi.vercel.app',
+    repoLink: 'https://github.com/MahalakshmiPFW/gsap-awwwards',
+    featured: true,
+    status: 'Learning',
+    year: '2026'
+  },
+  {
+    id: '2',
     title: 'SyllabusSync',
     description: 'AI-powered web application that converts course syllabi (text and PDF) into organized calendar tasks using Google Gemini 2.0 Flash API. Features native PDF processing and automatic semester-aware date detection.',
     tags: ['Next.js 15', 'React 19', 'Gemini 2.0 API', 'TailwindCSS v4', 'Vercel'],
@@ -139,27 +151,27 @@ export const PROJECTS: Project[] = [
     year: '2025'
   },
   {
-    id: '2',
+    id: '3',
     title: 'Gesture2Globe',
     description: 'Real-time ASL sign language recognition using MediaPipe to capture landmarks via webcam. Recognizes 30-40 common signs and converts them to English text with TTS output.',
     tags: ['Python', 'MediaPipe', 'OpenCV', 'Deep Learning'],
     image: '',
     featured: true,
     status: 'Completed',
-    year: '2024-Present'
+    year: '2025'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Pokémon Explorer',
     description: 'A React Native learning project exploring mobile development concepts using Expo.',
     tags: ['React Native', 'Expo', 'Mobile'],
     image: null,
     featured: false,
     status: 'Learning',
-    year: '2024'
+    year: '2025'
   },
   {
-    id: '4',
+    id: '5',
     title: 'MastodonHub',
     description: 'Full-stack web application for campus club and event engagement. Achieved 95%+ backend test coverage with Cypress and built features like Contact Support with EmailJS.',
     tags: ['React', 'Django', 'SQLite', 'Cypress'],
@@ -169,7 +181,7 @@ export const PROJECTS: Project[] = [
     year: '2025'
   },
   {
-    id: '5',
+    id: '6',
     title: 'CampusMart',
     description: 'Peer-to-peer responsive ecommerce platform using the MERN stack for secure buying and selling of used items.',
     tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Vercel'],
@@ -183,6 +195,6 @@ export const PROJECTS: Project[] = [
 export const SKILLS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS", 
   "Python", "Java", "Git/Github", "Node.js", "PostgreSQL", 
-  "MongoDB", "Express.js", "Cypress", "Playwright", "Jest", 
-  "Figma", "Webflow", "UI/UX Design","React Native"
+  "MongoDB", "Express.js", "Cypress", "Jest", 
+  "Figma", "UI/UX Design"
 ];
