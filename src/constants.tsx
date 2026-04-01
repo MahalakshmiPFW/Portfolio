@@ -128,7 +128,7 @@ export const EXPERIENCE: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'SPLYT - GSAP UI',
+    title: 'SPYLT - GSAP UI',
     description: 'AWWARDS-style animated frontend learning project built with React, GSAP, and TailwindCSS featuring scroll-triggered animations and responsive transitions.',
     tags: ['React', 'GSAP', 'TailwindCSS', 'Vite', 'Vercel'],
     image: '/assets/images/Splyt.png',
