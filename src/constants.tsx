@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS = [
-  "React", "Next.js", "TypeScript", "Tailwind CSS", 
+  "React", "Next.js", "TypeScript", "Tailwind", 
   "Python", "Java", "Git/Github", "Node.js", "PostgreSQL", 
   "MongoDB", "Express.js", "Cypress", "Jest", 
   "Figma", "UI/UX Design"
