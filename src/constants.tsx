@@ -38,6 +38,19 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
+    id: '5',
+    role: 'Computer Science Intern',
+    company: 'City of Fort Wayne - City Utilities',
+    location: 'Fort Wayne, IN, U.S.A',
+    period: 'June 2026 – August 2026',
+    description: [
+      ''
+    ],
+    skills: ['Python', 'TKinter', 'MySQL', 'Automation'],
+    logo: '/assets/images/COFW.png',
+  },
+
+  {
     id: 'edu-2',
     role: 'Master of Science in Computer Science',
     company: 'Purdue University Fort Wayne',
