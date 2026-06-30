@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
   const marqueeSkills = [...SKILLS, ...SKILLS, ...SKILLS];
 
   const categories = [
-    { name: "Frontend", items: ["React", "TypeScript", "JavaScript", "Next.js", "Tailwind", "HTML5", "CSS3", "SASS"] },
+    { name: "Frontend", items: ["React", "TypeScript", "JavaScript", "Next.js", "Tailwind", "HTML5", "CSS3", "SASS", "Tkinter"] },
     { name: "Backend & Data", items: ["Python", "Node.js", "Express.js", "Django", "MongoDB", "PostgreSQL"] },
     { name: "Testing & Tools", items: ["Jest", "Cypress", "Git/Github", "Vercel", "Figma", "Docker"] }
   ];
