@@ -83,7 +83,7 @@ export const EXPERIENCE: Experience[] = [
 
   {
     id: '2',
-    role: 'Process Automation & Procurement Intern',
+    role: 'Process Automation Intern',
     company: 'Schneider Electric',
     location: 'Dubai, U.A.E',
     period: 'June 2024 – July 2024',
