@@ -52,7 +52,7 @@ export const EXPERIENCE: Experience[] = [
 
   {
     id: 'edu-2',
-    role: 'Master of Science in Computer Science',
+    role: 'M.S in Computer Science',
     company: 'Purdue University Fort Wayne',
     location: 'IN, U.S.A',
     period: 'August 2024 – May 2026',
@@ -97,7 +97,7 @@ export const EXPERIENCE: Experience[] = [
 
   {
     id: '3',
-    role: 'IT Intern, Team Lead & Research Intern',
+    role: 'IT & Research Intern',
     company: 'BetaIT',
     location: 'Dubai, U.A.E',
     period: 'July 2022 – Aug. 2022 & July 2023 – Sept. 2023',
@@ -125,7 +125,7 @@ export const EXPERIENCE: Experience[] = [
 
   {
     id: 'edu-1',
-    role: 'Bachelor of Science in Computer Engineering',
+    role: 'B.S in Computer Engineering',
     company: 'American University of Sharjah',
     location: 'Sharjah, U.A.E',
     period: 'August 2020 – December 2023',
