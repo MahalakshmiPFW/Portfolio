@@ -1,8 +1,144 @@
-/* Tailwind directives are handled via CDN in index.html */
-/* This file can be used for any custom styles if needed */
+/* Theme tokens ---------------------------------------------------------- */
+:root {
+  --pm-accent: oklch(48% 0.135 255);
+  --pm-bg: oklch(98.2% 0.006 90);
+  --pm-ink: oklch(22% 0.01 90);
+  --pm-ink-soft: oklch(42% 0.012 90);
+  --pm-ink-faint: oklch(58% 0.01 90);
+  --pm-hairline: oklch(90% 0.008 90);
+  --pm-chip-bg: oklch(95% 0.008 90);
+  --pm-accent-soft: color-mix(in oklch, var(--pm-accent) 12%, var(--pm-bg));
+  --pm-bg-translucent: color-mix(in oklch, var(--pm-bg) 88%, transparent);
+  --pm-nav-shadow: oklch(50% 0.02 260 / 0.14);
+}
+
+:root.pm-dark {
+  --pm-accent: color-mix(in oklch, oklch(48% 0.135 255) 55%, white);
+  --pm-bg: oklch(19% 0.012 260);
+  --pm-ink: oklch(94% 0.008 260);
+  --pm-ink-soft: oklch(78% 0.012 260);
+  --pm-ink-faint: oklch(60% 0.014 260);
+  --pm-hairline: oklch(32% 0.016 260);
+  --pm-chip-bg: oklch(25% 0.016 260);
+  --pm-accent-soft: color-mix(in oklch, var(--pm-accent) 18%, var(--pm-bg));
+  --pm-nav-shadow: oklch(0% 0 0 / 0.5);
+}
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--pm-bg);
+  color: var(--pm-ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+  scroll-behavior: smooth;
+}
+
+html { scroll-behavior: smooth; }
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--pm-accent-soft); }
+
+[data-nav-target] { scroll-margin-top: 96px; }
+
+@keyframes pmSectionPop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.008); }
+  100% { transform: scale(1); }
+}
+.pm-nav-pop { animation: pmSectionPop 0.5s ease; }
+
+@keyframes pmRingPulse {
+  0% { opacity: 0; transform: scale(0.7); }
+  8% { opacity: 0.9; transform: scale(1); }
+  28% { opacity: 0; transform: scale(1.6); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+@keyframes pmCirclePulse {
+  0% { transform: scale(1); }
+  8% { transform: scale(1.14); }
+  28% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+@keyframes pmArrowFlow {
+  0% { opacity: 0.35; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(3px); }
+  100% { opacity: 0.35; transform: translateX(0); }
+}
+@keyframes pmWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+.pm-doodle-icon:hover { animation: pmWiggle 0.4s ease-in-out; }
+
+[data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+[data-reveal].pm-visible { opacity: 1; transform: translateY(0); }
+
+/* Interactive hover states (dynamic colors via CSS vars) ---------------- */
+.pm-nav-pill { transition: background 0.15s, color 0.15s; }
+.pm-nav-pill:hover { background: var(--pm-chip-bg); color: var(--pm-ink); }
+
+.pm-dark-toggle { transition: background 0.15s; }
+.pm-dark-toggle:hover { background: var(--pm-chip-bg); }
+
+.pm-resume-btn { transition: opacity 0.15s; }
+.pm-resume-btn:hover { opacity: 0.82; }
+
+.pm-hero-photo { transition: transform 0.25s ease; }
+.pm-hero-photo:hover { transform: rotate(-2deg); }
+
+.pm-polaroid-1 { transform: rotate(-4deg); transition: transform 0.25s ease; }
+.pm-polaroid-1:hover { transform: rotate(0deg) translateY(-4px) scale(1.03); }
+.pm-polaroid-2 { transform: rotate(3deg); transition: transform 0.25s ease; }
+.pm-polaroid-2:hover { transform: rotate(0deg) translateY(-4px) scale(1.03); }
+
+.pm-code-block { transform: rotate(-1deg); transition: transform 0.25s ease; }
+.pm-code-block:hover { transform: rotate(0deg) translateY(-3px); }
+
+.pm-chip { transition: transform 0.15s, background 0.15s; }
+.pm-chip:hover { transform: scale(1.06) rotate(-1.5deg); background: var(--pm-chip-bg); }
+
+.pm-toolkit-card { transition: transform 0.2s, box-shadow 0.2s; }
+.pm-toolkit-card:hover { transform: rotate(-0.6deg) translateY(-2px); box-shadow: 0 10px 20px -12px var(--pm-nav-shadow); }
+
+.pm-toolkit-chip { transition: transform 0.15s, background 0.15s; }
+.pm-toolkit-chip:hover { transform: scale(1.08) rotate(-2deg); background: var(--pm-accent-soft); }
+
+.pm-edu-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.pm-edu-card:hover { transform: rotate(var(--pm-tilt, 0deg)) translateY(-3px); box-shadow: 0 14px 24px -16px var(--pm-nav-shadow); }
+
+/* Custom cursor ---------------------------------------------------------- */
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button { cursor: none; }
+}
+#pm-cursor-dot, #pm-cursor-ring {
+  position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+#pm-cursor-ring { transition: width 0.18s, height 0.18s, opacity 0.18s; }
+@media (pointer: coarse) {
+  #pm-cursor-dot, #pm-cursor-ring { display: none; }
+}
+
+/* Responsive -------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .pm-hero-grid { grid-template-columns: 1fr !important; }
+  .pm-hero-photo { order: -1; width: 160px !important; height: 160px !important; margin: 0 auto; }
+  .pm-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .pm-cs-grid { grid-template-columns: 1fr !important; }
+  .pm-cs-media { display: none !important; }
+  .pm-toolkit-grid { grid-template-columns: 1fr !important; }
+  .pm-about-divider { display: none !important; }
+  .pm-edu-grid { grid-template-columns: 1fr !important; }
+  .pm-name { font-size: 44px !important; }
+  .pm-process-grid { grid-template-columns: repeat(2,1fr) !important; row-gap: 28px; }
+  .pm-process-arrow { display: none !important; }
+  .pm-nav-links { gap: 0 !important; overflow-x: auto; scrollbar-width: none; }
+  .pm-nav-links a { padding: 8px 10px !important; font-size: 12.5px !important; white-space: nowrap; }
 }

@@ -1,34 +1,63 @@
 import React from 'react';
 
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  image: string | null;
-  demoLink?: string;
-  repoLink?: string;
-  featured: boolean;
-  status?: 'Completed' | 'In Progress' | 'Learning';
-  year: string;
-}
-
-export interface Experience {
-  id: string;
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  description: string[];
-  skills: string[];
-  logo?: string;
-}
-
 export interface SocialLink {
   platform: string;
   url: string;
   icon: React.ReactNode;
   label?: string;
+}
+
+export interface CaseStudyPrd {
+  status: string;
+  overview: string;
+  goal: string;
+  users: string;
+  requirements: string[];
+  metrics: string[];
+  outOfScope: string;
+}
+
+export interface CaseStudy {
+  title: string;
+  year: string;
+  tags: string[];
+  problem: string;
+  approach: string;
+  outcome: string;
+  prd: CaseStudyPrd;
+}
+
+export interface ExperienceItem {
+  logo: string;
+  dates: string;
+  role: string;
+  org: string;
+  bullets: string[];
+}
+
+export interface ToolkitGroup {
+  title: string;
+  icon: string;
+  hue: number;
+  items: string[];
+}
+
+export interface EducationItem {
+  logo: string;
+  logoBg?: string;
+  name: string;
+  degreeLabel: string;
+  gpa: string;
+  location: string;
+  dates: string;
+  hue: number;
+  tilt: string;
+}
+
+export interface ProcessStep {
+  icon: string;
+  label: string;
+  desc: string;
 }
 
 export type Theme = 'light' | 'dark';
