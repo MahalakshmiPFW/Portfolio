@@ -37,7 +37,7 @@ const About: React.FC = () => {
           <div style={{ display: 'flex', gap: 22 }}>
             <div className="pm-polaroid-1" style={{ background: 'var(--pm-bg)', padding: '10px 10px 26px', borderRadius: 4, boxShadow: '0 10px 20px -12px var(--pm-nav-shadow)' }}>
               <div style={{ width: 120, height: 120, overflow: 'hidden', background: 'var(--pm-chip-bg)' }}>
-                <img src="/assets/images/IMG_7852.jpeg" alt="adventures" style={{ width: 120, height: 120, objectFit: 'cover', display: 'block' }} />
+                <img src="/assets/images/IMG_9567.jpeg" alt="adventures" style={{ width: 120, height: 120, objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{ textAlign: 'center', fontFamily: "'Newsreader',serif", fontStyle: 'italic', fontSize: 11.5, color: 'var(--pm-ink-faint)', marginTop: 8 }}>
                 adventures 🌍
@@ -45,7 +45,7 @@ const About: React.FC = () => {
             </div>
             <div className="pm-polaroid-2" style={{ background: 'var(--pm-bg)', padding: '10px 10px 26px', borderRadius: 4, boxShadow: '0 10px 20px -12px var(--pm-nav-shadow)', marginTop: 14 }}>
               <div style={{ width: 120, height: 120, overflow: 'hidden', background: 'var(--pm-chip-bg)' }}>
-                <img src="/assets/images/IMG_9567.jpeg" alt="team wins" style={{ width: 120, height: 120, objectFit: 'cover', display: 'block' }} />
+                <img src="/assets/images/IMG_7852.jpeg" alt="team wins" style={{ width: 120, height: 120, objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{ textAlign: 'center', fontFamily: "'Newsreader',serif", fontStyle: 'italic', fontSize: 11.5, color: 'var(--pm-ink-faint)', marginTop: 8 }}>
                 team wins 🤝
