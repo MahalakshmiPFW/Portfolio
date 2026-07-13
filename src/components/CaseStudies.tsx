@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CASE_STUDIES } from '../pmData';
 
 const CaseStudies: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
   const [prdOpenIndex, setPrdOpenIndex] = useState(-1);
 
   return (
