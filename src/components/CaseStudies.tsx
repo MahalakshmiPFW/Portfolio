@@ -72,6 +72,36 @@ const CaseStudies: React.FC = () => {
                       </div>
                     </div>
 
+                    {cs.externalLinks && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                        {cs.externalLinks.map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: 8,
+                              fontSize: 13.5,
+                              fontWeight: 600,
+                              color: 'var(--pm-accent)',
+                              background: 'var(--pm-accent-soft)',
+                              padding: '10px 16px',
+                              borderRadius: 10,
+                              textDecoration: 'none',
+                            }}
+                          >
+                            <span>{link.icon}</span>
+                            <span>{link.label}</span>
+                            <span style={{ fontSize: 11 }}>↗</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
+
+                    {cs.prd && (
                     <button
                       onClick={() => setPrdOpenIndex((prev) => (prev === i ? -1 : i))}
                       style={{ all: 'unset', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, fontWeight: 600, color: 'var(--pm-accent)', padding: '8px 0' }}
@@ -79,8 +109,9 @@ const CaseStudies: React.FC = () => {
                       <span>{prdOpen ? 'Hide mini PRD' : 'View mini PRD'}</span>
                       <span style={{ fontSize: 11, transform: prdOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▸</span>
                     </button>
+                    )}
 
-                    {prdOpen && (
+                    {cs.prd && prdOpen && (
                       <div style={{ marginTop: 14, borderRadius: 14, background: 'var(--pm-bg)', border: '1px solid var(--pm-hairline)', overflow: 'hidden' }}>
                         <div style={{ background: 'var(--pm-accent-soft)', padding: '16px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>

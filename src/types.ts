@@ -17,6 +17,12 @@ export interface CaseStudyPrd {
   outOfScope: string;
 }
 
+export interface CaseStudyLink {
+  label: string;
+  url: string;
+  icon: string;
+}
+
 export interface CaseStudy {
   title: string;
   year: string;
@@ -24,7 +30,8 @@ export interface CaseStudy {
   problem: string;
   approach: string;
   outcome: string;
-  prd: CaseStudyPrd;
+  prd?: CaseStudyPrd;
+  externalLinks?: CaseStudyLink[];
 }
 
 export interface ExperienceItem {

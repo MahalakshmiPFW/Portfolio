@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crescendo Coffee & Café — Wireframes</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+  <meta name="design_doc_mode" content="canvas">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Space+Mono:wght@400;700&display=swap');
+    body { margin:0; background:#f0eee9; font-family:'Architects Daughter', cursive; color:#1a1a1a; }
+    .dv-turn { padding:40px 44px 32px; border-bottom:1px solid rgba(0,0,0,.1); scroll-margin-top:16px; }
+    .dv-thd { display:flex; align-items:baseline; gap:10px; margin:0 0 22px; }
+    .dv-tid { font:700 11px 'Space Mono',monospace; padding:3px 8px; background:#1a1a1a; color:#fff; border-radius:4px; text-decoration:none; }
+    .dv-tname { font:700 15px 'Architects Daughter',cursive; color:#1a1a1a; }
+    .dv-opts { display:flex; flex-wrap:wrap; gap:30px; align-items:flex-start; }
+    .dv-opt { flex:none; display:flex; flex-direction:column; gap:9px; scroll-margin-top:16px; }
+    .dv-oid { font:700 11px 'Space Mono',monospace; padding:3px 8px; background:rgba(0,0,0,.08); color:#1a1a1a; border-radius:5px; text-decoration:none; }
+    .dv-olabel { display:flex; align-items:baseline; gap:8px; font:400 13px 'Architects Daughter',cursive; color:rgba(0,0,0,.6); }
+    .dv-card { background:#fff; border:2.5px solid #1a1a1a; border-radius:3px; box-shadow:4px 4px 0 rgba(0,0,0,.15); overflow:hidden; }
+    .dv-opt:target .dv-oid { background:#c1653a; color:#fff; }
+    .dv-next { margin:24px 0 0; font:14px/1.6 'Architects Daughter',cursive; color:rgba(0,0,0,.55); }
+    .wf-box { border:2px solid #1a1a1a; background:#fff; }
+    .wf-dash { border:2px dashed #999; background:repeating-linear-gradient(45deg,#f4f4f2,#f4f4f2 6px,#ececea 6px,#ececea 12px); display:flex; align-items:center; justify-content:center; font:12px 'Space Mono',monospace; color:#888; text-align:center; }
+    .wf-label { font:13px 'Architects Daughter',cursive; color:#1a1a1a; }
+    .wf-tag { font:11px 'Space Mono',monospace; color:#666; letter-spacing:.02em; }
+    .wf-btn { border:2px solid #1a1a1a; border-radius:20px; padding:6px 14px; font:13px 'Architects Daughter',cursive; text-align:center; background:#fff; }
+    .wf-btn.solid { background:#1a1a1a; color:#fff; }
+    .wf-x { position:relative; }
+    .wf-x::before, .wf-x::after { content:''; position:absolute; inset:0; }
+  </style>
+</helmet>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Menu &amp; order-flow structure options</span></div>
+  <div class="dv-opts">
+
+    <!-- 2a: Category tabs + grid + slide-over cart (matches built hi-fi) -->
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Tabs + grid + slide-over cart (built version)</div>
+      <div class="dv-card" style="width:300px;">
+        <div style="padding:12px; display:flex; gap:8px;">
+          <div style="flex:1; min-width:0;">
+            <div class="wf-box" style="height:26px; display:flex; align-items:center; justify-content:space-between; padding:0 8px;"><span class="wf-label">LOGO</span><span class="wf-tag">[cart 2]</span></div>
+            <div style="display:flex; gap:6px; margin:10px 0;">
+              <div class="wf-btn solid" style="padding:4px 10px; font-size:11px;">All</div>
+              <div class="wf-btn" style="padding:4px 10px; font-size:11px;">Coffee</div>
+              <div class="wf-btn" style="padding:4px 10px; font-size:11px;">Lunch</div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <div class="wf-box" style="height:70px; padding:6px;"><div class="wf-tag">item card</div></div>
+              <div class="wf-box" style="height:70px; padding:6px;"><div class="wf-tag">item card</div></div>
+              <div class="wf-box" style="height:70px; padding:6px;"><div class="wf-tag">item card</div></div>
+              <div class="wf-box" style="height:70px; padding:6px;"><div class="wf-tag">item card</div></div>
+            </div>
+          </div>
+          <div class="wf-dash" style="width:70px; flex-shrink:0; border-left:2px solid #1a1a1a; border-top:none; border-right:none; border-bottom:none; font-size:9px;">cart drawer (slides in)</div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:300px;">click item → modal for size/add-ons → cart drawer slides in from right, checkout inline</div>
+    </div>
+
+    <!-- 2b: Sidebar categories + scroll list (desktop pattern) -->
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Sticky sidebar categories, one long scroll</div>
+      <div class="dv-card" style="width:300px;">
+        <div style="padding:12px; display:flex; gap:10px;">
+          <div style="width:70px; display:flex; flex-direction:column; gap:6px;">
+            <div class="wf-btn solid" style="font-size:10px; padding:4px 6px;">Coffee</div>
+            <div class="wf-btn" style="font-size:10px; padding:4px 6px;">Lunch</div>
+            <div class="wf-btn" style="font-size:10px; padding:4px 6px;">Sweets</div>
+            <div class="wf-btn" style="font-size:10px; padding:4px 6px;">Kids</div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+            <div class="wf-tag">— Coffee —</div>
+            <div class="wf-box" style="height:34px;"></div>
+            <div class="wf-box" style="height:34px;"></div>
+            <div class="wf-tag">— Lunch —</div>
+            <div class="wf-box" style="height:34px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:300px;">sidebar highlights section in view as you scroll; cart as small fixed pill, bottom-right</div>
+    </div>
+
+    <!-- 2c: Guided step-by-step order wizard (mobile-first) -->
+    <div class="dv-opt" id="2c">
+      <div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Guided step-by-step order (mobile wizard)</div>
+      <div class="dv-card" style="width:210px;">
+        <div style="padding:12px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-tag">Step 1 of 3 ●○○</div>
+          <div class="wf-label">What are you craving?</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+            <div class="wf-box" style="height:44px; display:flex;align-items:center;justify-content:center;"><span class="wf-tag">Coffee</span></div>
+            <div class="wf-box" style="height:44px; display:flex;align-items:center;justify-content:center;"><span class="wf-tag">Food</span></div>
+            <div class="wf-box" style="height:44px; display:flex;align-items:center;justify-content:center;"><span class="wf-tag">Sweets</span></div>
+            <div class="wf-box" style="height:44px; display:flex;align-items:center;justify-content:center;"><span class="wf-tag">Kids</span></div>
+          </div>
+          <div class="wf-btn solid" style="align-self:stretch; text-align:center;">Next →</div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:210px;">craving → pick item → customize → review; one decision per screen, big tap targets</div>
+    </div>
+
+    <!-- 2d: Search-first with bottom-sheet cart -->
+    <div class="dv-opt" id="2d">
+      <div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>Search-first menu, bottom-sheet cart</div>
+      <div class="dv-card" style="width:210px;">
+        <div style="padding:12px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:28px; display:flex; align-items:center; padding:0 8px;"><span class="wf-tag">🔍 search menu…</span></div>
+          <div style="display:flex; gap:5px; flex-wrap:wrap;">
+            <div class="wf-btn" style="font-size:10px; padding:3px 8px;">Popular</div>
+            <div class="wf-btn" style="font-size:10px; padding:3px 8px;">GF</div>
+            <div class="wf-btn" style="font-size:10px; padding:3px 8px;">Veg</div>
+          </div>
+          <div class="wf-box" style="height:40px;"></div>
+          <div class="wf-box" style="height:40px;"></div>
+          <div class="wf-box" style="border-top:2px solid #1a1a1a; height:24px; display:flex; align-items:center; justify-content:center;"><span class="wf-tag">▲ cart (3) $18.50</span></div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:210px;">cart lives as a bottom sheet you drag up; good for a regular who knows what they want</div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "combine <a class="dv-oid" href="#2a">2a</a>'s cart with <a class="dv-oid" href="#2c">2c</a>'s wizard for first-timers" · "build <a class="dv-oid" href="#2d">2d</a> in hi-fi" · "more menu layout ideas"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage structure options</span></div>
+  <div class="dv-opts">
+
+    <!-- 1a: Classic stacked (matches built hi-fi) -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Classic stacked (built version)</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:22px; display:flex; align-items:center; justify-content:space-between; padding:0 8px;"><span class="wf-tag">LOGO</span><span class="wf-tag">cart</span></div>
+          <div class="wf-dash" style="height:80px;">hero photo + headline + 2 CTAs</div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
+            <div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div>
+          </div>
+          <div class="wf-tag">— top sellers grid —</div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
+            <div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div>
+          </div>
+          <div class="wf-dash" style="height:40px; font-size:9px;">about + interior photo</div>
+          <div class="wf-box" style="height:20px;"></div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">hero → trust strip → top sellers → about → hours/map → footer</div>
+    </div>
+
+    <!-- 1b: Split hero with persistent order rail -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Persistent order rail (desktop)</div>
+      <div class="dv-card" style="width:280px;">
+        <div style="padding:10px; display:flex; gap:8px;">
+          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+            <div class="wf-box" style="height:20px;"></div>
+            <div class="wf-dash" style="height:70px; font-size:9px;">hero photo + headline</div>
+            <div class="wf-tag">— top sellers —</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+              <div class="wf-box" style="height:30px;"></div><div class="wf-box" style="height:30px;"></div>
+            </div>
+          </div>
+          <div class="wf-box" style="width:80px; display:flex; flex-direction:column; gap:6px; padding:6px;">
+            <div class="wf-tag" style="font-size:9px;">YOUR ORDER</div>
+            <div class="wf-box" style="height:16px;"></div>
+            <div class="wf-box" style="height:16px;"></div>
+            <div class="wf-btn solid" style="font-size:9px; padding:3px;">Checkout</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:280px;">cart/order builder always visible alongside content — no drawer needed, good for regulars ordering ahead</div>
+    </div>
+
+    <!-- 1c: Menu-forward homepage -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Menu-forward (skip the hero)</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:20px;"></div>
+          <div class="wf-tag">Today's specials, right up top ↓</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px;">
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+          </div>
+          <div class="wf-btn solid" style="align-self:center; padding:5px 16px;">See Full Menu</div>
+          <div class="wf-dash" style="height:44px; font-size:9px;">brand story, shorter</div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">for the "already convinced, just want to order fast" visitor — trims the storytelling</div>
+    </div>
+
+    <!-- 1d: Editorial / magazine layout -->
+    <div class="dv-opt" id="1d">
+      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Editorial / magazine feel</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:20px;"></div>
+          <div class="wf-dash" style="height:100px; font-size:9px;">full-bleed photo, headline overlaid bottom-left</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="wf-dash" style="height:50px; font-size:9px;">interior photo</div>
+            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag" style="width: 86px; height: 56px; font-size: 9px">brand story copy, larger type</span></div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag">"what's in season" copy</span></div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">seasonal drink photo</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">alternating image/text blocks, slower and more atmospheric — leans into "third place" feel over speed</div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build <a class="dv-oid" href="#1b">1b</a>'s persistent order rail in hi-fi" · "mix <a class="dv-oid" href="#1c">1c</a> with the top-sellers grid from <a class="dv-oid" href="#1a">1a</a>" · "more homepage ideas"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

@@ -12,6 +12,19 @@ export const PROCESS_STEPS: ProcessStep[] = [
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
+    title: 'Crescendo Coffee Redesign',
+    year: '2026',
+    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
+    problem: 'Crescendo Coffee & Café — a locally loved shop in downtown Fort Wayne — has a website that undersells a genuinely great product: an unfilterable 2,000+ word menu page and an "Order Online" link that dumps visitors into an off-brand third-party checkout at the exact moment they\'re deciding to spend money.',
+    approach: 'Ran this as a real PM exercise against a live business, not a hypothetical: audited the current site, defined two contrasting personas (a daily regular vs. a price-sensitive first-timer), wrote goals tied to measurable targets, and MoSCoW-prioritized requirements into a 3-phase roadmap. Used Claude Design to explore wireframes from that spec, then hand-built the interactive ordering prototype in React and TypeScript.',
+    outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, risks, and roadmap — scoping an in-brand ordering flow to replace the jarring hand-off to a generic checkout page.',
+    externalLinks: [
+      { label: 'View Detailed PRD', url: '/case-studies/crescendo/prd.html', icon: '📋' },
+      { label: 'View Wireframes', url: '/case-studies/crescendo/wireframes.html', icon: '✏️' },
+      { label: 'View Prototype', url: '/case-studies/crescendo-prototype/', icon: '🖥️' },
+    ],
+  },
+  {
     title: 'GIS Data-Sharing Policy',
     year: '2026',
     tags: ['Ambiguous 0→1 Problem', 'Stakeholder Research', 'Policy Proposed'],

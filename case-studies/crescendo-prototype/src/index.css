@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background: oklch(0.965 0.012 55);
+  font-family: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: oklch(0.5 0.145 40 / 0.25);
+}
+
+a {
+  color: oklch(0.46 0.14 40);
+}
+
+a:hover {
+  color: oklch(0.38 0.14 40);
+}
