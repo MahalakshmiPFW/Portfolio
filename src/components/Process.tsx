@@ -12,10 +12,10 @@ const Process: React.FC = () => {
           How I work
         </div>
         <h2 style={{ fontFamily: "'Newsreader',serif", fontWeight: 500, fontSize: 32, margin: '0 0 10px', letterSpacing: '-0.01em' }}>
-          It's a loop, not a line
+          Ship, Learn, Iterate!
         </h2>
         <p style={{ fontSize: 15.5, color: 'var(--pm-ink-soft)', maxWidth: 620, margin: 0 }}>
-          Shipping isn't the finish line — it's where the next round of scoping starts.
+          Each cycle builds on the last, creating a continuous feedback loop that refines and improves the product.
         </p>
       </div>
 

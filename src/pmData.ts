@@ -132,7 +132,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     org: 'City of Fort Wayne, City Utilities Engineering',
     bullets: [
       'Developing and improving a spatial GIS chatbot through prompt design, feature implementation, code refinement, and end‑to‑end testing prior to integration.',
-      'Gathered requirements from legal and engineering stakeholders to identify GIS data-sharing constraints, then synthesized findings into a three-tier classification system that replaced manual, case-by-case decisions with a clear, repeatable framework',
+      'Gathered requirements from legal and engineering stakeholders to identify GIS data-sharing constraints, then synthesized findings into a three-tier classification system that replaced manual, case-by-case decisions with a clear, repeatable framework.',
       'Improved a Python/Tkinter data-entry tool by redesigning workflows based on direct feedback from field engineering staff.',
       'Tracked deliverables and cross-team progress via a SharePoint tracker across a 19-member group.',
     ],
