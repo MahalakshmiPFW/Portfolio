@@ -131,9 +131,10 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: 'Computer Science Intern',
     org: 'City of Fort Wayne, City Utilities Engineering',
     bullets: [
-      'Led research and requirements gathering from legal and engineering stakeholders on GIS data policy, distilling their constraints into a three-tier classification model proposed for public data-sharing decisions.',
-      'Gathered requirements directly from field engineering staff to redesign a Python/Tkinter data-entry tool around their actual workflow.',
-      'Tracked deliverables and cross-team progress via a SharePoint tracker across a 19-member intern group.',
+      'Developing and improving a spatial GIS chatbot through prompt design, feature implementation, code refinement, and end‑to‑end testing prior to integration.',
+      'Gathered requirements from legal and engineering stakeholders to identify GIS data-sharing constraints, then synthesized findings into a three-tier classification system that replaced manual, case-by-case decisions with a clear, repeatable framework',
+      'Improved a Python/Tkinter data-entry tool by redesigning workflows based on direct feedback from field engineering staff.',
+      'Tracked deliverables and cross-team progress via a SharePoint tracker across a 19-member group.',
     ],
   },
   {
@@ -163,7 +164,7 @@ export const TOOLKIT: ToolkitGroup[] = [
     title: 'Product & Process',
     icon: '🗂️',
     hue: 255,
-    items: ['Jira', 'Trello', 'Bitbucket', 'Backlog scoping', 'Sprint planning'],
+    items: ['Jira', 'Trello', 'Bitbucket', 'Confluence','Backlog scoping', 'Sprint planning'],
   },
   {
     title: 'Research & Comms',
@@ -175,13 +176,13 @@ export const TOOLKIT: ToolkitGroup[] = [
     title: 'Technical Fluency',
     icon: '⚡',
     hue: 300,
-    items: ['HTML/CSS', 'React', 'Next.js', 'Responsive Design', 'JavaScript/TS', 'Vercel', 'Node.js', 'Express.js', 'REST APIs', 'Python', 'SQL', 'Jest', 'Cypress'],
+    items: ['HTML/CSS', 'React', 'Next.js', 'Responsive Design', 'JavaScript/TypeScript', 'Vercel', 'Node.js', 'Express.js', 'REST APIs', 'Python', 'SQL', 'Jest', 'Cypress'],
   },
   {
-    title: 'AI-Assisted Work',
+    title: 'AI Tools',
     icon: '✨',
     hue: 30,
-    items: ['Gemini API', 'Cursor', 'Copilot', 'ChatGPT'],
+    items: ['Gemini API', 'Cursor', 'Claude Code', 'ChatGPT'],
   },
 ];
 
