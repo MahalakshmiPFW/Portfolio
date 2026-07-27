@@ -102,7 +102,7 @@ const CaseStudies: React.FC = () => {
                     )}
 
                     {cs.prd && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
                         <button
                           onClick={() => setPrdOpenIndex((prev) => (prev === i ? -1 : i))}
                           style={{ all: 'unset', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, fontWeight: 600, color: 'var(--pm-accent)', padding: '8px 0' }}
@@ -110,6 +110,29 @@ const CaseStudies: React.FC = () => {
                           <span>{prdOpen ? 'Hide mini PRD' : 'View mini PRD'}</span>
                           <span style={{ fontSize: 11, transform: prdOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▸</span>
                         </button>
+
+                        {cs.title === 'MastodonHub' && (
+                          <a
+                            href="https://docs.google.com/document/d/1NPqHgnlY1D9ml1xQDanVzA7mLWaDD6x2HfnN6NDijs4/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: 8,
+                              fontSize: 13.5,
+                              fontWeight: 600,
+                              color: 'var(--pm-accent)',
+                              background: 'var(--pm-accent-soft)',
+                              padding: '8px 12px',
+                              borderRadius: 10,
+                              textDecoration: 'none',
+                            }}
+                          >
+                            <span>View sprint demo</span>
+                            <span style={{ fontSize: 11 }}>↗</span>
+                          </a>
+                        )}
 
                         {cs.title === 'SyllabusSync' && (
                           <div style={{ display: 'flex', gap: 8 }}>
