@@ -102,13 +102,61 @@ const CaseStudies: React.FC = () => {
                     )}
 
                     {cs.prd && (
-                    <button
-                      onClick={() => setPrdOpenIndex((prev) => (prev === i ? -1 : i))}
-                      style={{ all: 'unset', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, fontWeight: 600, color: 'var(--pm-accent)', padding: '8px 0' }}
-                    >
-                      <span>{prdOpen ? 'Hide mini PRD' : 'View mini PRD'}</span>
-                      <span style={{ fontSize: 11, transform: prdOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▸</span>
-                    </button>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                        <button
+                          onClick={() => setPrdOpenIndex((prev) => (prev === i ? -1 : i))}
+                          style={{ all: 'unset', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, fontWeight: 600, color: 'var(--pm-accent)', padding: '8px 0' }}
+                        >
+                          <span>{prdOpen ? 'Hide mini PRD' : 'View mini PRD'}</span>
+                          <span style={{ fontSize: 11, transform: prdOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▸</span>
+                        </button>
+
+                        {cs.title === 'SyllabusSync' && (
+                          <div style={{ display: 'flex', gap: 8 }}>
+                            <a
+                              href="https://syllabus-to-calendar-app.vercel.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 8,
+                                fontSize: 13.5,
+                                fontWeight: 600,
+                                color: 'var(--pm-accent)',
+                                background: 'var(--pm-accent-soft)',
+                                padding: '8px 12px',
+                                borderRadius: 10,
+                                textDecoration: 'none',
+                              }}
+                            >
+                              <span>View Demo</span>
+                              <span style={{ fontSize: 11 }}>↗</span>
+                            </a>
+
+                            <a
+                              href="https://github.com/MahalakshmiPFW/Syllabus-to-Calendar-App"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 8,
+                                fontSize: 13.5,
+                                fontWeight: 600,
+                                color: 'var(--pm-accent)',
+                                background: 'var(--pm-accent-soft)',
+                                padding: '8px 12px',
+                                borderRadius: 10,
+                                textDecoration: 'none',
+                              }}
+                            >
+                              <span>View Repo</span>
+                              <span style={{ fontSize: 11 }}>↗</span>
+                            </a>
+                          </div>
+                        )}
+                      </div>
                     )}
 
                     {cs.prd && prdOpen && (

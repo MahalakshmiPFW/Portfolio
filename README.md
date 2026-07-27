@@ -1,8 +1,15 @@
 # Mahalakshmi | Personal Portfolio
 
-Hi! I’m Mahalakshmi, a Master’s student in Computer Science at Purdue University Fort Wayne (Class of 2026) with a strong focus on frontend product engineering and full-stack development.
+Hi! I'm Mahalakshmi, an MS CS New Grad from Purdue University Fort Wayne (Class of 2026), building at the intersection of full-stack engineering and product thinking.
 
-I’m currently preparing for new grad and entry-level software engineering roles starting in 2026.
+I'm currently preparing for new grad and entry-level Software Engineering and Product Management / Product-Adjacent roles starting in 2026.
+
+## What's Inside
+
+This site is built to work for two audiences at once:
+
+- **For engineers:** real projects with the stack, architecture decisions, and technical depth behind each one — including a real production bug I found and fixed after shipping.
+- **For product folks:** each project doubles as a case study — problem, approach, outcome — with a couple including a full mini-PRD (goals, target users, requirements, success metrics, and explicit scope boundaries).
 
 ## Tech Stack
 
@@ -25,6 +32,6 @@ npm install && npm run dev
 
 ## Contact
 
-- Email: sanjumahalakshmi12@gmail.com
+- Email: mahalak@purdue.edu
 - LinkedIn: [Mahalakshmi Mahadevan](https://www.linkedin.com/in/mahalakshmimahadevan/)
 - GitHub: [MahalakshmiPFW](https://github.com/MahalakshmiPFW)
