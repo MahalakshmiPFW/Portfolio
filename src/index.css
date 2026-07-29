@@ -139,6 +139,13 @@ a { color: inherit; text-decoration: none; }
   .pm-name { font-size: 44px !important; }
   .pm-process-grid { grid-template-columns: repeat(2,1fr) !important; row-gap: 28px; }
   .pm-process-arrow { display: none !important; }
-  .pm-nav-links { gap: 0 !important; overflow-x: auto; scrollbar-width: none; }
+  .pm-nav-links { gap: 0 !important; overflow-x: auto; scrollbar-width: none; min-width: 0; }
   .pm-nav-links a { padding: 8px 10px !important; font-size: 12.5px !important; white-space: nowrap; }
+  .pm-nav-links::-webkit-scrollbar { display: none; }
+  .pm-nav-pillbar { max-width: calc(100vw - 48px); }
+  .pm-hero-photo-ring { width: 184px !important; height: 184px !important; }
+  .pm-exp-row { grid-template-columns: 1fr !important; }
+  .pm-edu-card { flex-direction: column !important; align-items: flex-start !important; gap: 18px; }
+  .pm-edu-text { max-width: none !important; }
+  .pm-edu-name { white-space: normal !important; }
 }

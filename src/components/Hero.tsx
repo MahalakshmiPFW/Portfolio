@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="pm-hero-photo" style={{ width: 260, height: 260, position: 'relative', flex: 'none' }}>
-          <svg width="284" height="284" viewBox="0 0 284 284" style={{ position: 'absolute', top: -12, left: -12, pointerEvents: 'none' }}>
+          <svg className="pm-hero-photo-ring" width="284" height="284" viewBox="0 0 284 284" style={{ position: 'absolute', top: -12, left: -12, pointerEvents: 'none' }}>
             <circle cx="142" cy="142" r="136" fill="none" stroke="var(--pm-accent)" strokeWidth="2" strokeDasharray="6 7" strokeLinecap="round" />
           </svg>
           <svg width="34" height="34" viewBox="0 0 34 34" style={{ position: 'absolute', top: -14, right: -10, overflow: 'visible' }}>
@@ -75,8 +75,8 @@ const Hero: React.FC = () => {
               strokeLinecap="round"
             />
           </svg>
-          <div style={{ width: 260, height: 260, borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--pm-hairline)' }}>
-            <img src="/assets/images/Profile.png" alt="Mahalakshmi" style={{ width: 260, height: 260, objectFit: 'cover', display: 'block' }} />
+          <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--pm-hairline)' }}>
+            <img src="/assets/images/Profile.png" alt="Mahalakshmi" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           </div>
         </div>
       </div>

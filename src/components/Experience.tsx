@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
 
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {EXPERIENCE.map((job) => (
-          <div key={job.org} style={{ display: 'grid', gridTemplateColumns: '150px 1fr', gap: 24, padding: '22px 0', borderTop: '1px solid var(--pm-hairline)' }}>
+          <div key={job.org} className="pm-exp-row" style={{ display: 'grid', gridTemplateColumns: '150px 1fr', gap: 24, padding: '22px 0', borderTop: '1px solid var(--pm-hairline)' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
               <div style={{ width: 88, height: 88, borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--pm-hairline)', background: 'var(--pm-chip-bg)', flex: 'none' }}>
                 <img src={job.logo} alt={job.org} style={{ width: 88, height: 88, objectFit: 'cover', display: 'block' }} />

@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
   return (
     <div style={{ position: 'sticky', top: 0, zIndex: 50, padding: '18px 24px 0' }}>
       <div
+        className="pm-nav-pillbar"
         style={{
           width: 'fit-content',
           margin: '0 auto',

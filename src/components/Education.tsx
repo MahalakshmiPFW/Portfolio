@@ -22,10 +22,10 @@ const Education: React.FC = () => {
               className="pm-edu-card"
               style={{ '--pm-tilt': school.tilt, borderRadius: 18, padding: 26, background: colors.card, display: 'flex', alignItems: 'center' } as React.CSSProperties}
             >
-              <div style={{ flex: 'none', maxWidth: 320 }}>
+              <div className="pm-edu-text" style={{ flex: 'none', maxWidth: 320 }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 6, marginBottom: 10 }}>
                   <span className="pm-doodle-icon" style={{ fontSize: 15, display: 'inline-block', flex: 'none', marginTop: 1 }}>🎓</span>
-                  <span style={{ fontWeight: 600, fontSize: 16.5, lineHeight: 1.3, whiteSpace: 'nowrap' }}>{school.name}</span>
+                  <span className="pm-edu-name" style={{ fontWeight: 600, fontSize: 16.5, lineHeight: 1.3, whiteSpace: 'nowrap' }}>{school.name}</span>
                 </div>
                 <div style={{ fontSize: 14, color: 'var(--pm-ink-soft)', marginBottom: 10 }}>
                   {school.degreeLabel} {school.gpa && <strong style={{ fontWeight: 700, color: 'var(--pm-ink)' }}>{school.gpa}</strong>}
