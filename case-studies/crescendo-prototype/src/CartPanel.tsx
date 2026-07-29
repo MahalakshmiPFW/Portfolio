@@ -97,7 +97,7 @@ export default function CartPanel({
 
                 <div style={{ padding: '16px 22px', borderTop: '1px solid oklch(0.87 0.014 55)' }}>
                   <div style={{ font: "600 11px 'Work Sans',sans-serif", letterSpacing: '.06em', textTransform: 'uppercase', color: 'oklch(0.5 0.015 55)', marginBottom: 8 }}>Pickup</div>
-                  <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
+                  <div style={{ display: 'flex', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
                     <button onClick={onSetPickupAsap} style={chipStyle(pickupMode === 'asap')}>ASAP (~12 min)</button>
                     <button onClick={onSetPickupScheduled} style={chipStyle(pickupMode === 'scheduled')}>Schedule</button>
                   </div>

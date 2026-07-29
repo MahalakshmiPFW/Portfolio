@@ -12,7 +12,7 @@ interface MenuViewProps {
 
 export default function MenuView({ categoriesList, activeCategory, onSelectCategory, filteredItems, onQuickAdd, chipStyle }: MenuViewProps) {
   return (
-    <main style={{ maxWidth: 1240, margin: '0 auto', padding: '36px 32px 80px' }}>
+    <main className="menu-main" style={{ maxWidth: 1240, margin: '0 auto' }}>
       <h1 style={{ font: "600 34px 'Source Serif 4',serif", margin: '0 0 6px', color: 'oklch(0.2 0.016 55)' }}>Full Menu</h1>
       <p style={{ font: "400 14px 'Work Sans',sans-serif", color: 'oklch(0.5 0.015 55)', margin: '0 0 24px' }}>Breakfast served all day. Gluten-free bread available on request.</p>
 
@@ -22,7 +22,7 @@ export default function MenuView({ categoriesList, activeCategory, onSelectCateg
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 18 }}>
+      <div className="menu-grid">
         {filteredItems.map((item) => (
           <div key={item.id} style={{ background: 'oklch(0.985 0.006 55)', border: '1px solid oklch(0.875 0.014 55)', borderRadius: 12, padding: 16, display: 'flex', flexDirection: 'column', gap: 10 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>

@@ -17,10 +17,10 @@ export default function HomeView({ onGoMenu, topSellerItems, onQuickAdd }: HomeV
   return (
     <main>
       {/* HERO */}
-      <section style={{ position: 'relative', padding: '64px 32px 56px', display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 48, alignItems: 'center', maxWidth: 1240, margin: '0 auto' }}>
+      <section className="hero-section" style={{ position: 'relative', alignItems: 'center', maxWidth: 1240, margin: '0 auto' }}>
         <div>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, font: "600 11px 'Work Sans',sans-serif", letterSpacing: '.1em', textTransform: 'uppercase', color: 'oklch(0.46 0.14 40)', background: 'oklch(0.5 0.145 40 / 0.1)', padding: '6px 12px', borderRadius: 20, marginBottom: 20 }}>In The Pearl · Downtown Fort Wayne</div>
-          <h1 style={{ font: "600 52px/1.08 'Source Serif 4',serif", margin: '0 0 18px', color: 'oklch(0.2 0.016 55)', textWrap: 'balance' }}>Coffee, made unhurried.</h1>
+          <h1 className="hero-heading" style={{ fontFamily: "'Source Serif 4',serif", fontWeight: 600, lineHeight: 1.08, margin: '0 0 18px', color: 'oklch(0.2 0.016 55)', textWrap: 'balance' }}>Coffee, made unhurried.</h1>
           <p style={{ font: "400 16px/1.6 'Work Sans',sans-serif", color: 'oklch(0.42 0.018 55)', maxWidth: 460, margin: '0 0 28px', textWrap: 'pretty' }}>Scratch-made breakfast, lunch, and specialty drinks in the heart of downtown — the neighborhood spot for catching up, settling in, or ordering ahead on your way out the door.</p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <button onClick={onGoMenu} style={{ background: 'oklch(0.27 0.018 55)', color: 'oklch(0.965 0.012 55)', border: 'none', font: "600 14px 'Work Sans',sans-serif", padding: '14px 26px', borderRadius: 8, cursor: 'pointer' }}>View Full Menu</button>
@@ -33,7 +33,7 @@ export default function HomeView({ onGoMenu, topSellerItems, onQuickAdd }: HomeV
       </section>
 
       {/* TRUST STRIP */}
-      <section style={{ maxWidth: 1240, margin: '0 auto', padding: '0 32px 56px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
+      <section className="trust-grid" style={{ maxWidth: 1240, margin: '0 auto' }}>
         {TRUST_ITEMS.map((t) => (
           <div key={t.title} style={{ background: 'oklch(0.93 0.013 55)', border: '1px solid oklch(0.87 0.014 55)', borderRadius: 10, padding: '16px 18px', display: 'flex', alignItems: 'center', gap: 12 }}>
             <span style={{ fontSize: 20 }}>{t.icon}</span>
@@ -46,12 +46,12 @@ export default function HomeView({ onGoMenu, topSellerItems, onQuickAdd }: HomeV
       </section>
 
       {/* TOP SELLERS */}
-      <section style={{ maxWidth: 1240, margin: '0 auto', padding: '8px 32px 64px' }}>
+      <section className="sellers-section" style={{ maxWidth: 1240, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 20 }}>
           <h2 style={{ font: "600 26px 'Source Serif 4',serif", margin: 0, color: 'oklch(0.2 0.016 55)' }}>What people order</h2>
           <button onClick={onGoMenu} style={{ background: 'none', border: 'none', font: "600 13px 'Work Sans',sans-serif", color: 'oklch(0.46 0.14 40)', cursor: 'pointer' }}>See full menu →</button>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20 }}>
+        <div className="sellers-grid">
           {topSellerItems.map((item) => (
             <div key={item.id} style={{ background: 'oklch(0.985 0.006 55)', border: '1px solid oklch(0.875 0.014 55)', borderRadius: 12, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
               <div style={{ aspectRatio: '4/3', background: 'repeating-linear-gradient(45deg, oklch(0.895 0.014 55), oklch(0.895 0.014 55) 10px, oklch(0.92 0.013 55) 10px, oklch(0.92 0.013 55) 20px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -71,8 +71,8 @@ export default function HomeView({ onGoMenu, topSellerItems, onQuickAdd }: HomeV
       </section>
 
       {/* ABOUT */}
-      <section style={{ background: 'oklch(0.93 0.012 55)', padding: '64px 32px' }}>
-        <div style={{ maxWidth: 1240, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
+      <section className="about-section" style={{ background: 'oklch(0.93 0.012 55)' }}>
+        <div className="about-grid" style={{ maxWidth: 1240, margin: '0 auto', alignItems: 'center' }}>
           <div style={{ aspectRatio: '5/4', borderRadius: 16, background: 'repeating-linear-gradient(135deg, oklch(0.85 0.02 60), oklch(0.85 0.02 60) 14px, oklch(0.87 0.018 62) 14px, oklch(0.87 0.018 62) 28px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <span style={{ font: '12px ui-monospace,monospace', color: 'oklch(0.42 0.015 55)', background: 'oklch(0.975 0.007 55 / 0.85)', padding: '6px 12px', borderRadius: 6 }}>interior / seating area photo</span>
           </div>
@@ -86,7 +86,7 @@ export default function HomeView({ onGoMenu, topSellerItems, onQuickAdd }: HomeV
       </section>
 
       {/* LOCATION / HOURS */}
-      <section style={{ maxWidth: 1240, margin: '0 auto', padding: '64px 32px', display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 40 }}>
+      <section className="location-grid" style={{ maxWidth: 1240, margin: '0 auto' }}>
         <div>
           <h2 style={{ font: "600 26px 'Source Serif 4',serif", margin: '0 0 20px', color: 'oklch(0.2 0.016 55)' }}>Visit us</h2>
           <div style={{ font: "600 15px 'Work Sans',sans-serif", color: 'oklch(0.27 0.018 55)', marginBottom: 4 }}>258 West Main Street</div>

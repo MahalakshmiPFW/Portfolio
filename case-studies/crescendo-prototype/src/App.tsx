@@ -146,7 +146,7 @@ export default function App() {
     <div style={{ minHeight: '100vh', background: 'oklch(0.965 0.012 55)', color: 'oklch(0.27 0.018 55)', position: 'relative', overflowX: 'hidden' }}>
 
       {/* HEADER */}
-      <header style={{ position: 'sticky', top: 0, zIndex: 40, background: 'oklch(0.965 0.012 55 / 0.94)', backdropFilter: 'blur(8px)', borderBottom: '1px solid oklch(0.87 0.014 55)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 32px' }}>
+      <header className="app-header" style={{ position: 'sticky', top: 0, zIndex: 40, background: 'oklch(0.965 0.012 55 / 0.94)', backdropFilter: 'blur(8px)', borderBottom: '1px solid oklch(0.87 0.014 55)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <button onClick={() => setView('home')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', padding: 0 }}>
           <span style={{ font: "700 22px/1 'Source Serif 4',serif", color: 'oklch(0.27 0.018 55)', letterSpacing: '-0.01em' }}>Crescendo</span>
           <span style={{ font: "500 10px/1 'Work Sans',sans-serif", letterSpacing: '.18em', textTransform: 'uppercase', color: 'oklch(0.46 0.14 40)', marginTop: 3 }}>Coffee &amp; Café</span>
@@ -155,9 +155,9 @@ export default function App() {
         <nav style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <button onClick={() => setView('home')} style={navBtnStyle(view === 'home')}>Home</button>
           <button onClick={() => setView('menu')} style={navBtnStyle(view === 'menu')}>Menu</button>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 5, font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.5 0.015 55)', padding: '8px 14px', opacity: 0.7 }}>Rewards ★</span>
-          <span style={{ width: 1, height: 22, background: 'oklch(0.85 0.014 55)', margin: '0 6px' }} />
-          <span style={{ font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.45 0.016 55)', whiteSpace: 'nowrap' }}>(260) 363-0303</span>
+          <span className="header-rewards" style={{ font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.5 0.015 55)', padding: '8px 14px', opacity: 0.7 }}>Rewards ★</span>
+          <span className="header-rewards" style={{ width: 1, height: 22, background: 'oklch(0.85 0.014 55)', margin: '0 6px' }} />
+          <span className="header-phone" style={{ font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.45 0.016 55)', whiteSpace: 'nowrap' }}>(260) 363-0303</span>
           <button onClick={() => setCartOpen((v) => !v)} style={{ position: 'relative', marginLeft: 10, width: 42, height: 42, borderRadius: '50%', border: '1px solid oklch(0.83 0.015 55)', background: 'oklch(0.985 0.007 55)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="oklch(0.27 0.017 55)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             {cartCount > 0 && (
@@ -188,8 +188,8 @@ export default function App() {
       )}
 
       {/* FOOTER */}
-      <footer style={{ background: 'oklch(0.2 0.016 55)', color: 'oklch(0.885 0.008 55)', padding: '44px 32px 28px' }}>
-        <div style={{ maxWidth: 1240, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.3fr 1fr 1fr', gap: 32, paddingBottom: 28, borderBottom: '1px solid oklch(0.32 0.015 55)' }}>
+      <footer className="app-footer" style={{ background: 'oklch(0.2 0.016 55)', color: 'oklch(0.885 0.008 55)' }}>
+        <div className="footer-grid" style={{ maxWidth: 1240, margin: '0 auto', display: 'grid', gap: 32, paddingBottom: 28, borderBottom: '1px solid oklch(0.32 0.015 55)' }}>
           <div>
             <div style={{ font: "700 20px 'Source Serif 4',serif", color: 'oklch(0.965 0.012 55)', marginBottom: 10 }}>Crescendo</div>
             <p style={{ font: "400 13px/1.6 'Work Sans',sans-serif", color: 'oklch(0.75 0.011 55)', maxWidth: 280, margin: 0 }}>258 West Main Street, Fort Wayne, IN 46802 · (260) 363-0303</p>
