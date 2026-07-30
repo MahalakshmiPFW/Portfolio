@@ -16,17 +16,26 @@
     h1, h2, h3 { font-family: 'Source Serif 4', serif; }
     a { color: #9a4b2f; }
     a:hover { color: #7a3a24; }
+    .pm-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    @media (max-width: 640px) {
+      .pm-doc-hdr { flex-direction: column !important; align-items: flex-start !important; gap: 10px; }
+      .pm-doc-hdr h1 { font-size: 24px !important; }
+      .pm-doc-meta { text-align: left !important; white-space: normal !important; }
+      .pm-grid-2, .pm-grid-3 { grid-template-columns: 1fr !important; }
+      .pm-table-wrap table { font-size: 12px !important; }
+      .pm-table-wrap th, .pm-table-wrap td { padding: 6px 8px !important; }
+    }
   </style>
 </helmet>
 <x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0.85in" hint-size="100%,1100px">
 
-  <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:3px solid #2b1b12; padding-bottom:14px; margin-bottom:4px;">
+  <div class="pm-doc-hdr" style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:3px solid #2b1b12; padding-bottom:14px; margin-bottom:4px; flex-wrap:wrap;">
     <div>
       <div style="font:600 11px/1 'Work Sans',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#9a4b2f;">Product Requirements Document</div>
       <h1 style="font-size:34px; margin:6px 0 0; color:#2b1b12;">Crescendo Coffee &amp; Café — Website &amp; Ordering Redesign</h1>
     </div>
-    <div style="text-align:right; font:400 12px/1.5 'Work Sans',sans-serif; color:#5c4a3a; white-space:nowrap;">
-      v1.0 · July 2026<br/>Prepared by: Mahalakshmi<br/>Status: Draft for review
+    <div class="pm-doc-meta" style="text-align:right; font:400 12px/1.5 'Work Sans',sans-serif; color:#5c4a3a; white-space:nowrap;">
+      v1.0 · July 2026<br/>Prepared by: Mahalakshmi
     </div>
   </div>
 
@@ -34,7 +43,7 @@
     A concept redesign of crescendocoffeecafe.com, treated as a real PM exercise — problem framing, users, requirements, and scope — for a from-scratch rebuild of the marketing site and its ordering flow.
   </p>
 
-  <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px;">1. Background</h2>
+  <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:0;">1. Background</h2>
   <p style="font-size:14px; line-height:1.7; color:#2b1b12;">
     Crescendo Coffee &amp; Café is an independently loved coffee shop inside The Pearl in downtown Fort Wayne, IN, serving breakfast, lunch, and a large specialty drink menu (coffee, Lotus Energy drinks, mocktails, coffee flights). The current site is a WordPress theme with SEO-heavy copy, a hero image carousel, and four static homepage sections. Ordering happens entirely off-site: every "Order Online" link exits to a generic Toast Tab ordering page that shares none of Crescendo's branding.
   </p>
@@ -48,7 +57,7 @@
   </p>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">3. Users &amp; Personas</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:14px;">
+  <div class="pm-grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:14px;">
     <div style="border:1px solid #d8cdb8; border-radius:4px; padding:16px 18px; background:#f4efe3;">
       <div style="font:600 15px 'Source Serif 4',serif; color:#2b1b12;">"Downtown Dana" — Weekday Regular</div>
       <div style="font:500 11px 'Work Sans',sans-serif; color:#9a4b2f; margin:2px 0 10px; text-transform:uppercase; letter-spacing:.06em;">Remote worker, orders 3–4x/week</div>
@@ -70,6 +79,7 @@
   </div>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">4. Goals &amp; Success Metrics</h2>
+  <div class="pm-table-wrap">
   <table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:10px;">
     <thead>
       <tr style="border-bottom:2px solid #2b1b12; text-align:left;">
@@ -85,6 +95,7 @@
       <tr><td style="padding:8px 10px 8px 0;">Faster repeat orders for regulars</td><td style="padding:8px 10px;">Steps from landing → reorder confirmed</td><td style="padding:8px 0 8px 10px;">≤ 3 taps</td></tr>
     </tbody>
   </table>
+  </div>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">5. Current-State Audit</h2>
   <ul style="font-size:14px; line-height:1.8; color:#2b1b12; padding-left:20px;">
@@ -96,7 +107,7 @@
   </ul>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">6. Scope</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:10px;">
+  <div class="pm-grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:10px;">
     <div>
       <div style="font:600 13px 'Work Sans',sans-serif; color:#2b1b12; margin-bottom:6px;">In scope</div>
       <ul style="font-size:13px; line-height:1.7; color:#2b1b12; padding-left:18px; margin:0;">
@@ -118,6 +129,7 @@
   </div>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">7. Requirements</h2>
+  <div class="pm-table-wrap">
   <table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:10px;">
     <thead>
       <tr style="border-bottom:2px solid #2b1b12; text-align:left;">
@@ -137,6 +149,7 @@
       <tr><td style="padding:8px 10px 8px 0;">Mobile-first responsive layout</td><td style="padding:8px 10px;">Must</td><td style="padding:8px 0 8px 10px;">Majority of orders are pre-visit, on phone</td></tr>
     </tbody>
   </table>
+  </div>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">8. Redesigned Information Architecture</h2>
   <p style="font-size:14px; line-height:1.7; color:#2b1b12;">
@@ -151,7 +164,7 @@
   </ul>
 
   <h2 style="font-size:20px; color:#2b1b12; border-bottom:1px solid #d8cdb8; padding-bottom:6px; margin-top:30px;">10. Suggested Roadmap</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:10px;">
+  <div class="pm-grid-3" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:10px;">
     <div style="background:#f4efe3; border:1px solid #d8cdb8; border-radius:4px; padding:14px;">
       <div style="font:600 12px 'Work Sans',sans-serif; color:#9a4b2f; text-transform:uppercase; letter-spacing:.05em;">Phase 1</div>
       <div style="font:600 14px 'Source Serif 4',serif; color:#2b1b12; margin:4px 0 8px;">Homepage &amp; brand</div>
@@ -175,5 +188,44 @@
 
 </x-import>
 </x-dc>
+<script>
+(function () {
+  var BREAKPOINT = 880;
+  var dp = null, origWidth = null, origMargin = null, captured = false;
+  function capture() {
+    if (captured || !dp) return;
+    origWidth = dp.getAttribute('width');
+    origMargin = dp.getAttribute('margin');
+    captured = true;
+  }
+  function restore() {
+    if (origWidth) dp.setAttribute('width', origWidth); else dp.removeAttribute('width');
+    if (origMargin) dp.setAttribute('margin', origMargin); else dp.removeAttribute('margin');
+  }
+  function apply() {
+    dp = dp || document.querySelector('doc-page');
+    if (!dp) return;
+    capture();
+    if (window.innerWidth < BREAKPOINT) {
+      dp.setAttribute('width', Math.max(300, window.innerWidth - 48) + 'px');
+      dp.setAttribute('margin', '28px');
+    } else {
+      restore();
+    }
+  }
+  var tries = 0;
+  var poll = setInterval(function () {
+    tries++;
+    dp = document.querySelector('doc-page');
+    if (dp || tries > 100) {
+      clearInterval(poll);
+      apply();
+    }
+  }, 50);
+  window.addEventListener('resize', apply);
+  window.addEventListener('beforeprint', function () { if (dp) restore(); });
+  window.addEventListener('afterprint', apply);
+})();
+</script>
 </body>
 </html>
