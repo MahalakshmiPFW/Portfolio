@@ -17,7 +17,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
     problem: 'Burberry\'s trench coat — its most iconic product — is reachable through two inconsistent nav paths on the live site: one shows no style options at all, the other reveals 6 distinct styles by name only, with no visual way to compare them and no connection to the brand\'s heritage story.',
     approach: 'Ran this as a real PM exercise against the live burberry.com: audited the site\'s actual navigation structure and compared it across four other luxury houses (Chanel, Fendi, Balmain, Balenciaga) to confirm the pattern was systemic, not one-off. Wrote a problem statement, two contrasting personas, and goals tied to measurable targets. Used Claude Design to explore wireframes from that spec, then built the interactive prototype.',
-    outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, risks, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
+    outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
     externalLinks: [
       { label: 'View Detailed PRD', url: '/case-studies/burberry/prd.html', icon: '📄' },
       { label: 'View Wireframes', url: '/case-studies/burberry/wireframes.html', icon: '✏️' },
