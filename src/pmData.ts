@@ -19,10 +19,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach: 'Ran this as a real PM exercise against the live burberry.com: audited the site\'s actual navigation structure and compared it across four other luxury houses (Chanel, Fendi, Balmain, Balenciaga) to confirm the pattern was systemic, not one-off. Wrote a problem statement, two contrasting personas, and goals tied to measurable targets. Used Claude Design to explore wireframes from that spec, then built the interactive prototype.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
     externalLinks: [
-      { label: 'View Detailed PRD', url: '/case-studies/burberry/prd.html', icon: '📄' },
-      { label: 'View Wireframes', url: '/case-studies/burberry/wireframes.html', icon: '✏️' },
-      { label: 'View Prototype', url: '/case-studies/burberry-prototype/', icon: '💻' },
-      { label: 'View Comparative Analysis', url: '/case-studies/burberry/comparative-analysis.html', icon: '📊' },
+      { label: 'View Detailed PRD', url: 'https://burberry-redesign.vercel.app/prd.html', icon: '📄' },
+      { label: 'View Comparative Analysis', url: 'https://burberry-redesign.vercel.app/comparative-analysis.html', icon: '📊' },
     ],
   },
   {
@@ -33,9 +31,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach: 'Ran this as a real PM exercise against a live business, not a hypothetical: audited the current site, defined two contrasting personas (a daily regular vs. a price-sensitive first-timer), wrote goals tied to measurable targets, and MoSCoW-prioritized requirements into a 3-phase roadmap. Used Claude Design to explore wireframes from that spec, then hand-built the interactive ordering prototype in React and TypeScript.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, risks, and roadmap — scoping an in-brand ordering flow to replace the jarring hand-off to a generic checkout page.',
     externalLinks: [
-      { label: 'View Detailed PRD', url: '/case-studies/crescendo/prd.html', icon: '📋' },
-      { label: 'View Wireframes', url: '/case-studies/crescendo/wireframes.html', icon: '✏️' },
-      { label: 'View Prototype', url: '/case-studies/crescendo-prototype/', icon: '🖥️' },
+      { label: 'View Detailed PRD', url: 'https://crescendo-coffee-redesign.vercel.app/prd.html', icon: '📋' },
+      { label: 'View Wireframes', url: 'https://crescendo-coffee-redesign.vercel.app/wireframes.html', icon: '✏️' },
+      { label: 'View Prototype', url: 'https://crescendo-coffee-redesign.vercel.app/', icon: '🖥️' },
     ],
   },
   {
