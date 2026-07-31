@@ -21,8 +21,22 @@
       .pm-doc-hdr h1 { font-size: 24px !important; }
       .pm-doc-meta { text-align: left !important; white-space: normal !important; }
       .pm-grid-2, .pm-grid-3 { grid-template-columns: 1fr !important; }
-      .pm-table-wrap table { font-size: 12px !important; }
-      .pm-table-wrap th, .pm-table-wrap td { padding: 6px 8px !important; }
+      /* Narrow phone widths (iPhone included) wrap 3-column tables into
+         cramped multi-line cells; stack each row as a labeled card instead. */
+      .pm-table-wrap table, .pm-table-wrap tbody, .pm-table-wrap tr { display: block !important; }
+      .pm-table-wrap thead { display: none !important; }
+      .pm-table-wrap tr { border: 1px solid #E3DFD3 !important; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
+      .pm-table-wrap tr:last-child { margin-bottom: 0; }
+      .pm-table-wrap td { display: block !important; border: none !important; padding: 5px 0 !important; font-size: 13px !important; }
+      .pm-table-wrap td::before {
+        content: attr(data-label);
+        display: block;
+        font: 700 10px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        color: #5B5B54;
+        margin-bottom: 2px;
+      }
     }
   </style>
 </helmet>
@@ -83,9 +97,9 @@
       </tr>
     </thead>
     <tbody style="color:#1C1C1C;">
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">One clear path to trench coats</td><td style="padding:8px 10px;">Number of nav paths to trench coats</td><td style="padding:8px 0 8px 10px;">2 → 1</td></tr>
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">Faster style comparison</td><td style="padding:8px 10px;">Time to identify the right style</td><td style="padding:8px 0 8px 10px;">-30%</td></tr>
-      <tr><td style="padding:8px 10px 8px 0;">Surface heritage story</td><td style="padding:8px 10px;">% of users who view heritage/craft content</td><td style="padding:8px 0 8px 10px;">+25%</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Goal" style="padding:8px 10px 8px 0;">One clear path to trench coats</td><td data-label="Metric" style="padding:8px 10px;">Number of nav paths to trench coats</td><td data-label="Target" style="padding:8px 0 8px 10px;">2 → 1</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Goal" style="padding:8px 10px 8px 0;">Faster style comparison</td><td data-label="Metric" style="padding:8px 10px;">Time to identify the right style</td><td data-label="Target" style="padding:8px 0 8px 10px;">-30%</td></tr>
+      <tr><td data-label="Goal" style="padding:8px 10px 8px 0;">Surface heritage story</td><td data-label="Metric" style="padding:8px 10px;">% of users who view heritage/craft content</td><td data-label="Target" style="padding:8px 0 8px 10px;">+25%</td></tr>
     </tbody>
   </table>
   </div>
@@ -130,11 +144,11 @@
       </tr>
     </thead>
     <tbody style="color:#1C1C1C;">
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">Single, unified nav path to trench coats</td><td style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td style="padding:8px 0 8px 10px;">Removes the two-path confusion</td></tr>
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">Visual comparison view (photo + 1-line description per style)</td><td style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td style="padding:8px 0 8px 10px;">Replaces name-only browsing</td></tr>
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">Heritage/craft story surfaced on homepage</td><td style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#E7ECFB; color:#233A82;">Should</span></td><td style="padding:8px 0 8px 10px;">Currently buried on a separate page</td></tr>
-      <tr style="border-bottom:1px solid #E3DFD3;"><td style="padding:8px 10px 8px 0;">Simplified nav depth</td><td style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#E7ECFB; color:#233A82;">Should</span></td><td style="padding:8px 0 8px 10px;">Reduce redundant menu layers</td></tr>
-      <tr><td style="padding:8px 10px 8px 0;">Mobile-first responsive layout</td><td style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td style="padding:8px 0 8px 10px;">Matches majority shopping behavior</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Requirement" style="padding:8px 10px 8px 0;">Single, unified nav path to trench coats</td><td data-label="Priority" style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td data-label="Notes" style="padding:8px 0 8px 10px;">Removes the two-path confusion</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Requirement" style="padding:8px 10px 8px 0;">Visual comparison view (photo + 1-line description per style)</td><td data-label="Priority" style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td data-label="Notes" style="padding:8px 0 8px 10px;">Replaces name-only browsing</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Requirement" style="padding:8px 10px 8px 0;">Heritage/craft story surfaced on homepage</td><td data-label="Priority" style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#E7ECFB; color:#233A82;">Should</span></td><td data-label="Notes" style="padding:8px 0 8px 10px;">Currently buried on a separate page</td></tr>
+      <tr style="border-bottom:1px solid #E3DFD3;"><td data-label="Requirement" style="padding:8px 10px 8px 0;">Simplified nav depth</td><td data-label="Priority" style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#E7ECFB; color:#233A82;">Should</span></td><td data-label="Notes" style="padding:8px 0 8px 10px;">Reduce redundant menu layers</td></tr>
+      <tr><td data-label="Requirement" style="padding:8px 10px 8px 0;">Mobile-first responsive layout</td><td data-label="Priority" style="padding:8px 10px;"><span style="display:inline-block; font-weight:700; font-size:12px; padding:1px 8px; border-radius:5px; background:#FBE7E5; color:#A3372B;">Must</span></td><td data-label="Notes" style="padding:8px 0 8px 10px;">Matches majority shopping behavior</td></tr>
     </tbody>
   </table>
   </div>

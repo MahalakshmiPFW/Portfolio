@@ -137,8 +137,6 @@ export default function App() {
     background: 'none',
     border: 'none',
     cursor: 'pointer',
-    font: "600 13px 'Work Sans',sans-serif",
-    padding: '8px 14px',
     color: active ? 'oklch(0.27 0.018 55)' : 'oklch(0.5 0.015 55)',
   });
 
@@ -152,13 +150,13 @@ export default function App() {
           <span style={{ font: "500 10px/1 'Work Sans',sans-serif", letterSpacing: '.18em', textTransform: 'uppercase', color: 'oklch(0.46 0.14 40)', marginTop: 3 }}>Coffee &amp; Café</span>
         </button>
 
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <button onClick={() => setView('home')} style={navBtnStyle(view === 'home')}>Home</button>
-          <button onClick={() => setView('menu')} style={navBtnStyle(view === 'menu')}>Menu</button>
-          <span className="header-rewards" style={{ font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.5 0.015 55)', padding: '8px 14px', opacity: 0.7 }}>Rewards ★</span>
-          <span className="header-rewards" style={{ width: 1, height: 22, background: 'oklch(0.85 0.014 55)', margin: '0 6px' }} />
+        <nav className="app-nav" style={{ display: 'flex', alignItems: 'center' }}>
+          <button className="nav-btn" onClick={() => setView('home')} style={navBtnStyle(view === 'home')}>Home</button>
+          <button className="nav-btn" onClick={() => setView('menu')} style={navBtnStyle(view === 'menu')}>Menu</button>
+          <span className="header-rewards" style={{ opacity: 0.7 }}>Rewards ★</span>
+          <span className="header-divider" />
           <span className="header-phone" style={{ font: "500 13px 'Work Sans',sans-serif", color: 'oklch(0.45 0.016 55)', whiteSpace: 'nowrap' }}>(260) 363-0303</span>
-          <button onClick={() => setCartOpen((v) => !v)} style={{ position: 'relative', marginLeft: 10, width: 42, height: 42, borderRadius: '50%', border: '1px solid oklch(0.83 0.015 55)', background: 'oklch(0.985 0.007 55)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button className="cart-btn" onClick={() => setCartOpen((v) => !v)} style={{ position: 'relative', marginLeft: 10, borderRadius: '50%', border: '1px solid oklch(0.83 0.015 55)', background: 'oklch(0.985 0.007 55)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="oklch(0.27 0.017 55)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             {cartCount > 0 && (
               <span style={{ position: 'absolute', top: -4, right: -4, background: 'oklch(0.5 0.145 40)', color: 'white', font: "700 10px/1 'Work Sans',sans-serif", minWidth: 17, height: 17, borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 4px' }}>{cartCount}</span>

@@ -35,6 +35,98 @@
   </style>
 </helmet>
 
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage structure options</span></div>
+  <div class="dv-opts">
+
+    <!-- 1a: Classic stacked (matches built hi-fi) -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Classic stacked (built version)</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:22px; display:flex; align-items:center; justify-content:space-between; padding:0 8px;"><span class="wf-tag">LOGO</span><span class="wf-tag">cart</span></div>
+          <div class="wf-dash" style="height:80px;">hero photo + headline + 2 CTAs</div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
+            <div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div>
+          </div>
+          <div class="wf-tag">— top sellers grid —</div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
+            <div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div>
+          </div>
+          <div class="wf-dash" style="height:40px; font-size:9px;">about + interior photo</div>
+          <div class="wf-box" style="height:20px;"></div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">hero → trust strip → top sellers → about → hours/map → footer</div>
+    </div>
+
+    <!-- 1b: Split hero with persistent order rail -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Persistent order rail (desktop)</div>
+      <div class="dv-card" style="width:280px;">
+        <div style="padding:10px; display:flex; gap:8px;">
+          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+            <div class="wf-box" style="height:20px;"></div>
+            <div class="wf-dash" style="height:70px; font-size:9px;">hero photo + headline</div>
+            <div class="wf-tag">— top sellers —</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+              <div class="wf-box" style="height:30px;"></div><div class="wf-box" style="height:30px;"></div>
+            </div>
+          </div>
+          <div class="wf-box" style="width:80px; display:flex; flex-direction:column; gap:6px; padding:6px;">
+            <div class="wf-tag" style="font-size:9px;">YOUR ORDER</div>
+            <div class="wf-box" style="height:16px;"></div>
+            <div class="wf-box" style="height:16px;"></div>
+            <div class="wf-btn solid" style="font-size:9px; padding:3px;">Checkout</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:280px;">cart/order builder always visible alongside content — no drawer needed, good for regulars ordering ahead</div>
+    </div>
+
+    <!-- 1c: Menu-forward homepage -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Menu-forward (skip the hero)</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:20px;"></div>
+          <div class="wf-tag">Today's specials, right up top ↓</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px;">
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
+          </div>
+          <div class="wf-btn solid" style="align-self:center; padding:5px 16px;">See Full Menu</div>
+          <div class="wf-dash" style="height:44px; font-size:9px;">brand story, shorter</div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">for the "already convinced, just want to order fast" visitor — trims the storytelling</div>
+    </div>
+
+    <!-- 1d: Editorial / magazine layout -->
+    <div class="dv-opt" id="1d">
+      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Editorial / magazine feel</div>
+      <div class="dv-card" style="width:260px;">
+        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
+          <div class="wf-box" style="height:20px;"></div>
+          <div class="wf-dash" style="height:100px; font-size:9px;">full-bleed photo, headline overlaid bottom-left</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="wf-dash" style="height:50px; font-size:9px;">interior photo</div>
+            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag" style="width: 86px; height: 56px; font-size: 9px">brand story copy, larger type</span></div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag">"what's in season" copy</span></div>
+            <div class="wf-dash" style="height:50px; font-size:9px;">seasonal drink photo</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-tag" style="max-width:260px;">alternating image/text blocks, slower and more atmospheric — leans into "third place" feel over speed</div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build <a class="dv-oid" href="#1b">1b</a>'s persistent order rail in hi-fi" · "mix <a class="dv-oid" href="#1c">1c</a> with the top-sellers grid from <a class="dv-oid" href="#1a">1a</a>" · "more homepage ideas"</p>
+</section>
+
 <section class="dv-turn" id="t2">
   <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Menu &amp; order-flow structure options</span></div>
   <div class="dv-opts">
@@ -127,98 +219,6 @@
 
   </div>
   <p class="dv-next">Try next: "combine <a class="dv-oid" href="#2a">2a</a>'s cart with <a class="dv-oid" href="#2c">2c</a>'s wizard for first-timers" · "build <a class="dv-oid" href="#2d">2d</a> in hi-fi" · "more menu layout ideas"</p>
-</section>
-
-<section class="dv-turn" id="t1">
-  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage structure options</span></div>
-  <div class="dv-opts">
-
-    <!-- 1a: Classic stacked (matches built hi-fi) -->
-    <div class="dv-opt" id="1a">
-      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Classic stacked (built version)</div>
-      <div class="dv-card" style="width:260px;">
-        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
-          <div class="wf-box" style="height:22px; display:flex; align-items:center; justify-content:space-between; padding:0 8px;"><span class="wf-tag">LOGO</span><span class="wf-tag">cart</span></div>
-          <div class="wf-dash" style="height:80px;">hero photo + headline + 2 CTAs</div>
-          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
-            <div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div><div class="wf-box" style="height:24px;"></div>
-          </div>
-          <div class="wf-tag">— top sellers grid —</div>
-          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:4px;">
-            <div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div><div class="wf-dash" style="height:34px; font-size:9px;">img</div>
-          </div>
-          <div class="wf-dash" style="height:40px; font-size:9px;">about + interior photo</div>
-          <div class="wf-box" style="height:20px;"></div>
-        </div>
-      </div>
-      <div class="wf-tag" style="max-width:260px;">hero → trust strip → top sellers → about → hours/map → footer</div>
-    </div>
-
-    <!-- 1b: Split hero with persistent order rail -->
-    <div class="dv-opt" id="1b">
-      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Persistent order rail (desktop)</div>
-      <div class="dv-card" style="width:280px;">
-        <div style="padding:10px; display:flex; gap:8px;">
-          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
-            <div class="wf-box" style="height:20px;"></div>
-            <div class="wf-dash" style="height:70px; font-size:9px;">hero photo + headline</div>
-            <div class="wf-tag">— top sellers —</div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
-              <div class="wf-box" style="height:30px;"></div><div class="wf-box" style="height:30px;"></div>
-            </div>
-          </div>
-          <div class="wf-box" style="width:80px; display:flex; flex-direction:column; gap:6px; padding:6px;">
-            <div class="wf-tag" style="font-size:9px;">YOUR ORDER</div>
-            <div class="wf-box" style="height:16px;"></div>
-            <div class="wf-box" style="height:16px;"></div>
-            <div class="wf-btn solid" style="font-size:9px; padding:3px;">Checkout</div>
-          </div>
-        </div>
-      </div>
-      <div class="wf-tag" style="max-width:280px;">cart/order builder always visible alongside content — no drawer needed, good for regulars ordering ahead</div>
-    </div>
-
-    <!-- 1c: Menu-forward homepage -->
-    <div class="dv-opt" id="1c">
-      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Menu-forward (skip the hero)</div>
-      <div class="dv-card" style="width:260px;">
-        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
-          <div class="wf-box" style="height:20px;"></div>
-          <div class="wf-tag">Today's specials, right up top ↓</div>
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:5px;">
-            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
-            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
-            <div class="wf-dash" style="height:50px; font-size:9px;">item</div>
-          </div>
-          <div class="wf-btn solid" style="align-self:center; padding:5px 16px;">See Full Menu</div>
-          <div class="wf-dash" style="height:44px; font-size:9px;">brand story, shorter</div>
-        </div>
-      </div>
-      <div class="wf-tag" style="max-width:260px;">for the "already convinced, just want to order fast" visitor — trims the storytelling</div>
-    </div>
-
-    <!-- 1d: Editorial / magazine layout -->
-    <div class="dv-opt" id="1d">
-      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Editorial / magazine feel</div>
-      <div class="dv-card" style="width:260px;">
-        <div style="padding:10px; display:flex; flex-direction:column; gap:8px;">
-          <div class="wf-box" style="height:20px;"></div>
-          <div class="wf-dash" style="height:100px; font-size:9px;">full-bleed photo, headline overlaid bottom-left</div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-            <div class="wf-dash" style="height:50px; font-size:9px;">interior photo</div>
-            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag" style="width: 86px; height: 56px; font-size: 9px">brand story copy, larger type</span></div>
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-            <div class="wf-box" style="height:50px; padding:6px;"><span class="wf-tag">"what's in season" copy</span></div>
-            <div class="wf-dash" style="height:50px; font-size:9px;">seasonal drink photo</div>
-          </div>
-        </div>
-      </div>
-      <div class="wf-tag" style="max-width:260px;">alternating image/text blocks, slower and more atmospheric — leans into "third place" feel over speed</div>
-    </div>
-
-  </div>
-  <p class="dv-next">Try next: "build <a class="dv-oid" href="#1b">1b</a>'s persistent order rail in hi-fi" · "mix <a class="dv-oid" href="#1c">1c</a> with the top-sellers grid from <a class="dv-oid" href="#1a">1a</a>" · "more homepage ideas"</p>
 </section>
 
 </x-dc>

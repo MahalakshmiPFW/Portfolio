@@ -28,8 +28,12 @@ a:hover {
    them (a plain class can't out-specificity an inline style). */
 
 .app-header { padding: 14px 32px; }
+.app-nav { gap: 6px; }
+.nav-btn { font: 600 13px 'Work Sans',sans-serif; padding: 8px 14px; }
 .header-phone { }
-.header-rewards { }
+.header-rewards { font: 500 13px 'Work Sans',sans-serif; color: oklch(0.5 0.015 55); padding: 8px 14px; }
+.header-divider { width: 1px; height: 22px; background: oklch(0.85 0.014 55); margin: 0 6px; }
+.cart-btn { width: 42px; height: 42px; }
 .app-footer { padding: 44px 32px 28px; }
 
 .hero-section { padding: 64px 32px 56px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; }
@@ -62,8 +66,14 @@ a:hover {
 }
 
 @media (max-width: 560px) {
-  .app-header { padding: 12px 16px; }
-  .header-phone, .header-rewards { display: none; }
+  .app-header { padding: 10px 12px; }
+  .app-nav { gap: 0; }
+  /* Phone number and divider drop first to make room; Rewards stays
+     visible (previously hidden here entirely, which was the bug). */
+  .header-phone, .header-divider { display: none; }
+  .nav-btn { padding: 6px 8px; font-size: 12px; }
+  .header-rewards { padding: 6px 6px; font-size: 12px; }
+  .cart-btn { width: 36px; height: 36px; margin-left: 4px !important; }
   .hero-section { padding: 32px 18px 32px; }
   .hero-heading { font-size: 30px; }
   .trust-grid { grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 18px 32px; }
