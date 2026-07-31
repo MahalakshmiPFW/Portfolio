@@ -19,8 +19,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach: 'Ran this as a real PM exercise against the live burberry.com: audited the site\'s actual navigation structure and compared it across four other luxury houses (Chanel, Fendi, Balmain, Balenciaga) to confirm the pattern was systemic, not one-off. Wrote a problem statement, two contrasting personas, and goals tied to measurable targets. Used Claude Design to explore wireframes from that spec, then built the interactive prototype.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
     externalLinks: [
-      { label: 'View Detailed PRD', url: 'https://burberry-redesign.vercel.app/prd.html', icon: '📄' },
+      { label: 'View Detailed PRD', url: 'https://burberry-redesign.vercel.app/prd.html', icon: '📋' },
       { label: 'View Comparative Analysis', url: 'https://burberry-redesign.vercel.app/comparative-analysis.html', icon: '📊' },
+      { label: 'View Wireframes', url: 'https://burberry-redesign.vercel.app/wireframes.html', icon: '✏️' },
+      { label: 'View Prototype', url: 'https://burberry-redesign.vercel.app/', icon: '🖥️' },
     ],
   },
   {
