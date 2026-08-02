@@ -161,6 +161,9 @@ export const EXPERIENCE: ExperienceItem[] = [
       'Resolved 4 critical UI/UX and responsive-layout issues, improving usability for end users managing their finances.',
       'Partnered with QA and a cross-functional Agile team on planning, code review, and release reliability.',
     ],
+    recommendations: [
+      { label: 'View LinkedIn Recommendations', url: '/assets/images/FOLN-Recommendations.png' },
+    ],
   },
   {
     logo: '/assets/images/SE Logo1.png',
@@ -169,6 +172,22 @@ export const EXPERIENCE: ExperienceItem[] = [
     org: 'Schneider Electric',
     bullets: [
       'Built an internal automation prototype to replace spreadsheet-heavy procurement workflows, improving data consistency through structured input flows.',
+    ],
+    recommendations: [
+      { label: 'View Recommendation Letter', url: '/SE - Recommendation Letter - Mahalakshmi.pdf' },
+    ],
+  },
+  {
+    logo: '/assets/images/BetaIT.jpeg',
+    dates: 'Jul 2023 – Sep 2023',
+    role: 'Research Intern',
+    org: 'Beta Information Technology',
+    bullets: [
+      'Assisted the Director of Corporate Development in researching Odoo (ERP software) as a candidate for the company\'s 2nd digital transformation initiative, evaluating features and capabilities, cost/pricing, integration feasibility with existing systems, and implementation risk.',
+      'Compiled findings into a formal report and presentation, which was taken into consideration in the company\'s evaluation process.',
+    ],
+    recommendations: [
+      { label: 'View Recommendation Letter', url: '/BetaIT_Recommendation_Letter.pdf' },
     ],
   },
 ];

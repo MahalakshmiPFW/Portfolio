@@ -34,12 +34,18 @@ export interface CaseStudy {
   externalLinks?: CaseStudyLink[];
 }
 
+export interface ExperienceRecommendation {
+  label: string;
+  url: string;
+}
+
 export interface ExperienceItem {
   logo: string;
   dates: string;
   role: string;
   org: string;
   bullets: string[];
+  recommendations?: ExperienceRecommendation[];
 }
 
 export interface ToolkitGroup {

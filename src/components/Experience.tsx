@@ -32,6 +32,32 @@ const Experience: React.FC = () => {
                   <li key={bullet} style={{ marginBottom: 5 }}>{bullet}</li>
                 ))}
               </ul>
+              {job.recommendations && job.recommendations.length > 0 && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12 }}>
+                  {job.recommendations.map((rec) => (
+                    <a
+                      key={rec.url}
+                      href={rec.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        fontSize: 13,
+                        fontWeight: 600,
+                        color: 'var(--pm-accent)',
+                        background: 'var(--pm-accent-soft)',
+                        padding: '6px 12px',
+                        borderRadius: 999,
+                        textDecoration: 'none',
+                      }}
+                    >
+                      📄 {rec.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}
