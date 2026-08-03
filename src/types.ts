@@ -67,6 +67,18 @@ export interface EducationItem {
   tilt: string;
 }
 
+export interface CommunityItem {
+  logo: string;
+  logoBg?: string;
+  icon: string;
+  org: string;
+  role: string;
+  dates: string;
+  blurb: string;
+  hue: number;
+  tilt: string;
+}
+
 export interface ProcessStep {
   icon: string;
   label: string;

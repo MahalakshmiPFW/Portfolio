@@ -1,4 +1,4 @@
-import { CaseStudy, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup } from './types';
+import { CaseStudy, CommunityItem, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup } from './types';
 
 export const EXPLORING = ['React Native', 'Web Design', 'Docker'];
 
@@ -189,6 +189,41 @@ export const EXPERIENCE: ExperienceItem[] = [
     recommendations: [
       { label: 'View Recommendation Letter', url: '/BetaIT_Recommendation_Letter.pdf' },
     ],
+  },
+];
+
+export const COMMUNITY: CommunityItem[] = [
+  {
+    logo: '/assets/images/RTC-logo.png',
+    logoBg: 'white',
+    icon: '🌟',
+    org: 'Rewriting the Code',
+    role: 'Early-Career Member ✨',
+    dates: '2026 – Present',
+    blurb: 'Plugged into a global network of women in tech — trading career advice, leveling up through professional-development programming, and cheering on the next cohort of builders.',
+    hue: 330,
+    tilt: '-1deg',
+  },
+  {
+    logo: '/assets/images/PurdueLogo.svg',
+    icon: '☎',
+    org: 'Purdue Box Office',
+    role: 'Box Office & Front-of-House',
+    dates: 'During grad school',
+    blurb: 'Months of direct customer-facing work — booking event tickets, fielding calls, resolving complaints in real time, and ushering events. Staying calm, listening past the complaint to the actual need, and finding a fix on the spot.',
+    hue: 255,
+    tilt: '1deg',
+  },
+  {
+    logo: '/assets/images/AUS Logo.png',
+    logoBg: 'white',
+    icon: '🐍',
+    org: 'Python Bootcamp',
+    role: 'Co-Owner, Curriculum & Delivery',
+    dates: 'During undergrad',
+    blurb: 'Co-owned curriculum design and delivery end-to-end for a 2-day program, leading non-technical business and finance students and faculty through data analysis and automation fundamentals using Python.',
+    hue: 210,
+    tilt: '-0.6deg',
   },
 ];
 
