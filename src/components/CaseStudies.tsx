@@ -101,6 +101,31 @@ const CaseStudies: React.FC = () => {
                       </div>
                     )}
 
+                    {cs.title === 'Gesture2Globe' && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: cs.externalLinks ? 12 : 0 }}>
+                        <a
+                          href="https://github.com/MahalakshmiPFW/ASL-to-Speech"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            fontSize: 13.5,
+                            fontWeight: 600,
+                            color: 'var(--pm-accent)',
+                            background: 'var(--pm-accent-soft)',
+                            padding: '10px 16px',
+                            borderRadius: 10,
+                            textDecoration: 'none',
+                          }}
+                        >
+                          <span>View Repo</span>
+                          <span style={{ fontSize: 11 }}>↗</span>
+                        </a>
+                      </div>
+                    )}
+
                     {cs.prd && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
                         <button

@@ -74,6 +74,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
   },
   {
+    title: 'Gesture2Globe',
+    year: '2025',
+    tags: ['Deep Learning', 'Computer Vision', 'Full-Stack Build'],
+    problem: 'Gesture-based communication can feel inaccessible in real-world settings, especially when users need a system that turns live motion into understandable, translated output rather than just recognizing isolated poses.',
+    approach: 'Built a full-stack pipeline as part of an Applications of Deep Learning course project: used MediaPipe for keypoint extraction, a TGCN model optimized with ONNX Runtime for inference, and a Flask backend to handle video processing, sentence formation, translation, and text-to-speech. I also built a React/Vite frontend for webcam capture, video uploads, and live prediction display.',
+    outcome: 'Delivered an end-to-end system that converts live or recorded gestures into structured text, translated output, and speech, with a modular architecture that separates capture, inference, language processing, and UI responsibilities.',
+  },
+  {
     title: 'SyllabusSync',
     year: '2025',
     tags: ['0→1 Product', 'User Research', 'AI Integration'],
