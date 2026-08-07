@@ -30,13 +30,5 @@ export default defineConfig(({ mode }) => {
           '@': resolve(__dirname, '.'),
         }
       },
-      build: {
-        rollupOptions: {
-          input: {
-            main: resolve(__dirname, 'index.html'),
-            crescendoPrototype: resolve(__dirname, 'case-studies/crescendo-prototype/index.html'),
-          },
-        },
-      },
     };
 });

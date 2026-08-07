@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <a
               href={RESUME_HREF}
-              download="Mahalakshmi_PM_Resume.pdf"
+              download="Mahalakshmi-Product-Resume.pdf"
               style={{ background: 'var(--pm-accent)', color: 'var(--pm-bg)', padding: '13px 24px', borderRadius: 8, fontWeight: 600, fontSize: 14.5, display: 'inline-flex', alignItems: 'center', gap: 8 }}
             >
               Download Résumé
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="pm-hero-photo" style={{ width: 260, height: 260, position: 'relative', flex: 'none' }}>
-          <svg width="284" height="284" viewBox="0 0 284 284" style={{ position: 'absolute', top: -12, left: -12, pointerEvents: 'none' }}>
+          <svg className="pm-hero-photo-ring" width="284" height="284" viewBox="0 0 284 284" style={{ position: 'absolute', top: -12, left: -12, pointerEvents: 'none' }}>
             <circle cx="142" cy="142" r="136" fill="none" stroke="var(--pm-accent)" strokeWidth="2" strokeDasharray="6 7" strokeLinecap="round" />
           </svg>
           <svg width="34" height="34" viewBox="0 0 34 34" style={{ position: 'absolute', top: -14, right: -10, overflow: 'visible' }}>
@@ -75,8 +75,8 @@ const Hero: React.FC = () => {
               strokeLinecap="round"
             />
           </svg>
-          <div style={{ width: 260, height: 260, borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--pm-hairline)' }}>
-            <img src="/assets/images/Profile.png" alt="Mahalakshmi" style={{ width: 260, height: 260, objectFit: 'cover', display: 'block' }} />
+          <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--pm-hairline)' }}>
+            <img src="/assets/images/Profile.png" alt="Mahalakshmi" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           </div>
         </div>
       </div>

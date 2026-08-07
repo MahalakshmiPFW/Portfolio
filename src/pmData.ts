@@ -1,4 +1,4 @@
-import { CaseStudy, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup } from './types';
+import { CaseStudy, CommunityItem, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup } from './types';
 
 export const EXPLORING = ['React Native', 'Web Design', 'Docker'];
 
@@ -12,6 +12,20 @@ export const PROCESS_STEPS: ProcessStep[] = [
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
+    title: 'Burberry Trench Navigation Redesign',
+    year: '2026',
+    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
+    problem: 'Burberry\'s trench coat — its most iconic product — is reachable through two inconsistent nav paths on the live site: one shows no style options at all, the other reveals 6 distinct styles by name only, with no visual way to compare them and no connection to the brand\'s heritage story.',
+    approach: 'Ran this as a real PM exercise against the live burberry.com: audited the site\'s actual navigation structure and compared it across four other luxury houses (Chanel, Fendi, Balmain, Balenciaga) to confirm the pattern was systemic, not one-off. Wrote a problem statement, two contrasting personas, and goals tied to measurable targets. Used Claude Design to explore wireframes from that spec, then built the interactive prototype.',
+    outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
+    externalLinks: [
+      { label: 'View Detailed PRD', url: 'https://burberry-redesign.vercel.app/prd.html', icon: '📋' },
+      { label: 'View Comparative Analysis', url: 'https://burberry-redesign.vercel.app/comparative-analysis.html', icon: '📊' },
+      { label: 'View Wireframes', url: 'https://burberry-redesign.vercel.app/wireframes.html', icon: '✏️' },
+      { label: 'View Prototype', url: 'https://burberry-redesign.vercel.app/', icon: '🖥️' },
+    ],
+  },
+  {
     title: 'Crescendo Coffee Redesign',
     year: '2026',
     tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
@@ -19,9 +33,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach: 'Ran this as a real PM exercise against a live business, not a hypothetical: audited the current site, defined two contrasting personas (a daily regular vs. a price-sensitive first-timer), wrote goals tied to measurable targets, and MoSCoW-prioritized requirements into a 3-phase roadmap. Used Claude Design to explore wireframes from that spec, then hand-built the interactive ordering prototype in React and TypeScript.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, risks, and roadmap — scoping an in-brand ordering flow to replace the jarring hand-off to a generic checkout page.',
     externalLinks: [
-      { label: 'View Detailed PRD', url: '/case-studies/crescendo/prd.html', icon: '📋' },
-      { label: 'View Wireframes', url: '/case-studies/crescendo/wireframes.html', icon: '✏️' },
-      { label: 'View Prototype', url: '/case-studies/crescendo-prototype/', icon: '🖥️' },
+      { label: 'View Detailed PRD', url: 'https://crescendo-coffee-redesign.vercel.app/prd.html', icon: '📋' },
+      { label: 'View Wireframes', url: 'https://crescendo-coffee-redesign.vercel.app/wireframes.html', icon: '✏️' },
+      { label: 'View Prototype', url: 'https://crescendo-coffee-redesign.vercel.app/', icon: '🖥️' },
     ],
   },
   {
@@ -155,6 +169,9 @@ export const EXPERIENCE: ExperienceItem[] = [
       'Resolved 4 critical UI/UX and responsive-layout issues, improving usability for end users managing their finances.',
       'Partnered with QA and a cross-functional Agile team on planning, code review, and release reliability.',
     ],
+    recommendations: [
+      { label: 'View LinkedIn Recommendations', url: '/assets/images/FOLN-Recommendations.png' },
+    ],
   },
   {
     logo: '/assets/images/SE Logo1.png',
@@ -164,6 +181,57 @@ export const EXPERIENCE: ExperienceItem[] = [
     bullets: [
       'Built an internal automation prototype to replace spreadsheet-heavy procurement workflows, improving data consistency through structured input flows.',
     ],
+    recommendations: [
+      { label: 'View Recommendation Letter', url: '/SE - Recommendation Letter - Mahalakshmi.pdf' },
+    ],
+  },
+  {
+    logo: '/assets/images/BetaIT.jpeg',
+    dates: 'Jul 2023 – Sep 2023',
+    role: 'Research Intern',
+    org: 'Beta Information Technology',
+    bullets: [
+      'Assisted the Director of Corporate Development in researching Odoo (ERP software) as a candidate for the company\'s 2nd digital transformation initiative, evaluating features and capabilities, cost/pricing, integration feasibility with existing systems, and implementation risk.',
+      'Compiled findings into a formal report and presentation, which was taken into consideration in the company\'s evaluation process.',
+    ],
+    recommendations: [
+      { label: 'View Recommendation Letter', url: '/BetaIT_Recommendation_Letter.pdf' },
+    ],
+  },
+];
+
+export const COMMUNITY: CommunityItem[] = [
+  {
+    logo: '/assets/images/RTC-logo.png',
+    logoBg: 'white',
+    icon: '🌟',
+    org: 'Rewriting the Code',
+    role: 'Early-Career Member ✨',
+    dates: '2026 – Present',
+    blurb: 'Plugged into a global network of women in tech — trading career advice, leveling up through professional-development programming, and cheering on the next cohort of builders.',
+    hue: 330,
+    tilt: '-1deg',
+  },
+  {
+    logo: '/assets/images/PurdueLogo.svg',
+    icon: '☎',
+    org: 'Purdue Box Office',
+    role: 'Box Office & Front-of-House',
+    dates: 'During grad school',
+    blurb: 'Months of direct customer-facing work — booking event tickets, fielding calls, resolving complaints in real time, and ushering events. Staying calm, listening past the complaint to the actual need, and finding a fix on the spot.',
+    hue: 255,
+    tilt: '1deg',
+  },
+  {
+    logo: '/assets/images/AUS Logo.png',
+    logoBg: 'white',
+    icon: '🐍',
+    org: 'Python Bootcamp',
+    role: 'Co-Owner, Curriculum & Delivery',
+    dates: 'During undergrad',
+    blurb: 'Co-owned curriculum design and delivery end-to-end for a 2-day program, leading non-technical business and finance students and faculty through data analysis and automation fundamentals using Python.',
+    hue: 210,
+    tilt: '-0.6deg',
   },
 ];
 

@@ -34,12 +34,18 @@ export interface CaseStudy {
   externalLinks?: CaseStudyLink[];
 }
 
+export interface ExperienceRecommendation {
+  label: string;
+  url: string;
+}
+
 export interface ExperienceItem {
   logo: string;
   dates: string;
   role: string;
   org: string;
   bullets: string[];
+  recommendations?: ExperienceRecommendation[];
 }
 
 export interface ToolkitGroup {
@@ -57,6 +63,18 @@ export interface EducationItem {
   gpa: string;
   location: string;
   dates: string;
+  hue: number;
+  tilt: string;
+}
+
+export interface CommunityItem {
+  logo: string;
+  logoBg?: string;
+  icon: string;
+  org: string;
+  role: string;
+  dates: string;
+  blurb: string;
   hue: number;
   tilt: string;
 }

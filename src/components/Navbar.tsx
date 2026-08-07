@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
   return (
     <div style={{ position: 'sticky', top: 0, zIndex: 50, padding: '18px 24px 0' }}>
       <div
+        className="pm-nav-pillbar"
         style={{
           width: 'fit-content',
           margin: '0 auto',
@@ -98,7 +99,7 @@ const Navbar: React.FC = () => {
           </button>
           <a
             href={RESUME_HREF}
-            download="Mahalakshmi_PM_Resume.pdf"
+            download="Mahalakshmi-Product-Resume.pdf"
             className="pm-resume-btn"
             style={{
               background: 'var(--pm-accent)',
