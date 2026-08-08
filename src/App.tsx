@@ -10,6 +10,7 @@ import CaseStudies from './components/CaseStudies';
 import Experience from './components/Experience';
 import Toolkit from './components/Toolkit';
 import Education from './components/Education';
+import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 
 function AppShell() {
@@ -23,6 +24,7 @@ function AppShell() {
       <About />
       <Process />
       <CaseStudies />
+      <Certifications />
       <Experience />
       <Toolkit />
       <Education />

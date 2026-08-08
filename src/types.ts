@@ -67,6 +67,14 @@ export interface EducationItem {
   tilt: string;
 }
 
+export interface CertificationItem {
+  name: string;
+  issuer: string;
+  url?: string;
+  date?: string;
+  logo?: string;
+}
+
 export interface CommunityItem {
   logo: string;
   logoBg?: string;

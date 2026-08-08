@@ -1,5 +1,5 @@
 import React from 'react';
-import { EDUCATION } from '../pmData';
+import { EDUCATION, CERTIFICATIONS } from '../pmData';
 import { hueColors, usePmTheme } from '../theme';
 
 const Education: React.FC = () => {
@@ -46,6 +46,8 @@ const Education: React.FC = () => {
           );
         })}
       </div>
+
+      {/* Certifications moved into its own component */}
     </section>
   );
 };

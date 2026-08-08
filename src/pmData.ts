@@ -1,4 +1,4 @@
-import { CaseStudy, CommunityItem, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup } from './types';
+import { CaseStudy, CommunityItem, EducationItem, ExperienceItem, ProcessStep, ToolkitGroup, CertificationItem } from './types';
 
 export const EXPLORING = ['React Native', 'Web Design', 'Docker'];
 
@@ -283,5 +283,15 @@ export const EDUCATION: EducationItem[] = [
     dates: 'Aug 2020 – Dec 2023',
     hue: 30,
     tilt: '1.2deg',
+  },
+];
+
+export const CERTIFICATIONS: CertificationItem[] = [
+  {
+    name: 'Google Cybersecurity Professional Certificate',
+    issuer: 'Google (Credly)',
+    url: 'https://www.credly.com/badges/928a96c7-09b7-467c-a8f3-1ea169550db2/linked_in_profile',
+    date: '2024',
+    logo: '/assets/images/google-cyber-badge.svg',
   },
 ];
