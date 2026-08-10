@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <a
               href={RESUME_HREF}
-              download="Mahalakshmi-Product-Resume.pdf"
+              download="Mahalakshmi_Tech_Resume.pdf"
               style={{ background: 'var(--pm-accent)', color: 'var(--pm-bg)', padding: '13px 24px', borderRadius: 8, fontWeight: 600, fontSize: 14.5, display: 'inline-flex', alignItems: 'center', gap: 8 }}
             >
               Download Résumé

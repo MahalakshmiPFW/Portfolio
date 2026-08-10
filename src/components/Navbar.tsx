@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
           </button>
           <a
             href={RESUME_HREF}
-            download="Mahalakshmi-Product-Resume.pdf"
+            download="Mahalakshmi_Tech_Resume.pdf"
             className="pm-resume-btn"
             style={{
               background: 'var(--pm-accent)',

@@ -30,4 +30,4 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-export const RESUME_HREF = '/Mahalakshmi-Product-Resume.pdf';
+export const RESUME_HREF = '/Mahalakshmi_Tech_Resume.pdf';
