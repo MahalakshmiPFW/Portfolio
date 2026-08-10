@@ -39,9 +39,19 @@ const CaseStudies: React.FC = () => {
                   boxSizing: 'border-box',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap' }}>
-                  <span style={{ fontFamily: "'Newsreader',serif", fontSize: 21, fontWeight: 600 }}>{cs.title}</span>
-                  <span style={{ fontSize: 13, color: 'var(--pm-ink-faint)' }}>{cs.year}</span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap' }}>
+                    <span style={{ fontFamily: "'Newsreader',serif", fontSize: 21, fontWeight: 600 }}>{cs.title}</span>
+                    <span style={{ fontSize: 13, color: 'var(--pm-ink-faint)' }}>{cs.year}</span>
+                  </div>
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {cs.tags && cs.tags.map((tag) => (
+                      <span key={tag} style={{ fontSize: 12.5, padding: '5px 10px', borderRadius: 999, background: 'var(--pm-accent-soft)', color: 'var(--pm-accent)', fontWeight: 600 }}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <span style={{ fontSize: 20, color: 'var(--pm-accent)', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>⌄</span>
               </button>
@@ -49,13 +59,7 @@ const CaseStudies: React.FC = () => {
               <div style={{ border: '1px solid var(--pm-hairline)', borderRadius: 14, background: 'var(--pm-bg)', overflow: 'hidden' }}>
                 {isOpen && (
                   <div style={{ padding: '0 26px 28px' }}>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
-                      {cs.tags.map((tag) => (
-                        <span key={tag} style={{ fontSize: 12.5, padding: '5px 11px', borderRadius: 999, background: 'var(--pm-accent-soft)', color: 'var(--pm-accent)', fontWeight: 600 }}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    
 
                     <div className="pm-cs-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 24, marginBottom: 22 }}>
                       <div>
@@ -200,6 +204,73 @@ const CaseStudies: React.FC = () => {
                               }}
                             >
                               <span>View Repo</span>
+                              <span style={{ fontSize: 11 }}>↗</span>
+                            </a>
+                          </div>
+                        )}
+
+                        {cs.title === 'CampusMart' && (
+                          <div style={{ display: 'flex', gap: 8 }}>
+                            <a
+                              href="https://campusmart-purdue.vercel.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 8,
+                                fontSize: 13.5,
+                                fontWeight: 600,
+                                color: 'var(--pm-accent)',
+                                background: 'var(--pm-accent-soft)',
+                                padding: '8px 12px',
+                                borderRadius: 10,
+                                textDecoration: 'none',
+                              }}
+                            >
+                              <span>View Demo</span>
+                              <span style={{ fontSize: 11 }}>↗</span>
+                            </a>
+
+                            <a
+                              href="https://github.com/MahalakshmiPFW/campusMart.App"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 8,
+                                fontSize: 13.5,
+                                fontWeight: 600,
+                                color: 'var(--pm-accent)',
+                                background: 'var(--pm-accent-soft)',
+                                padding: '8px 12px',
+                                borderRadius: 10,
+                                textDecoration: 'none',
+                              }}
+                            >
+                              <span>View Frontend Repo</span>
+                              <span style={{ fontSize: 11 }}>↗</span>
+                            </a>
+
+                            <a
+                              href="https://github.com/MahalakshmiPFW/campusMart.Api"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 8,
+                                fontSize: 13.5,
+                                fontWeight: 600,
+                                color: 'var(--pm-accent)',
+                                background: 'var(--pm-accent-soft)',
+                                padding: '8px 12px',
+                                borderRadius: 10,
+                                textDecoration: 'none',
+                              }}
+                            >
+                              <span>View Backend Repo</span>
                               <span style={{ fontSize: 11 }}>↗</span>
                             </a>
                           </div>

@@ -14,7 +14,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     title: 'Burberry Trench Navigation Redesign',
     year: '2026',
-    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
+    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign', 'React / TypeScript', 'Vercel Deployment'],
     problem: 'Burberry\'s trench coat — its most iconic product — is reachable through two inconsistent nav paths on the live site: one shows no style options at all, the other reveals 6 distinct styles by name only, with no visual way to compare them and no connection to the brand\'s heritage story.',
     approach: 'Ran this as a real PM exercise against the live burberry.com: audited the site\'s actual navigation structure and compared it across four other luxury houses (Chanel, Fendi, Balmain, Balenciaga) to confirm the pattern was systemic, not one-off. Wrote a problem statement, two contrasting personas, and goals tied to measurable targets. Used Claude Design to explore wireframes from that spec, then built the interactive prototype.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, and roadmap — scoping a unified navigation path and visual style-comparison view to replace the split, name-only browsing experience.',
@@ -28,7 +28,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     title: 'Crescendo Coffee Redesign',
     year: '2026',
-    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign'],
+    tags: ['Self-Directed PRD', 'UX Audit', 'Concept Redesign', 'React / TypeScript', 'Vercel Deployment'],
     problem: 'Crescendo Coffee & Café — a locally loved shop in downtown Fort Wayne — has a website that undersells a genuinely great product: an unfilterable 2,000+ word menu page and an "Order Online" link that dumps visitors into an off-brand third-party checkout at the exact moment they\'re deciding to spend money.',
     approach: 'Ran this as a real PM exercise against a live business, not a hypothetical: audited the current site, defined two contrasting personas (a daily regular vs. a price-sensitive first-timer), wrote goals tied to measurable targets, and MoSCoW-prioritized requirements into a 3-phase roadmap. Used Claude Design to explore wireframes from that spec, then hand-built the interactive ordering prototype in React and TypeScript.',
     outcome: 'A complete concept PRD — background, problem statement, personas, success metrics, current-state audit, scope, requirements, IA, risks, and roadmap — scoping an in-brand ordering flow to replace the jarring hand-off to a generic checkout page.',
@@ -98,7 +98,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     title: 'SyllabusSync',
     year: '2025',
-    tags: ['0→1 Product', 'User Research', 'AI Integration'],
+    tags: ['0→1 Product', 'User Research', 'AI Integration', 'TypeScript','React / Next.js / Vercel'],
     problem: 'Every semester, students manually re-type deadlines from PDF syllabi into calendars — a small but recurring friction point I kept hitting myself and hearing about from classmates.',
     approach: 'Scoped an MVP around the single highest-value flow (syllabus → calendar), chose the Gemini API to handle unstructured PDF parsing instead of building brittle custom parsing, and shipped a working version fast rather than over-building.',
     outcome: 'Shipped a live, public product on Vercel end-to-end — my first time owning a product decision (not just a ticket) from idea to production.',
@@ -122,7 +122,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     title: 'CampusMart',
     year: '2024',
-    tags: ['End-to-end Build', 'Data Modeling', 'User Flows'],
+    tags: ['End-to-end Build', 'Data Modeling', 'User Flows', 'MERN Stack', 'Vercel Deployment'],
     problem: 'WhatsApp groups for buying/selling used items on campus get cluttered and forgotten fast — posts bury each other, there’s no way to browse what’s actually still available, and no safety net for meeting a stranger to hand over cash for a mattress.',
     approach: 'Designed the data model first (what a "listing" actually needs to support browsing and search), then built the API and UI around that model rather than the other way around — keeping the browse and list flows the two things it had to get right.',
     outcome: 'A working e-commerce flow, end to end, that made the core browse → list → contact loop actually usable and safer than a scrolling chat thread.',
