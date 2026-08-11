@@ -27,14 +27,34 @@ const Experience: React.FC = () => {
             </div>
             <div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 2, marginBottom: 12 }}>
-                <span style={{ fontWeight: 600, fontSize: 16.5 }}>{job.role}</span>
+                {job.role && <span style={{ fontWeight: 600, fontSize: 16.5 }}>{job.role}</span>}
                 <span style={{ fontSize: 14, color: 'var(--pm-ink-soft)' }}>{job.org}</span>
               </div>
-              <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14.5, color: 'var(--pm-ink-soft)' }}>
-                {job.bullets.map((bullet) => (
-                  <li key={bullet} style={{ marginBottom: 5 }}>{bullet}</li>
-                ))}
-              </ul>
+              {job.positions ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 24, position: 'relative', paddingLeft: 20 }}>
+                  <div style={{ position: 'absolute', left: -10, top: 16, bottom: 16, width: 2, background: 'var(--pm-hairline)', borderRadius: 999 }} />
+                  {job.positions.map((position, index) => (
+                    <div key={`${job.org}-${position.role}-${position.dates}`} style={{ position: 'relative', paddingLeft: 20 }}>
+                      <div style={{ position: 'absolute', left: -16, top: 10, width: 12, height: 12, borderRadius: '50%', background: 'var(--pm-bg)', border: '2px solid var(--pm-accent)' }} />
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 10 }}>
+                        <span style={{ fontWeight: 600, fontSize: 15.5 }}>{position.role}</span>
+                        <span style={{ fontSize: 14, color: 'var(--pm-ink-soft)' }}>{position.dates}</span>
+                      </div>
+                      <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14.5, color: 'var(--pm-ink-soft)' }}>
+                        {position.bullets.map((bullet) => (
+                          <li key={bullet} style={{ marginBottom: 5 }}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14.5, color: 'var(--pm-ink-soft)' }}>
+                  {job.bullets?.map((bullet) => (
+                    <li key={bullet} style={{ marginBottom: 5 }}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
               {job.recommendations && job.recommendations.length > 0 && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12 }}>
                   {job.recommendations.map((rec) => (

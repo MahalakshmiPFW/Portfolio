@@ -179,7 +179,8 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: 'Process Automation Intern',
     org: 'Schneider Electric',
     bullets: [
-      'Built an internal automation prototype to replace spreadsheet-heavy procurement workflows, improving data consistency through structured input flows.',
+      'Developed an internal automation prototype in Python/Tkinter to replace spreadsheet-heavy procurement workflows, reiterating the design as stakeholder requirements evolved.',
+      'Streamlined retrieval and updating of procurement-related data through backend handling logic built in Python.',
     ],
     recommendations: [
       { label: 'View Recommendation Letter', url: '/SE - Recommendation Letter - Mahalakshmi.pdf' },
@@ -187,12 +188,27 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     logo: '/assets/images/BetaIT.jpeg',
-    dates: 'Jul 2023 – Sep 2023',
-    role: 'Research Intern',
+    dates: 'Jul 2022 – Sep 2023',
     org: 'Beta Information Technology',
-    bullets: [
-      'Assisted the Director of Corporate Development in researching Odoo (ERP software) as a candidate for the company\'s 2nd digital transformation initiative, evaluating features and capabilities, cost/pricing, integration feasibility with existing systems, and implementation risk.',
-      'Compiled findings into a formal report and presentation, which was taken into consideration in the company\'s evaluation process.',
+    positions: [
+      {
+        role: 'Research Intern',
+        dates: 'Jul 2023 – Sep 2023',
+        bullets: [
+          'Researched Odoo ERP for BetaIT’s second digital transformation initiative, evaluating features, pricing, integration feasibility, and implementation risk.',
+          'Compiled findings into a formal report and presentation that was taken into consideration in the company’s evaluation process.',
+        ],
+      },
+      {
+        role: 'Intern Team Lead',
+        dates: 'Jul 2022 – Aug 2022',
+        bullets: [
+          'Coordinated intern team tasks, removed technical blockers for peers, and facilitated collaboration to keep project deliverables on track.',
+          'Used Hypervisors and Autopsy in Kali Linux to learn about forensic analysis.',
+          'Created and configured virtual load balancers on Google Public Cloud to simulate scalable infrastructure.',
+          'Presented research findings and supported team collaboration across planning and execution.',
+        ],
+      },
     ],
     recommendations: [
       { label: 'View Recommendation Letter', url: '/BetaIT_Recommendation_Letter.pdf' },

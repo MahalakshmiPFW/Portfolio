@@ -39,12 +39,19 @@ export interface ExperienceRecommendation {
   url: string;
 }
 
+export interface ExperiencePosition {
+  role: string;
+  dates: string;
+  bullets: string[];
+}
+
 export interface ExperienceItem {
   logo: string;
   dates: string;
-  role: string;
   org: string;
-  bullets: string[];
+  role?: string;
+  bullets?: string[];
+  positions?: ExperiencePosition[];
   recommendations?: ExperienceRecommendation[];
 }
 
