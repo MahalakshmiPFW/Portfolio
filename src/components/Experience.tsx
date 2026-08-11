@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
               </div>
               {job.positions ? (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 24, position: 'relative', paddingLeft: 20 }}>
-                  <div style={{ position: 'absolute', left: -10, top: 16, bottom: 16, width: 2, background: 'var(--pm-hairline)', borderRadius: 999 }} />
+                  <div style={{ position: 'absolute', left: 8, top: 12, bottom: 12, width: 2, background: 'var(--pm-hairline)', borderRadius: 999 }} />
                   {job.positions.map((position, index) => (
                     <div key={`${job.org}-${position.role}-${position.dates}`} style={{ position: 'relative', paddingLeft: 20 }}>
                       <div style={{ position: 'absolute', left: -16, top: 10, width: 12, height: 12, borderRadius: '50%', background: 'var(--pm-bg)', border: '2px solid var(--pm-accent)' }} />
