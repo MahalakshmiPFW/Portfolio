@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p style={{ fontSize: 18, color: 'var(--pm-ink-soft)', maxWidth: 560, margin: '0 0 28px' }}>
-            <strong>User-focused builder with a strong technical foundation, bridging software development, product thinking, and customer experience.</strong>
+            <strong>User-focused builder bridging software development, product thinking, and customer experience.</strong>
             <br /><br />
             Through hands-on engineering projects and internships, I'm just as comfortable scoping product requirements and analyzing UX as I am debugging live issues with end users. Whether I'm writing clean code, resolving technical support tickets, or translating user feedback into product improvements, I focus on building intuitive solutions for people!
           </p>
