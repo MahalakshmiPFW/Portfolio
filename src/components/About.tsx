@@ -91,7 +91,7 @@ const About: React.FC = () => {
               <div style={{ paddingLeft: 16 }}><span style={{ color: 'oklch(75% 0.16 25)' }}>askedWhy</span>: <span style={{ color: 'oklch(78% 0.14 145)' }}>true</span>,</div>
               <div style={{ paddingLeft: 16 }}><span style={{ color: 'oklch(75% 0.16 25)' }}>shipsClean</span>: <span style={{ color: 'oklch(78% 0.14 145)' }}>true</span>,</div>
               <div style={{ paddingLeft: 16 }}><span style={{ color: 'oklch(75% 0.16 25)' }}>runsOn</span>: [<span style={{ color: 'oklch(78% 0.14 145)' }}>"matcha"</span>, <span style={{ color: 'oklch(78% 0.14 145)' }}>"good questions"</span>],</div>
-              <div style={{ paddingLeft: 16 }}><span style={{ color: 'oklch(75% 0.16 25)' }}>lookingFor</span>: <span style={{ color: 'oklch(78% 0.14 145)' }}>"2026 grad role"</span></div>
+              <div style={{ paddingLeft: 16 }}><span style={{ color: 'oklch(75% 0.16 25)' }}>lookingFor</span>: <span style={{ color: 'oklch(78% 0.14 145)' }}>"SWE / PM / Customer Success Eng role"</span></div>
               <div>{'};'}</div>
             </div>
           </div>

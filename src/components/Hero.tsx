@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             }}
           >
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--pm-accent)', display: 'inline-block' }} />
-            Open to Entry-Level Software Engineer / Product-Adjacent roles
+            Open to early career SWE, Product & Support-Facing Roles
             <svg width="26" height="26" viewBox="0 0 26 26" style={{ position: 'absolute', right: -30, top: -14, overflow: 'visible' }}>
               <path d="M13 2 L15 10 L23 12 L15 14 L13 22 L11 14 L3 12 L11 10 Z" fill="none" stroke="var(--pm-accent)" strokeWidth="1.4" strokeLinejoin="round" />
             </svg>
@@ -38,7 +38,9 @@ const Hero: React.FC = () => {
           </h1>
 
           <p style={{ fontSize: 18, color: 'var(--pm-ink-soft)', maxWidth: 560, margin: '0 0 28px' }}>
-            Full-stack engineer with two years shipping production features — who's just as comfortable scoping the requirements, weighing tradeoffs, and talking to the people who'll use it. I like sitting where the code and the "why" meet.
+            <strong>User-focused builder with a strong technical foundation, bridging software development, product thinking, and customer experience.</strong>
+            <br /><br />
+            Through hands-on engineering projects and internships, I'm just as comfortable scoping product requirements and analyzing UX as I am debugging live issues with end users. Whether I'm writing clean code, resolving technical support tickets, or translating user feedback into product improvements, I focus on building intuitive solutions for people!
           </p>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
