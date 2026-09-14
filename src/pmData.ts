@@ -148,6 +148,17 @@ export const CASE_STUDIES: CaseStudy[] = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
+    logo: '/assets/images/one_community_global_logo.jpg',
+    dates: 'Aug 2026 – Present',
+    role: 'Volunteer Software Engineer',
+    org: 'One Community Global',
+    bullets: [
+      'Reviewing and documenting pull requests for frontend (React.js) and backend (Node.js) repositories of the Highest Good Network application.',
+      'Identifying, debugging, and resolving software issues across the full stack—frontend and backend—to improve code quality and application reliability.',
+      'Writing clean, well-documented, testable code as part of feature implementation based on project requirements.',
+    ],
+  },
+  {
     logo: '/assets/images/COFW.png',
     dates: 'Jun 2026 – Present',
     role: 'Computer Science Intern',
