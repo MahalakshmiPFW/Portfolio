@@ -304,9 +304,23 @@ export const EDUCATION: EducationItem[] = [
 
 export const CERTIFICATIONS: CertificationItem[] = [
   {
+    name: 'ArcGIS Online Basics',
+    issuer: 'Esri',
+    url: '/ArcGIS Online Basics_Certificate_06252026.pdf',
+    date: '2026',
+    logo: '/assets/images/esri logo.png',
+  },
+  {
+    name: 'ArcGIS Pro Basics',
+    issuer: 'Esri',
+    url: '/ArcGIS Pro Basics_Certificate_06252026.pdf',
+    date: '2026',
+    logo: '/assets/images/esri logo.png',
+  },
+  {
     name: 'Google Cybersecurity Professional Certificate',
     issuer: 'Google (Credly)',
-    url: 'https://www.credly.com/badges/928a96c7-09b7-467c-a8f3-1ea169550db2/linked_in_profile',
+    url: '/Google_Cybersecurity_Professional_Certificate.pdf',
     date: '2024',
     logo: '/assets/images/google-cyber-badge.svg',
   },
