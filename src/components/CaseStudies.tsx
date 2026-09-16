@@ -1,9 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { CASE_STUDIES } from '../pmData';
 
 const CaseStudies: React.FC = () => {
   const [openIndex, setOpenIndex] = useState(-1);
   const [prdOpenIndex, setPrdOpenIndex] = useState(-1);
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+  const showFilters = false;
+
+  // Extract all unique tags sorted
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    CASE_STUDIES.forEach(cs => {
+      cs.tags?.forEach(tag => tags.add(tag));
+    });
+    return Array.from(tags).sort();
+  }, []);
+
+  // Filter case studies based on selected tags
+  const filteredCaseStudies = useMemo(() => {
+    if (selectedTags.size === 0) return CASE_STUDIES;
+    return CASE_STUDIES.filter(cs => 
+      cs.tags?.some(tag => selectedTags.has(tag))
+    );
+  }, [selectedTags]);
+
+  const toggleTag = (tag: string) => {
+    const newTags = new Set(selectedTags);
+    if (newTags.has(tag)) {
+      newTags.delete(tag);
+    } else {
+      newTags.add(tag);
+    }
+    setSelectedTags(newTags);
+  };
+
+  const clearFilters = () => {
+    setSelectedTags(new Set());
+  };
 
   return (
     <section id="work" data-nav-target data-reveal data-screen-label="Case Studies" style={{ maxWidth: 1080, margin: '0 auto', padding: '24px 32px 72px' }}>
@@ -19,14 +52,77 @@ const CaseStudies: React.FC = () => {
         </p>
       </div>
 
+      {showFilters && (
+        <div style={{ marginBottom: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--pm-ink-faint)', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: 10 }}>
+            Filter by skill or focus
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                style={{
+                  padding: '8px 14px',
+                  borderRadius: 999,
+                  border: `1.5px solid ${selectedTags.has(tag) ? 'var(--pm-accent)' : 'var(--pm-hairline)'}`,
+                  background: selectedTags.has(tag) ? 'var(--pm-accent-soft)' : 'transparent',
+                  color: selectedTags.has(tag) ? 'var(--pm-accent)' : 'var(--pm-ink)',
+                  fontSize: 13,
+                  fontWeight: selectedTags.has(tag) ? 700 : 500,
+                  cursor: 'pointer',
+                  transition: 'all 150ms ease',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {selectedTags.size > 0 && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <span style={{ fontSize: 13, color: 'var(--pm-ink-soft)' }}>
+              Showing {filteredCaseStudies.length} of {CASE_STUDIES.length} project{filteredCaseStudies.length !== 1 ? 's' : ''}
+            </span>
+            <button
+              onClick={clearFilters}
+              style={{
+                padding: '6px 12px',
+                borderRadius: 999,
+                border: 'none',
+                background: 'var(--pm-ink-faint)',
+                color: 'var(--pm-bg)',
+                fontSize: 12,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 150ms ease',
+              }}
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
+        </div>
+      )}
+
+      {/* Case Studies List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        {CASE_STUDIES.map((cs, i) => {
-          const isOpen = openIndex === i;
-          const prdOpen = prdOpenIndex === i;
+        {filteredCaseStudies.length === 0 ? (
+          <div style={{ padding: '40px 26px', textAlign: 'center', color: 'var(--pm-ink-faint)' }}>
+            <p style={{ fontSize: 15, margin: 0 }}>No projects match your filters. Try adjusting your selection.</p>
+          </div>
+        ) : (
+          filteredCaseStudies.map((cs) => {
+            const originalIndex = CASE_STUDIES.indexOf(cs);
+            const isOpen = openIndex === originalIndex;
+            const prdOpen = prdOpenIndex === originalIndex;
           return (
             <div key={cs.title}>
               <button
-                onClick={() => setOpenIndex((prev) => (prev === i ? -1 : i))}
+                onClick={() => setOpenIndex((prev) => (prev === originalIndex ? -1 : originalIndex))}
                 style={{
                   all: 'unset',
                   cursor: 'pointer',
@@ -133,7 +229,7 @@ const CaseStudies: React.FC = () => {
                     {cs.prd && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
                         <button
-                          onClick={() => setPrdOpenIndex((prev) => (prev === i ? -1 : i))}
+                          onClick={() => setPrdOpenIndex((prev) => (prev === originalIndex ? -1 : originalIndex))}
                           style={{ all: 'unset', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, fontWeight: 600, color: 'var(--pm-accent)', padding: '8px 0' }}
                         >
                           <span>{prdOpen ? 'Hide mini PRD' : 'View mini PRD'}</span>
@@ -347,7 +443,8 @@ const CaseStudies: React.FC = () => {
               </div>
             </div>
           );
-        })}
+          })
+        )}
       </div>
     </section>
   );

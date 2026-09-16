@@ -229,14 +229,14 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const COMMUNITY: CommunityItem[] = [
   {
-    logo: '/assets/images/RTC-logo.png',
+    logo: '/assets/images/american-red-cross.svg',
     logoBg: 'white',
-    icon: '🌟',
-    org: 'Rewriting the Code',
-    role: 'Early-Career Member ✨',
-    dates: '2026 – Present',
-    blurb: 'Plugged into a global network of women in tech — trading career advice, leveling up through professional-development programming, and cheering on the next cohort of builders.',
-    hue: 330,
+    icon: '✚',
+    org: 'American Red Cross',
+    role: 'Volunteer, Disaster Services',
+    dates: 'Sep 2026 – Present',
+    blurb: 'Supporting the American Red Cross Disaster Services team as a volunteer, helping communities prepare for, respond to, and recover from emergencies.',
+    hue: 0,
     tilt: '-1deg',
   },
   {
@@ -248,6 +248,17 @@ export const COMMUNITY: CommunityItem[] = [
     blurb: 'Months of direct customer-facing work — booking event tickets, fielding calls, resolving complaints in real time, and ushering events. Staying calm, listening past the complaint to the actual need, and finding a fix on the spot.',
     hue: 255,
     tilt: '1deg',
+  },
+  {
+    logo: '/assets/images/RTC-logo.png',
+    logoBg: 'white',
+    icon: '🌟',
+    org: 'Rewriting the Code',
+    role: 'Early-Career Member ✨',
+    dates: '2026 – Present',
+    blurb: 'Plugged into a global network of women in tech — trading career advice, leveling up through professional-development programming, and cheering on the next cohort of builders.',
+    hue: 330,
+    tilt: '-1deg',
   },
   {
     logo: '/assets/images/AUS Logo.png',
@@ -314,6 +325,13 @@ export const EDUCATION: EducationItem[] = [
 ];
 
 export const CERTIFICATIONS: CertificationItem[] = [
+  {
+    name: 'GIS Basics',
+    issuer: 'Esri',
+    url: '/GIS Basics_Certificate_06252026.pdf',
+    date: '2026',
+    logo: '/assets/images/esri logo.png',
+  },
   {
     name: 'ArcGIS Online Basics',
     issuer: 'Esri',

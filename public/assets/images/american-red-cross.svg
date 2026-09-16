@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>American Red Cross</title>
+  <rect width="128" height="128" rx="18" fill="#fff"/>
+  <path fill="#ed1b2f" d="M48 16h32v32h32v32H80v32H48V80H16V48h32z"/>
+</svg>
